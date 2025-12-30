@@ -308,26 +308,30 @@
                 document.getElementById('backtestTime').textContent = `Last run: ${backtest.last_run}`;
                 
                 let backtestHtml = `
-                    <div class="grid grid-cols-2 md:grid-cols-5 gap-4 mb-4">
+                    <div class="grid grid-cols-3 md:grid-cols-6 gap-3 mb-4">
                         <div class="bg-gray-800/50 rounded p-3 text-center">
-                            <div class="text-2xl font-bold">${backtest.total_signals || 0}</div>
-                            <div class="text-xs text-gray-500">Total Signals</div>
+                            <div class="text-xl font-bold">${backtest.total_signals || 0}</div>
+                            <div class="text-xs text-gray-500">Signals (bars)</div>
                         </div>
                         <div class="bg-gray-800/50 rounded p-3 text-center">
-                            <div class="text-2xl font-bold text-green-400">${backtest.long_signals || 0}</div>
-                            <div class="text-xs text-gray-500">🟢 LONG</div>
+                            <div class="text-xl font-bold">${backtest.signal_hours || 0}</div>
+                            <div class="text-xs text-gray-500">Signal Hours</div>
                         </div>
                         <div class="bg-gray-800/50 rounded p-3 text-center">
-                            <div class="text-2xl font-bold text-red-400">${backtest.short_signals || 0}</div>
-                            <div class="text-xs text-gray-500">🔴 SHORT</div>
+                            <div class="text-xl font-bold text-blue-400">${backtest.trade_count || 0}</div>
+                            <div class="text-xs text-gray-500">Bot Trades</div>
                         </div>
                         <div class="bg-gray-800/50 rounded p-3 text-center border border-green-500/30">
-                            <div class="text-2xl font-bold text-green-400">${backtest.matched_signals || 0}</div>
-                            <div class="text-xs text-gray-500">✅ Matched</div>
+                            <div class="text-xl font-bold text-green-400">${backtest.matched_hours || 0}</div>
+                            <div class="text-xs text-gray-500">✅ Matched Hrs</div>
                         </div>
                         <div class="bg-gray-800/50 rounded p-3 text-center border border-yellow-500/30">
-                            <div class="text-2xl font-bold text-yellow-400">${backtest.missed_signals || 0}</div>
-                            <div class="text-xs text-gray-500">⚠️ Missed</div>
+                            <div class="text-xl font-bold text-yellow-400">${backtest.missed_hours || 0}</div>
+                            <div class="text-xs text-gray-500">⚠️ No Trade Hrs</div>
+                        </div>
+                        <div class="bg-gray-800/50 rounded p-3 text-center">
+                            <div class="text-xl font-bold">${backtest.signal_hours ? Math.round(100 * (backtest.matched_hours || 0) / backtest.signal_hours) : 0}%</div>
+                            <div class="text-xs text-gray-500">Execution Rate</div>
                         </div>
                     </div>`;
                 

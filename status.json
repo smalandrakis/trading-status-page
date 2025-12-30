@@ -156,11 +156,12 @@
     }
   },
   "backtest": {
-    "last_run": "2025-12-30 23:03 UTC",
+    "last_run": "2025-12-30 23:12 UTC",
     "period": "24h",
     "total_signals": 21,
     "long_signals": 0,
     "short_signals": 21,
+    "signal_hours": 4,
     "recent_signals": [
       {
         "time": "15:55 UTC",
@@ -303,12 +304,33 @@
       },
       {
         "hour": "23:00",
-        "price": 88458.0,
+        "price": 88493.0,
         "long": 50.0,
-        "short": 50.0,
+        "short": 53.0,
         "signal": null
       }
-    ]
+    ],
+    "actual_trades": [
+      {
+        "time": "16:55 UTC",
+        "direction": "SHORT",
+        "price": 89133.0,
+        "model": "2h_0.5pct_SHORT",
+        "pnl": "+$45",
+        "result": "\u2705"
+      },
+      {
+        "time": "16:04 UTC",
+        "direction": "SHORT",
+        "price": 88288.0,
+        "model": "2h_0.5pct_SHORT",
+        "pnl": "-$68",
+        "result": "\u274c"
+      }
+    ],
+    "matched_hours": 1,
+    "missed_hours": 3,
+    "trade_count": 2
   },
   "alerts": [],
   "check_count": 1
