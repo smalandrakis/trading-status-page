@@ -103,9 +103,20 @@
             <!-- Signal Match -->
             <div class="card rounded-xl p-4">
                 <h2 class="text-lg font-bold mb-4">
-                    <i class="fas fa-check-double mr-2"></i>Signal Match (Backtest)
+                    <i class="fas fa-check-double mr-2"></i>Signal Match
                 </h2>
                 <div id="signalMatch" class="space-y-3"></div>
+            </div>
+        </div>
+
+        <!-- Backtest Section -->
+        <div class="card rounded-xl p-4 mb-6">
+            <h2 class="text-lg font-bold mb-4">
+                <i class="fas fa-flask mr-2"></i>BTC Backtest (24h) 
+                <span id="backtestTime" class="text-sm font-normal text-gray-500 ml-2"></span>
+            </h2>
+            <div id="backtestContent">
+                <div class="text-gray-500">Backtest runs 4x daily (00:00, 06:00, 12:00, 18:00 UTC)</div>
             </div>
         </div>
 
@@ -290,6 +301,77 @@
                 </div>`;
             }).join('');
             document.getElementById('signalMatch').innerHTML = matchHtml || '<span class="text-gray-500">No data</span>';
+
+            // Backtest Section
+            const backtest = data.backtest || {};
+            if (backtest.last_run) {
+                document.getElementById('backtestTime').textContent = `Last run: ${backtest.last_run}`;
+                
+                let backtestHtml = `
+                    <div class="grid grid-cols-3 gap-4 mb-4">
+                        <div class="bg-gray-800/50 rounded p-3 text-center">
+                            <div class="text-2xl font-bold">${backtest.total_signals || 0}</div>
+                            <div class="text-xs text-gray-500">Total Signals</div>
+                        </div>
+                        <div class="bg-gray-800/50 rounded p-3 text-center">
+                            <div class="text-2xl font-bold text-green-400">${backtest.long_signals || 0}</div>
+                            <div class="text-xs text-gray-500">🟢 LONG</div>
+                        </div>
+                        <div class="bg-gray-800/50 rounded p-3 text-center">
+                            <div class="text-2xl font-bold text-red-400">${backtest.short_signals || 0}</div>
+                            <div class="text-xs text-gray-500">🔴 SHORT</div>
+                        </div>
+                    </div>`;
+                
+                // Hourly summary chart
+                if (backtest.hourly_summary && backtest.hourly_summary.length > 0) {
+                    backtestHtml += `<div class="mb-4">
+                        <div class="text-sm text-gray-400 mb-2">Hourly Max Probabilities (Last 12h)</div>
+                        <div class="grid grid-cols-12 gap-1 text-xs">
+                            ${backtest.hourly_summary.map(h => {
+                                const longHeight = Math.min(h.long, 100);
+                                const shortHeight = Math.min(h.short, 100);
+                                const signalBg = h.signal === 'LONG' ? 'bg-green-500/30' : h.signal === 'SHORT' ? 'bg-red-500/30' : '';
+                                return `<div class="text-center ${signalBg} rounded p-1">
+                                    <div class="h-16 flex flex-col justify-end items-center gap-1">
+                                        <div class="w-full bg-green-600 rounded-t" style="height: ${longHeight * 0.6}%"></div>
+                                        <div class="w-full bg-red-600 rounded-b" style="height: ${shortHeight * 0.6}%"></div>
+                                    </div>
+                                    <div class="mt-1 text-gray-500">${h.hour.split(':')[0]}</div>
+                                    ${h.signal ? `<div class="${h.signal === 'LONG' ? 'text-green-400' : 'text-red-400'}">●</div>` : '<div class="text-transparent">●</div>'}
+                                </div>`;
+                            }).join('')}
+                        </div>
+                        <div class="flex justify-center gap-4 mt-2 text-xs text-gray-500">
+                            <span><span class="inline-block w-3 h-3 bg-green-600 rounded mr-1"></span>LONG %</span>
+                            <span><span class="inline-block w-3 h-3 bg-red-600 rounded mr-1"></span>SHORT %</span>
+                        </div>
+                    </div>`;
+                }
+                
+                // Recent signals
+                if (backtest.recent_signals && backtest.recent_signals.length > 0) {
+                    backtestHtml += `<div>
+                        <div class="text-sm text-gray-400 mb-2">Recent Signals (≥65%)</div>
+                        <div class="grid grid-cols-2 md:grid-cols-5 gap-2">
+                            ${backtest.recent_signals.slice(-10).map(s => {
+                                const isShort = s.model.includes('SHORT');
+                                const icon = isShort ? '🔴' : '🟢';
+                                const bgColor = isShort ? 'bg-red-900/30' : 'bg-green-900/30';
+                                return `<div class="${bgColor} rounded p-2 text-xs">
+                                    <div class="font-mono">${s.time}</div>
+                                    <div>${icon} ${s.prob}%</div>
+                                    <div class="text-gray-500">$${s.price?.toLocaleString()}</div>
+                                </div>`;
+                            }).join('')}
+                        </div>
+                    </div>`;
+                }
+                
+                document.getElementById('backtestContent').innerHTML = backtestHtml;
+            } else {
+                document.getElementById('backtestContent').innerHTML = '<div class="text-gray-500">Backtest runs 4x daily (00:00, 06:00, 12:00, 18:00 UTC)</div>';
+            }
         }
 
         // Initial load
