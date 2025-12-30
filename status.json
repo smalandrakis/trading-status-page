@@ -1,0 +1,160 @@
+{
+  "last_update": "2025-12-30 23:32:41 CET",
+  "last_update_utc": "2025-12-30 22:32:41 UTC",
+  "bots": {
+    "BTC": {
+      "running": true,
+      "pid": "2073",
+      "probabilities": {
+        "2h_0.5pct": 19.2,
+        "4h_0.5pct": 18.5,
+        "2h_0.5pct_SHORT": 33.1,
+        "4h_0.5pct_SHORT": 39.4
+      },
+      "positions": 0,
+      "max_positions": 4,
+      "last_price": 88273.65,
+      "last_log_time": "2025-12-30 22:59:50",
+      "pnl_24h": {
+        "realized": -23.71,
+        "unrealized": 0,
+        "trades": 2,
+        "wins": 1,
+        "losses": 1,
+        "open_positions": [],
+        "closed_trades": [
+          {
+            "direction": "SHORT",
+            "entry": 89133.38,
+            "exit": 88666.67,
+            "pnl": 44.65,
+            "reason": "TAKE_PROFIT",
+            "exit_time": "2025-12-30 17:41:07",
+            "model": "2h_0.5pct_SHORT"
+          },
+          {
+            "direction": "SHORT",
+            "entry": 88288.0,
+            "exit": 88951.36,
+            "pnl": -68.36,
+            "reason": "STOP_LOSS",
+            "exit_time": "2025-12-30 16:50:31",
+            "model": "2h_0.5pct_SHORT"
+          }
+        ]
+      }
+    },
+    "MNQ": {
+      "running": true,
+      "pid": "2073",
+      "probabilities": {
+        "2h_0.5pct": 9.4,
+        "4h_0.5pct": 11.8,
+        "2h_0.5pct_SHORT": 5.5,
+        "4h_0.5pct_SHORT": 15.0
+      },
+      "positions": 0,
+      "max_positions": 4,
+      "last_price": 623.4,
+      "last_log_time": "2025-12-30 22:59:53",
+      "pnl_24h": {
+        "realized": 0,
+        "unrealized": 0,
+        "trades": 0,
+        "wins": 0,
+        "losses": 0,
+        "open_positions": [],
+        "closed_trades": []
+      }
+    },
+    "SPY": {
+      "running": true,
+      "pid": "2417",
+      "probabilities": {
+        "4h_0.5pct": 1.7,
+        "2h_0.5pct_SHORT": 9.6,
+        "4h_0.5pct_SHORT": 13.2
+      },
+      "positions": 0,
+      "max_positions": 3,
+      "last_price": 694.55,
+      "last_log_time": "2025-12-30 22:59:55",
+      "pnl_24h": {
+        "realized": 0,
+        "unrealized": 0,
+        "trades": 0,
+        "wins": 0,
+        "losses": 0,
+        "open_positions": [],
+        "closed_trades": []
+      }
+    }
+  },
+  "parquet_health": {
+    "BTC": {
+      "healthy": true,
+      "bars": 2011,
+      "last_timestamp": "2025-12-30 21:55:00",
+      "freshness_minutes": 37.7,
+      "issues": [
+        "Stale data: 38 min old"
+      ]
+    },
+    "QQQ": {
+      "healthy": true,
+      "bars": 13256,
+      "last_timestamp": "2025-12-30 22:50:00",
+      "freshness_minutes": -17.3,
+      "issues": []
+    }
+  },
+  "signal_match": {
+    "BTC": {
+      "match": true,
+      "differences": {
+        "2h_0.5pct": 3.9,
+        "4h_0.5pct": 0.3,
+        "2h_0.5pct_SHORT": 3.0,
+        "4h_0.5pct_SHORT": 1.5
+      },
+      "parquet_probs": {
+        "2h_0.5pct": 19.2,
+        "4h_0.5pct": 18.5,
+        "2h_0.5pct_SHORT": 33.1,
+        "4h_0.5pct_SHORT": 39.4
+      },
+      "fresh_probs": {
+        "2h_0.5pct": 15.3,
+        "4h_0.5pct": 18.8,
+        "2h_0.5pct_SHORT": 36.1,
+        "4h_0.5pct_SHORT": 40.9
+      },
+      "timestamp": "2025-12-30 21:55:00"
+    },
+    "MNQ": {
+      "match": true,
+      "differences": {
+        "2h_0.5pct": 0.0,
+        "4h_0.5pct": 3.6,
+        "2h_0.5pct_SHORT": 0.0,
+        "4h_0.5pct_SHORT": 0.1
+      },
+      "parquet_probs": {
+        "2h_0.5pct": 12.1,
+        "4h_0.5pct": 11.7,
+        "2h_0.5pct_SHORT": 3.6,
+        "4h_0.5pct_SHORT": 14.8
+      },
+      "fresh_probs": {
+        "2h_0.5pct": 12.1,
+        "4h_0.5pct": 8.1,
+        "2h_0.5pct_SHORT": 3.6,
+        "4h_0.5pct_SHORT": 14.7
+      },
+      "timestamp": "2025-12-30 22:50:00",
+      "note": "Compared at same timestamp: 2025-12-30 22:50:00"
+    }
+  },
+  "alerts": [],
+  "check_count": 4
+}
