@@ -308,7 +308,7 @@
                 document.getElementById('backtestTime').textContent = `Last run: ${backtest.last_run}`;
                 
                 let backtestHtml = `
-                    <div class="grid grid-cols-3 gap-4 mb-4">
+                    <div class="grid grid-cols-2 md:grid-cols-5 gap-4 mb-4">
                         <div class="bg-gray-800/50 rounded p-3 text-center">
                             <div class="text-2xl font-bold">${backtest.total_signals || 0}</div>
                             <div class="text-xs text-gray-500">Total Signals</div>
@@ -321,7 +321,32 @@
                             <div class="text-2xl font-bold text-red-400">${backtest.short_signals || 0}</div>
                             <div class="text-xs text-gray-500">🔴 SHORT</div>
                         </div>
+                        <div class="bg-gray-800/50 rounded p-3 text-center border border-green-500/30">
+                            <div class="text-2xl font-bold text-green-400">${backtest.matched_signals || 0}</div>
+                            <div class="text-xs text-gray-500">✅ Matched</div>
+                        </div>
+                        <div class="bg-gray-800/50 rounded p-3 text-center border border-yellow-500/30">
+                            <div class="text-2xl font-bold text-yellow-400">${backtest.missed_signals || 0}</div>
+                            <div class="text-xs text-gray-500">⚠️ Missed</div>
+                        </div>
                     </div>`;
+                
+                // Actual trades comparison
+                if (backtest.actual_trades && backtest.actual_trades.length > 0) {
+                    backtestHtml += `<div class="mb-4">
+                        <div class="text-sm text-gray-400 mb-2">Actual Bot Trades (24h)</div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+                            ${backtest.actual_trades.map(t => {
+                                const dirIcon = t.direction === 'LONG' ? '🟢' : '🔴';
+                                const bgColor = t.direction === 'LONG' ? 'bg-green-900/20' : 'bg-red-900/20';
+                                return `<div class="${bgColor} rounded p-2 text-sm flex justify-between items-center">
+                                    <span>${dirIcon} ${t.time} @ $${t.price?.toLocaleString()}</span>
+                                    <span class="font-mono">${t.result} ${t.pnl}</span>
+                                </div>`;
+                            }).join('')}
+                        </div>
+                    </div>`
+                }
                 
                 // Hourly summary chart
                 if (backtest.hourly_summary && backtest.hourly_summary.length > 0) {
