@@ -1,20 +1,20 @@
 {
-  "last_update": "2025-12-31 14:35:09 CET",
-  "last_update_utc": "2025-12-31 13:35:09 UTC",
+  "last_update": "2025-12-31 15:05:14 CET",
+  "last_update_utc": "2025-12-31 14:05:14 UTC",
   "bots": {
     "BTC": {
       "running": true,
       "pid": "86317",
       "probabilities": {
-        "2h_0.5pct": 28.0,
-        "4h_0.5pct": 19.5,
-        "2h_0.5pct_SHORT": 24.6,
-        "4h_0.5pct_SHORT": 35.6
+        "2h_0.5pct": 24.5,
+        "4h_0.5pct": 21.8,
+        "2h_0.5pct_SHORT": 27.4,
+        "4h_0.5pct_SHORT": 44.9
       },
       "positions": 0,
       "max_positions": 4,
-      "last_price": 88770.73,
-      "last_log_time": "2025-12-31 14:35:09",
+      "last_price": 89028.86,
+      "last_log_time": "2025-12-31 15:05:16",
       "pnl_24h": {
         "realized": -23.71,
         "unrealized": 0,
@@ -48,15 +48,15 @@
       "running": true,
       "pid": "2245",
       "probabilities": {
-        "2h_0.5pct": 6.4,
-        "4h_0.5pct": 2.1,
-        "2h_0.5pct_SHORT": 6.9,
-        "4h_0.5pct_SHORT": 13.6
+        "2h_0.5pct": 1.3,
+        "4h_0.5pct": 0.7,
+        "2h_0.5pct_SHORT": 16.0,
+        "4h_0.5pct_SHORT": 7.1
       },
       "positions": 0,
       "max_positions": 4,
-      "last_price": 622.47,
-      "last_log_time": "2025-12-31 14:35:00",
+      "last_price": 623.91,
+      "last_log_time": "2025-12-31 15:05:08",
       "pnl_24h": {
         "realized": 0,
         "unrealized": 0,
@@ -77,8 +77,8 @@
       },
       "positions": 0,
       "max_positions": 3,
-      "last_price": 693.92,
-      "last_log_time": "2025-12-31 14:35:10",
+      "last_price": 694.95,
+      "last_log_time": "2025-12-31 15:05:07",
       "pnl_24h": {
         "realized": 0,
         "unrealized": 0,
@@ -93,21 +93,43 @@
   "parquet_health": {
     "BTC": {
       "healthy": true,
-      "bars": 2019,
-      "last_timestamp": "2025-12-31 13:35:00",
-      "freshness_minutes": 0.2,
+      "bars": 2024,
+      "last_timestamp": "2025-12-31 14:00:00",
+      "freshness_minutes": 5.2,
       "issues": []
     },
     "QQQ": {
       "healthy": true,
-      "bars": 13153,
-      "last_timestamp": "2025-12-31 14:20:00",
-      "freshness_minutes": -44.8,
+      "bars": 13160,
+      "last_timestamp": "2025-12-31 14:55:00",
+      "freshness_minutes": -49.8,
       "issues": []
     }
   },
   "signal_match": {
     "BTC": {
+      "match": true,
+      "differences": {
+        "2h_0.5pct": 1.1,
+        "4h_0.5pct": 0.8,
+        "2h_0.5pct_SHORT": 1.5,
+        "4h_0.5pct_SHORT": 3.0
+      },
+      "parquet_probs": {
+        "2h_0.5pct": 24.5,
+        "4h_0.5pct": 17.8,
+        "2h_0.5pct_SHORT": 25.8,
+        "4h_0.5pct_SHORT": 44.0
+      },
+      "fresh_probs": {
+        "2h_0.5pct": 25.6,
+        "4h_0.5pct": 18.6,
+        "2h_0.5pct_SHORT": 27.3,
+        "4h_0.5pct_SHORT": 47.0
+      },
+      "timestamp": "2025-12-31 14:00:00"
+    },
+    "MNQ": {
       "match": true,
       "differences": {
         "2h_0.5pct": 0.0,
@@ -116,41 +138,20 @@
         "4h_0.5pct_SHORT": 0.0
       },
       "parquet_probs": {
-        "2h_0.5pct": 28.0,
-        "4h_0.5pct": 19.5,
-        "2h_0.5pct_SHORT": 24.6,
-        "4h_0.5pct_SHORT": 35.6
-      },
-      "fresh_probs": {
-        "2h_0.5pct": 28.0,
-        "4h_0.5pct": 19.5,
-        "2h_0.5pct_SHORT": 24.6,
-        "4h_0.5pct_SHORT": 35.6
-      },
-      "timestamp": "2025-12-31 13:35:00"
-    },
-    "MNQ": {
-      "match": true,
-      "differences": {
-        "2h_0.5pct": 2.1,
+        "2h_0.5pct": 3.2,
         "4h_0.5pct": 0.6,
-        "2h_0.5pct_SHORT": 1.2,
-        "4h_0.5pct_SHORT": 3.2
-      },
-      "parquet_probs": {
-        "2h_0.5pct": 6.4,
-        "4h_0.5pct": 2.1,
-        "2h_0.5pct_SHORT": 6.9,
-        "4h_0.5pct_SHORT": 13.6
+        "2h_0.5pct_SHORT": 25.1,
+        "4h_0.5pct_SHORT": 17.5
       },
       "fresh_probs": {
-        "2h_0.5pct": 8.5,
-        "4h_0.5pct": 1.5,
-        "2h_0.5pct_SHORT": 8.1,
-        "4h_0.5pct_SHORT": 16.8
+        "2h_0.5pct": 3.2,
+        "4h_0.5pct": 0.6,
+        "2h_0.5pct_SHORT": 25.1,
+        "4h_0.5pct_SHORT": 17.5
       },
-      "timestamp": "2025-12-31 14:20:00",
-      "note": "Compared at same timestamp: 2025-12-31 14:20:00"
+      "timestamp": "2025-12-31 14:55:00",
+      "note": "Compared at same timestamp: 2025-12-31 14:55:00",
+      "auto_fixed": true
     }
   },
   "backtest": {
@@ -308,6 +309,12 @@
       }
     ]
   },
-  "alerts": [],
-  "check_count": 30
+  "alerts": [
+    {
+      "time": "2025-12-31T14:05:18.928914",
+      "type": "info",
+      "message": "MNQ parquet refreshed with 13160 bars"
+    }
+  ],
+  "check_count": 31
 }
