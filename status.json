@@ -1,20 +1,20 @@
 {
-  "last_update": "2026-01-01 21:56:39 CET",
-  "last_update_utc": "2026-01-01 20:56:39 UTC",
+  "last_update": "2026-01-01 22:26:44 CET",
+  "last_update_utc": "2026-01-01 21:26:44 UTC",
   "bots": {
     "BTC": {
       "running": true,
       "pid": "68557",
       "probabilities": {
-        "2h_0.5pct": 23.6,
+        "2h_0.5pct": 20.0,
         "4h_0.5pct": 25.1,
-        "2h_0.5pct_SHORT": 19.2,
-        "4h_0.5pct_SHORT": 34.2
+        "2h_0.5pct_SHORT": 14.6,
+        "4h_0.5pct_SHORT": 33.9
       },
       "positions": 0,
       "max_positions": 4,
-      "last_price": 88267.06,
-      "last_log_time": "2026-01-01 21:56:30",
+      "last_price": 88392.6,
+      "last_log_time": "2026-01-01 22:26:37",
       "pnl_24h": {
         "realized": 0,
         "unrealized": 0,
@@ -29,15 +29,15 @@
       "running": true,
       "pid": "2245",
       "probabilities": {
-        "2h_0.5pct": 11.3,
-        "4h_0.5pct": 12.8,
-        "2h_0.5pct_SHORT": 3.8,
-        "4h_0.5pct_SHORT": 10.9
+        "2h_0.5pct": 12.4,
+        "4h_0.5pct": 5.6,
+        "2h_0.5pct_SHORT": 10.0,
+        "4h_0.5pct_SHORT": 12.7
       },
       "positions": 0,
       "max_positions": 4,
-      "last_price": 614.31,
-      "last_log_time": "2026-01-01 21:56:34",
+      "last_price": 617.34,
+      "last_log_time": "2026-01-01 22:26:39",
       "pnl_24h": {
         "realized": 0,
         "unrealized": 0,
@@ -58,8 +58,8 @@
       },
       "positions": 0,
       "max_positions": 3,
-      "last_price": 681.92,
-      "last_log_time": "2026-01-01 21:56:42",
+      "last_price": 689.38,
+      "last_log_time": "2026-01-01 22:26:39",
       "pnl_24h": {
         "realized": 0,
         "unrealized": 0,
@@ -74,16 +74,16 @@
   "parquet_health": {
     "BTC": {
       "healthy": true,
-      "bars": 2042,
-      "last_timestamp": "2026-01-01 20:55:00",
-      "freshness_minutes": 1.7,
+      "bars": 2047,
+      "last_timestamp": "2026-01-01 21:20:00",
+      "freshness_minutes": 6.7,
       "issues": []
     },
     "QQQ": {
       "healthy": true,
-      "bars": 4581,
-      "last_timestamp": "2025-12-31 21:55:00",
-      "freshness_minutes": 1381.7,
+      "bars": 4593,
+      "last_timestamp": "2025-12-31 22:55:00",
+      "freshness_minutes": 1351.7,
       "issues": []
     }
   },
@@ -97,18 +97,18 @@
         "4h_0.5pct_SHORT": 0.0
       },
       "parquet_probs": {
-        "2h_0.5pct": 23.6,
+        "2h_0.5pct": 20.0,
         "4h_0.5pct": 25.1,
-        "2h_0.5pct_SHORT": 19.2,
-        "4h_0.5pct_SHORT": 34.2
+        "2h_0.5pct_SHORT": 14.5,
+        "4h_0.5pct_SHORT": 33.9
       },
       "fresh_probs": {
-        "2h_0.5pct": 23.6,
+        "2h_0.5pct": 20.0,
         "4h_0.5pct": 25.1,
-        "2h_0.5pct_SHORT": 19.2,
-        "4h_0.5pct_SHORT": 34.2
+        "2h_0.5pct_SHORT": 14.5,
+        "4h_0.5pct_SHORT": 33.9
       },
-      "timestamp": "2026-01-01 20:55:00"
+      "timestamp": "2026-01-01 21:20:00"
     },
     "MNQ": {
       "match": true,
@@ -119,19 +119,20 @@
         "4h_0.5pct_SHORT": 0.0
       },
       "parquet_probs": {
-        "2h_0.5pct": 10.0,
-        "4h_0.5pct": 12.4,
-        "2h_0.5pct_SHORT": 18.8,
-        "4h_0.5pct_SHORT": 8.6
+        "2h_0.5pct": 14.3,
+        "4h_0.5pct": 13.5,
+        "2h_0.5pct_SHORT": 7.7,
+        "4h_0.5pct_SHORT": 7.4
       },
       "fresh_probs": {
-        "2h_0.5pct": 10.0,
-        "4h_0.5pct": 12.4,
-        "2h_0.5pct_SHORT": 18.8,
-        "4h_0.5pct_SHORT": 8.6
+        "2h_0.5pct": 14.3,
+        "4h_0.5pct": 13.5,
+        "2h_0.5pct_SHORT": 7.7,
+        "4h_0.5pct_SHORT": 7.4
       },
-      "timestamp": "2025-12-31 21:55:00",
-      "note": "Compared at same timestamp: 2025-12-31 21:55:00"
+      "timestamp": "2025-12-31 22:55:00",
+      "note": "Compared at same timestamp: 2025-12-31 22:55:00",
+      "auto_fixed": true
     }
   },
   "backtest": {
@@ -233,6 +234,12 @@
     "missed_hours": 0,
     "trade_count": 0
   },
-  "alerts": [],
-  "check_count": 56
+  "alerts": [
+    {
+      "time": "2026-01-01T21:26:48.453676",
+      "type": "info",
+      "message": "MNQ parquet refreshed with 13256 bars"
+    }
+  ],
+  "check_count": 57
 }
