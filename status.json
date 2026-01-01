@@ -1,6 +1,6 @@
 {
-  "last_update": "2026-01-01 00:52:46 CET",
-  "last_update_utc": "2025-12-31 23:52:46 UTC",
+  "last_update": "2026-01-01 01:22:50 CET",
+  "last_update_utc": "2026-01-01 00:22:50 UTC",
   "bots": {
     "BTC": {
       "running": true,
@@ -76,16 +76,16 @@
       "healthy": true,
       "bars": 2019,
       "last_timestamp": "2025-12-31 21:55:00",
-      "freshness_minutes": 117.8,
+      "freshness_minutes": 147.8,
       "issues": [
-        "Stale data: 118 min old"
+        "Stale data: 148 min old"
       ]
     },
     "QQQ": {
       "healthy": true,
       "bars": 13254,
       "last_timestamp": "2025-12-31 22:45:00",
-      "freshness_minutes": 67.8,
+      "freshness_minutes": 97.8,
       "issues": []
     }
   },
@@ -137,117 +137,141 @@
     }
   },
   "backtest": {
-    "last_run": "2025-12-31 18:21 UTC",
+    "last_run": "2026-01-01 00:23 UTC",
     "period": "24h",
-    "total_signals": 2,
+    "total_signals": 6,
     "long_signals": 0,
-    "short_signals": 2,
-    "signal_hours": 1,
+    "short_signals": 6,
+    "signal_hours": 2,
     "recent_signals": [
+      {
+        "time": "14:50 UTC",
+        "price": 88457.0,
+        "model": "2h_0.5pct_SHORT",
+        "prob": 65.8
+      },
+      {
+        "time": "15:00 UTC",
+        "price": 88405.0,
+        "model": "2h_0.5pct_SHORT",
+        "prob": 65.6
+      },
+      {
+        "time": "15:10 UTC",
+        "price": 88199.0,
+        "model": "2h_0.5pct_SHORT",
+        "prob": 65.6
+      },
+      {
+        "time": "15:15 UTC",
+        "price": 88051.0,
+        "model": "2h_0.5pct_SHORT",
+        "prob": 66.2
+      },
       {
         "time": "15:20 UTC",
         "price": 87946.0,
         "model": "2h_0.5pct_SHORT",
-        "prob": 66.3
+        "prob": 67.5
       },
       {
         "time": "15:25 UTC",
         "price": 87984.0,
         "model": "2h_0.5pct_SHORT",
-        "prob": 65.6
+        "prob": 66.8
       }
     ],
     "hourly_summary": [
       {
-        "hour": "07:00",
-        "price": 88613.0,
-        "long": 38.0,
-        "short": 42.0,
-        "signal": null
-      },
-      {
-        "hour": "08:00",
-        "price": 88435.0,
-        "long": 33.0,
-        "short": 45.0,
-        "signal": null
-      },
-      {
-        "hour": "09:00",
-        "price": 88660.0,
-        "long": 22.0,
-        "short": 38.0,
-        "signal": null
-      },
-      {
-        "hour": "10:00",
-        "price": 88847.0,
-        "long": 25.0,
-        "short": 45.0,
-        "signal": null
-      },
-      {
-        "hour": "11:00",
-        "price": 89012.0,
-        "long": 30.0,
-        "short": 52.0,
-        "signal": null
-      },
-      {
-        "hour": "12:00",
-        "price": 88776.0,
-        "long": 45.0,
-        "short": 54.0,
-        "signal": null
-      },
-      {
         "hour": "13:00",
         "price": 88992.0,
-        "long": 40.0,
+        "long": 42.0,
         "short": 54.0,
         "signal": null
       },
       {
         "hour": "14:00",
         "price": 88480.0,
-        "long": 51.0,
-        "short": 65.0,
-        "signal": null
+        "long": 53.0,
+        "short": 66.0,
+        "signal": "SHORT"
       },
       {
         "hour": "15:00",
         "price": 87954.0,
-        "long": 51.0,
-        "short": 66.0,
+        "long": 53.0,
+        "short": 67.0,
         "signal": "SHORT"
       },
       {
         "hour": "16:00",
         "price": 87657.0,
-        "long": 53.0,
-        "short": 56.0,
+        "long": 54.0,
+        "short": 58.0,
         "signal": null
       },
       {
         "hour": "17:00",
         "price": 87621.0,
-        "long": 41.0,
-        "short": 56.0,
+        "long": 42.0,
+        "short": 57.0,
         "signal": null
       },
       {
         "hour": "18:00",
-        "price": 87911.0,
-        "long": 41.0,
-        "short": 53.0,
+        "price": 87684.0,
+        "long": 42.0,
+        "short": 52.0,
+        "signal": null
+      },
+      {
+        "hour": "19:00",
+        "price": 87542.0,
+        "long": 37.0,
+        "short": 45.0,
+        "signal": null
+      },
+      {
+        "hour": "20:00",
+        "price": 87662.0,
+        "long": 50.0,
+        "short": 47.0,
+        "signal": null
+      },
+      {
+        "hour": "21:00",
+        "price": 87800.0,
+        "long": 44.0,
+        "short": 52.0,
+        "signal": null
+      },
+      {
+        "hour": "22:00",
+        "price": 87728.0,
+        "long": 27.0,
+        "short": 50.0,
+        "signal": null
+      },
+      {
+        "hour": "23:00",
+        "price": 87648.0,
+        "long": 26.0,
+        "short": 49.0,
+        "signal": null
+      },
+      {
+        "hour": "00:00",
+        "price": 87768.0,
+        "long": 20.0,
+        "short": 37.0,
         "signal": null
       }
     ],
     "actual_trades": [],
     "matched_hours": 0,
-    "missed_hours": 1,
+    "missed_hours": 2,
     "trade_count": 0
   },
   "alerts": [],
-  "check_count": 14
+  "check_count": 15
 }
