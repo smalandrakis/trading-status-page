@@ -1,6 +1,6 @@
 {
-  "last_update": "2026-01-02 22:01:31 CET",
-  "last_update_utc": "2026-01-02 21:01:31 UTC",
+  "last_update": "2026-01-02 22:31:37 CET",
+  "last_update_utc": "2026-01-02 21:31:37 UTC",
   "bots": {
     "BTC": {
       "running": true,
@@ -311,14 +311,16 @@
       "healthy": true,
       "bars": 2005,
       "last_timestamp": "2026-01-02 20:55:00",
-      "freshness_minutes": 6.5,
-      "issues": []
+      "freshness_minutes": 36.6,
+      "issues": [
+        "Stale data: 37 min old"
+      ]
     },
     "QQQ": {
       "healthy": true,
-      "bars": 4581,
-      "last_timestamp": "2026-01-02 21:55:00",
-      "freshness_minutes": -53.5,
+      "bars": 13174,
+      "last_timestamp": "2026-01-02 21:50:00",
+      "freshness_minutes": -18.4,
       "issues": []
     }
   },
@@ -346,27 +348,27 @@
       "timestamp": "2026-01-02 20:55:00"
     },
     "MNQ": {
-      "match": true,
+      "match": false,
       "differences": {
-        "2h_0.5pct": 0.0,
-        "4h_0.5pct": 0.9,
-        "2h_0.5pct_SHORT": 0.6,
-        "4h_0.5pct_SHORT": 0.0
+        "2h_0.5pct": 0.8,
+        "4h_0.5pct": 10.3,
+        "2h_0.5pct_SHORT": 3.6,
+        "4h_0.5pct_SHORT": 9.7
       },
       "parquet_probs": {
-        "2h_0.5pct": 54.9,
-        "4h_0.5pct": 26.4,
-        "2h_0.5pct_SHORT": 7.0,
-        "4h_0.5pct_SHORT": 11.6
+        "2h_0.5pct": 56.0,
+        "4h_0.5pct": 24.9,
+        "2h_0.5pct_SHORT": 10.6,
+        "4h_0.5pct_SHORT": 19.2
       },
       "fresh_probs": {
-        "2h_0.5pct": 54.9,
-        "4h_0.5pct": 27.3,
-        "2h_0.5pct_SHORT": 7.6,
-        "4h_0.5pct_SHORT": 11.6
+        "2h_0.5pct": 55.2,
+        "4h_0.5pct": 35.2,
+        "2h_0.5pct_SHORT": 7.0,
+        "4h_0.5pct_SHORT": 9.5
       },
       "timestamp": "2026-01-02 21:50:00",
-      "note": "Parquet stale (2026-01-02 21:55:00), fresh at 2026-01-02 21:50:00",
+      "note": "Compared at same timestamp: 2026-01-02 21:50:00",
       "auto_fixed": true
     }
   },
@@ -573,10 +575,25 @@
   },
   "alerts": [
     {
-      "time": "2026-01-02T21:01:36.166799",
+      "time": "2026-01-02T21:31:40.953645",
+      "type": "warning",
+      "message": "MNQ 4h_0.5pct mismatch: parquet=26.4% vs fresh=35.2%"
+    },
+    {
+      "time": "2026-01-02T21:31:42.404500",
       "type": "info",
-      "message": "MNQ parquet refreshed with 13174 bars"
+      "message": "MNQ parquet refreshed with 13180 bars"
+    },
+    {
+      "time": "2026-01-02T21:31:42.404619",
+      "type": "info",
+      "message": "MNQ parquet auto-refreshed to fix mismatch"
+    },
+    {
+      "time": "2026-01-02T21:31:42.441656",
+      "type": "warning",
+      "message": "MNQ signal still mismatched after refresh - may need investigation"
     }
   ],
-  "check_count": 104
+  "check_count": 105
 }
