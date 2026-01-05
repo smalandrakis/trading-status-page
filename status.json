@@ -1,23 +1,19 @@
 {
-  "last_update": "2026-01-05 23:21:41 CET",
-  "last_update_utc": "2026-01-05 22:21:41 UTC",
+  "last_update": "2026-01-05 23:24:21 CET",
+  "last_update_utc": "2026-01-05 22:24:21 UTC",
   "bots": {
     "BTC": {
-      "running": false,
-      "pid": null,
-      "probabilities": {
-        "2h_0.5pct": 0.0,
-        "4h_0.5pct": 0.0,
-        "2h_0.5pct_SHORT": 28.5,
-        "4h_0.5pct_SHORT": 31.2
-      },
-      "positions": 2,
+      "running": true,
+      "pid": "29421",
+      "probabilities": {},
+      "positions": 0,
       "max_positions": 4,
-      "last_price": 94328.99,
-      "last_log_time": "2026-01-05 23:21:27",
+      "last_price": null,
+      "last_log_time": null,
+      "error": "Error tokenizing data. C error: Expected 14 fields in line 4959, saw 15\n",
       "pnl_24h": {
         "realized": -93.96,
-        "unrealized": 102.18,
+        "unrealized": 109.46,
         "trades": 48,
         "wins": 13,
         "losses": 35,
@@ -26,15 +22,15 @@
             "id": "4h_0.5pct",
             "direction": "LONG",
             "entry": 93809.83,
-            "current": 94335.36,
-            "pnl": 52.55
+            "current": 94371.75,
+            "pnl": 56.19
           },
           {
             "id": "2h_0.5pct",
             "direction": "LONG",
             "entry": 93839.1,
-            "current": 94335.36,
-            "pnl": 49.63
+            "current": 94371.75,
+            "pnl": 53.26
           }
         ],
         "closed_trades": [
@@ -540,14 +536,14 @@
       "healthy": true,
       "bars": 2026,
       "last_timestamp": "2026-01-05 22:20:00",
-      "freshness_minutes": 1.7,
+      "freshness_minutes": 4.4,
       "issues": []
     },
     "QQQ": {
       "healthy": true,
       "bars": 12913,
       "last_timestamp": "2026-01-05 22:55:00",
-      "freshness_minutes": -33.3,
+      "freshness_minutes": -30.6,
       "issues": []
     }
   },
@@ -555,28 +551,28 @@
     "BTC": {
       "match": true,
       "differences": {
-        "2h_0.5pct": 1.4,
-        "4h_0.5pct": 3.1,
-        "2h_0.5pct_SHORT": 0.2,
+        "2h_0.5pct": 2.7,
+        "4h_0.5pct": 2.2,
+        "2h_0.5pct_SHORT": 2.2,
         "4h_0.5pct_SHORT": 0.3
       },
       "parquet_probs": {
-        "2h_0.5pct": 27.5,
-        "4h_0.5pct": 35.0,
-        "2h_0.5pct_SHORT": 28.5,
-        "4h_0.5pct_SHORT": 31.2
+        "2h_0.5pct": 28.2,
+        "4h_0.5pct": 32.3,
+        "2h_0.5pct_SHORT": 28.3,
+        "4h_0.5pct_SHORT": 32.9
       },
       "fresh_probs": {
-        "2h_0.5pct": 28.9,
-        "4h_0.5pct": 31.9,
-        "2h_0.5pct_SHORT": 28.3,
-        "4h_0.5pct_SHORT": 31.5
+        "2h_0.5pct": 30.9,
+        "4h_0.5pct": 34.5,
+        "2h_0.5pct_SHORT": 30.5,
+        "4h_0.5pct_SHORT": 32.6
       },
       "timestamp": "2026-01-05 22:20:00",
       "indicators": {
-        "bb_pct_b": 0.9165,
-        "macd": 2.82,
-        "macd_signal": -23.93,
+        "bb_pct_b": 1.0216,
+        "macd": 7.6,
+        "macd_signal": -22.97,
         "bb_condition": true,
         "macd_condition": true
       },
@@ -613,5 +609,5 @@
   },
   "backtest": {},
   "alerts": [],
-  "check_count": 2
+  "check_count": 1
 }
