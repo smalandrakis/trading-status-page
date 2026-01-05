@@ -90,6 +90,14 @@
             </div>
         </div>
 
+        <!-- Indicator Signals -->
+        <div class="card rounded-xl p-4 mb-6">
+            <h2 class="text-lg font-bold mb-4">
+                <i class="fas fa-chart-bar mr-2"></i>Indicator Signals
+            </h2>
+            <div id="indicatorSignals" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
+        </div>
+
         <!-- Parquet Health & Signal Match -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
             <!-- Parquet Health -->
@@ -252,6 +260,74 @@
                     </div>
                     ${closedTradesHtml}`;
             });
+
+            // Indicator Signals
+            let indicatorHtml = '';
+            
+            // BTC Indicators
+            const btcMatch = data.signal_match?.BTC || {};
+            if (btcMatch.indicators) {
+                const ind = btcMatch.indicators;
+                const signalActive = btcMatch.indicator_signal;
+                const signalBorder = signalActive ? 'border-2 border-green-500' : '';
+                indicatorHtml += `<div class="bg-gray-800/50 rounded-lg p-4 ${signalBorder}">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-lg font-bold">₿ BTC</span>
+                        <span class="px-2 py-1 rounded text-sm ${signalActive ? 'bg-green-500/20 text-green-400' : 'bg-gray-700 text-gray-400'}">
+                            ${signalActive ? '🟢 LONG Signal' : '⏸️ No Signal'}
+                        </span>
+                    </div>
+                    <div class="text-xs text-gray-500 mb-2">Strategy: BB %B > 0.5 AND MACD > Signal</div>
+                    <div class="space-y-2">
+                        <div class="flex items-center justify-between">
+                            <span class="text-gray-400">BB %B</span>
+                            <div class="flex items-center gap-2">
+                                <span class="font-mono ${ind.bb_condition ? 'text-green-400' : 'text-gray-400'}">${ind.bb_pct_b?.toFixed(4) || '--'}</span>
+                                <span class="text-xs ${ind.bb_condition ? 'text-green-400' : 'text-red-400'}">${ind.bb_condition ? '✓ >0.5' : '✗ ≤0.5'}</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-gray-400">MACD</span>
+                            <span class="font-mono">${ind.macd?.toFixed(2) || '--'}</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-gray-400">MACD Signal</span>
+                            <div class="flex items-center gap-2">
+                                <span class="font-mono">${ind.macd_signal?.toFixed(2) || '--'}</span>
+                                <span class="text-xs ${ind.macd_condition ? 'text-green-400' : 'text-red-400'}">${ind.macd_condition ? '✓ MACD>Sig' : '✗ MACD≤Sig'}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>`;
+            }
+            
+            // MNQ Indicators
+            const mnqMatch = data.signal_match?.MNQ || {};
+            if (mnqMatch.indicators) {
+                const ind = mnqMatch.indicators;
+                const signalActive = mnqMatch.indicator_signal;
+                const signalBorder = signalActive ? 'border-2 border-green-500' : '';
+                indicatorHtml += `<div class="bg-gray-800/50 rounded-lg p-4 ${signalBorder}">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-lg font-bold">📈 MNQ</span>
+                        <span class="px-2 py-1 rounded text-sm ${signalActive ? 'bg-green-500/20 text-green-400' : 'bg-gray-700 text-gray-400'}">
+                            ${signalActive ? '🟢 LONG Signal' : '⏸️ No Signal'}
+                        </span>
+                    </div>
+                    <div class="text-xs text-gray-500 mb-2">Strategy: BB %B < 0.5</div>
+                    <div class="space-y-2">
+                        <div class="flex items-center justify-between">
+                            <span class="text-gray-400">BB %B</span>
+                            <div class="flex items-center gap-2">
+                                <span class="font-mono ${ind.bb_condition ? 'text-green-400' : 'text-gray-400'}">${ind.bb_pct_b?.toFixed(4) || '--'}</span>
+                                <span class="text-xs ${ind.bb_condition ? 'text-green-400' : 'text-red-400'}">${ind.bb_condition ? '✓ <0.5' : '✗ ≥0.5'}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>`;
+            }
+            
+            document.getElementById('indicatorSignals').innerHTML = indicatorHtml || '<span class="text-gray-500">No indicator data</span>';
 
             // Parquet Health
             const parquetHtml = Object.entries(data.parquet_health || {}).map(([name, health]) => {
