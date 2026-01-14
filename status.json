@@ -1,6 +1,6 @@
 {
-  "last_update": "2026-01-14 14:42:51 CET",
-  "last_update_utc": "2026-01-14 13:42:51 UTC",
+  "last_update": "2026-01-14 15:12:52 CET",
+  "last_update_utc": "2026-01-14 14:12:52 UTC",
   "bots": {
     "BTC": {
       "running": true,
@@ -210,7 +210,7 @@
       "positions": 0,
       "max_positions": 4,
       "last_price": 623.45,
-      "last_log_time": "2026-01-14 14:42:18",
+      "last_log_time": "2026-01-14 15:12:48",
       "pnl_24h": {
         "realized": 0,
         "unrealized": 0,
@@ -232,7 +232,7 @@
       "positions": 0,
       "max_positions": 3,
       "last_price": 691.6,
-      "last_log_time": "2026-01-14 14:42:24",
+      "last_log_time": "2026-01-14 15:12:45",
       "pnl_24h": {
         "realized": 0,
         "unrealized": 0,
@@ -249,14 +249,16 @@
       "healthy": true,
       "bars": 2030,
       "last_timestamp": "2026-01-14 13:40:00",
-      "freshness_minutes": 2.9,
-      "issues": []
+      "freshness_minutes": 32.9,
+      "issues": [
+        "Stale data: 33 min old"
+      ]
     },
     "QQQ": {
       "healthy": true,
       "bars": 13100,
       "last_timestamp": "2026-01-14 14:30:00",
-      "freshness_minutes": -47.1,
+      "freshness_minutes": -17.1,
       "issues": []
     }
   },
@@ -275,7 +277,7 @@
       "timestamp": "2026-01-14 13:40:00",
       "indicators": {},
       "indicator_signal": false,
-      "error": "HTTPSConnectionPool(host='api.binance.com', port=443): Max retries exceeded with url: /api/v3/klines?symbol=BTCUSDT&interval=5m&limit=1000 (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x12d0ccb80>: Failed to resolve 'api.binance.com' ([Errno 8] nodename nor servname provided, or not known)\"))"
+      "error": "HTTPSConnectionPool(host='api.binance.com', port=443): Max retries exceeded with url: /api/v3/klines?symbol=BTCUSDT&interval=5m&limit=1000 (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x12d461ca0>: Failed to resolve 'api.binance.com' ([Errno 8] nodename nor servname provided, or not known)\"))"
     },
     "MNQ": {
       "match": true,
@@ -509,7 +511,7 @@
     "error": "HTTPSConnectionPool(host='api.binance.com', port=443): Max retries exceeded with url: /api/v3/klines?symbol=BTCUSDT&interval=5m&limit=1000 (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x12d07d550>: Failed to resolve 'api.binance.com' ([Errno 8] nodename nor servname provided, or not known)\"))"
   },
   "alerts": [],
-  "check_count": 104,
+  "check_count": 105,
   "config": {
     "BTC": {
       "SL_PCT": 0.7,
