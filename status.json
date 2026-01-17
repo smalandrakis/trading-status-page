@@ -1,6 +1,6 @@
 {
-  "last_update": "2026-01-17 06:34:25 CET",
-  "last_update_utc": "2026-01-17 05:34:25 UTC",
+  "last_update": "2026-01-17 07:04:29 CET",
+  "last_update_utc": "2026-01-17 06:04:29 UTC",
   "bots": {
     "BTC": {
       "running": true,
@@ -122,16 +122,16 @@
       "healthy": true,
       "bars": 2000,
       "last_timestamp": "2026-01-16 21:00:00",
-      "freshness_minutes": 514.4,
+      "freshness_minutes": 544.5,
       "issues": [
-        "Stale data: 514 min old"
+        "Stale data: 544 min old"
       ]
     },
     "QQQ": {
       "healthy": true,
       "bars": 13187,
       "last_timestamp": "2026-01-16 21:50:00",
-      "freshness_minutes": 464.4,
+      "freshness_minutes": 494.5,
       "issues": []
     }
   },
@@ -205,7 +205,7 @@
     }
   },
   "backtest": {
-    "last_run": "2026-01-17 00:03 UTC",
+    "last_run": "2026-01-17 06:04 UTC",
     "period": "24h",
     "total_signals": 9,
     "long_signals": 5,
@@ -269,48 +269,6 @@
     ],
     "hourly_summary": [
       {
-        "hour": "13:00",
-        "price": 95449.0,
-        "long": 59.0,
-        "short": 55.0,
-        "signal": null
-      },
-      {
-        "hour": "14:00",
-        "price": 95192.0,
-        "long": 60.0,
-        "short": 67.0,
-        "signal": "SHORT"
-      },
-      {
-        "hour": "15:00",
-        "price": 94586.0,
-        "long": 63.0,
-        "short": 71.0,
-        "signal": "SHORT"
-      },
-      {
-        "hour": "16:00",
-        "price": 94873.0,
-        "long": 55.0,
-        "short": 69.0,
-        "signal": "SHORT"
-      },
-      {
-        "hour": "17:00",
-        "price": 95076.0,
-        "long": 50.0,
-        "short": 51.0,
-        "signal": null
-      },
-      {
-        "hour": "18:00",
-        "price": 95001.0,
-        "long": 41.0,
-        "short": 50.0,
-        "signal": null
-      },
-      {
         "hour": "19:00",
         "price": 95002.0,
         "long": 47.0,
@@ -347,9 +305,51 @@
       },
       {
         "hour": "00:00",
-        "price": 95533.0,
+        "price": 95466.0,
+        "long": 26.0,
+        "short": 18.0,
+        "signal": null
+      },
+      {
+        "hour": "01:00",
+        "price": 95400.0,
+        "long": 28.0,
+        "short": 14.0,
+        "signal": null
+      },
+      {
+        "hour": "02:00",
+        "price": 95371.0,
+        "long": 26.0,
+        "short": 17.0,
+        "signal": null
+      },
+      {
+        "hour": "03:00",
+        "price": 95373.0,
+        "long": 19.0,
+        "short": 17.0,
+        "signal": null
+      },
+      {
+        "hour": "04:00",
+        "price": 95304.0,
         "long": 24.0,
-        "short": 15.0,
+        "short": 19.0,
+        "signal": null
+      },
+      {
+        "hour": "05:00",
+        "price": 95324.0,
+        "long": 28.0,
+        "short": 17.0,
+        "signal": null
+      },
+      {
+        "hour": "06:00",
+        "price": 95227.0,
+        "long": 29.0,
+        "short": 17.0,
         "signal": null
       }
     ],
@@ -369,22 +369,14 @@
         "model": "6h_0.5pct",
         "pnl": "-$69",
         "result": "\u274c"
-      },
-      {
-        "time": "04:20 UTC",
-        "direction": "LONG",
-        "price": 95531.0,
-        "model": "4h_0.5pct",
-        "pnl": "+$26",
-        "result": "\u2705"
       }
     ],
     "matched_hours": 0,
     "missed_hours": 5,
-    "trade_count": 3
+    "trade_count": 2
   },
   "alerts": [],
-  "check_count": 110,
+  "check_count": 111,
   "config": {
     "BTC": {
       "SL_PCT": 0.7,
