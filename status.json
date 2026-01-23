@@ -1,6 +1,6 @@
 {
-  "last_update": "2026-01-23 16:13:01 CET",
-  "last_update_utc": "2026-01-23 15:13:01 UTC",
+  "last_update": "2026-01-23 16:43:01 CET",
+  "last_update_utc": "2026-01-23 15:43:01 UTC",
   "bots": {
     "BTC": {
       "running": true,
@@ -17,11 +17,11 @@
       "last_price": 89059.99,
       "last_log_time": "2026-01-23 16:07:58",
       "pnl_24h": {
-        "realized": -177.27,
+        "realized": -167.2,
         "unrealized": 0,
-        "trades": 46,
-        "wins": 29,
-        "losses": 17,
+        "trades": 43,
+        "wins": 27,
+        "losses": 16,
         "open_positions": [],
         "closed_trades": [
           {
@@ -410,33 +410,6 @@
             "reason": "TRAILING_STOP",
             "exit_time": "2026-01-22 15:47:31",
             "model": "2h_0.5pct_SHORT"
-          },
-          {
-            "direction": "SHORT",
-            "entry": 89642.12,
-            "exit": 89390.0,
-            "pnl": 23.19,
-            "reason": "TRAILING_STOP",
-            "exit_time": "2026-01-22 15:23:55",
-            "model": "4h_0.5pct_SHORT"
-          },
-          {
-            "direction": "SHORT",
-            "entry": 89642.12,
-            "exit": 89390.0,
-            "pnl": 23.19,
-            "reason": "TRAILING_STOP",
-            "exit_time": "2026-01-22 15:23:55",
-            "model": "2h_0.5pct_SHORT"
-          },
-          {
-            "direction": "LONG",
-            "entry": 89959.47,
-            "exit": 89411.81,
-            "pnl": -56.45,
-            "reason": "STOP_LOSS",
-            "exit_time": "2026-01-22 15:23:43",
-            "model": "4h_0.5pct"
           }
         ]
       }
@@ -453,7 +426,7 @@
       "positions": 0,
       "max_positions": 4,
       "last_price": 619.37,
-      "last_log_time": "2026-01-23 16:12:54",
+      "last_log_time": "2026-01-23 16:42:47",
       "pnl_24h": {
         "realized": 0,
         "unrealized": 0,
@@ -475,7 +448,7 @@
       "positions": 1,
       "max_positions": 3,
       "last_price": 687.34,
-      "last_log_time": "2026-01-23 16:12:59",
+      "last_log_time": "2026-01-23 16:42:56",
       "pnl_24h": {
         "realized": 0,
         "unrealized": -84.38,
@@ -500,14 +473,16 @@
       "healthy": true,
       "bars": 2005,
       "last_timestamp": "2026-01-23 15:05:00",
-      "freshness_minutes": 8.0,
-      "issues": []
+      "freshness_minutes": 38.0,
+      "issues": [
+        "Stale data: 38 min old"
+      ]
     },
     "QQQ": {
       "healthy": true,
       "bars": 4536,
       "last_timestamp": "2026-01-23 16:00:00",
-      "freshness_minutes": -47.0,
+      "freshness_minutes": -17.0,
       "issues": []
     }
   },
@@ -526,7 +501,7 @@
       "timestamp": "2026-01-23 15:05:00",
       "indicators": {},
       "indicator_signal": false,
-      "error": "HTTPSConnectionPool(host='api.binance.com', port=443): Max retries exceeded with url: /api/v3/klines?symbol=BTCUSDT&interval=5m&limit=1000 (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x13154cc40>: Failed to resolve 'api.binance.com' ([Errno 8] nodename nor servname provided, or not known)\"))"
+      "error": "HTTPSConnectionPool(host='api.binance.com', port=443): Max retries exceeded with url: /api/v3/klines?symbol=BTCUSDT&interval=5m&limit=1000 (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x130ec3c40>: Failed to resolve 'api.binance.com' ([Errno 8] nodename nor servname provided, or not known)\"))"
     },
     "MNQ": {
       "match": true,
@@ -759,7 +734,7 @@
     "trade_count": 40
   },
   "alerts": [],
-  "check_count": 416,
+  "check_count": 417,
   "config": {
     "BTC": {
       "SL_PCT": 0.7,
