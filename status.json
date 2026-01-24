@@ -1,6 +1,6 @@
 {
-  "last_update": "2026-01-24 06:45:27 CET",
-  "last_update_utc": "2026-01-24 05:45:27 UTC",
+  "last_update": "2026-01-24 07:15:30 CET",
+  "last_update_utc": "2026-01-24 06:15:30 UTC",
   "bots": {
     "BTC": {
       "running": true,
@@ -18,7 +18,7 @@
       "last_log_time": "2026-01-23 19:18:41",
       "pnl_24h": {
         "realized": -220.48,
-        "unrealized": -39.62,
+        "unrealized": -32.14,
         "trades": 12,
         "wins": 5,
         "losses": 7,
@@ -27,15 +27,15 @@
             "id": "4h_0.5pct_SHORT",
             "direction": "SHORT",
             "entry": 89575.45,
-            "current": 89773.57,
-            "pnl": -19.81
+            "current": 89736.14,
+            "pnl": -16.07
           },
           {
             "id": "2h_0.5pct_SHORT",
             "direction": "SHORT",
             "entry": 89575.45,
-            "current": 89773.57,
-            "pnl": -19.81
+            "current": 89736.14,
+            "pnl": -16.07
           }
         ],
         "closed_trades": [
@@ -209,16 +209,16 @@
       "healthy": true,
       "bars": 2000,
       "last_timestamp": "2026-01-23 20:40:00",
-      "freshness_minutes": 545.5,
+      "freshness_minutes": 575.5,
       "issues": [
-        "Stale data: 545 min old"
+        "Stale data: 576 min old"
       ]
     },
     "QQQ": {
       "healthy": true,
       "bars": 13129,
       "last_timestamp": "2026-01-23 22:30:00",
-      "freshness_minutes": 435.5,
+      "freshness_minutes": 465.5,
       "issues": []
     }
   },
@@ -292,7 +292,7 @@
     }
   },
   "backtest": {
-    "last_run": "2026-01-24 00:14 UTC",
+    "last_run": "2026-01-24 06:15 UTC",
     "period": "24h",
     "total_signals": 32,
     "long_signals": 3,
@@ -362,48 +362,6 @@
     ],
     "hourly_summary": [
       {
-        "hour": "13:00",
-        "price": 89351.0,
-        "long": 64.0,
-        "short": 54.0,
-        "signal": null
-      },
-      {
-        "hour": "14:00",
-        "price": 89018.0,
-        "long": 70.0,
-        "short": 72.0,
-        "signal": "LONG"
-      },
-      {
-        "hour": "15:00",
-        "price": 89762.0,
-        "long": 60.0,
-        "short": 71.0,
-        "signal": "SHORT"
-      },
-      {
-        "hour": "16:00",
-        "price": 90125.0,
-        "long": 52.0,
-        "short": 73.0,
-        "signal": "SHORT"
-      },
-      {
-        "hour": "17:00",
-        "price": 90600.0,
-        "long": 52.0,
-        "short": 71.0,
-        "signal": "SHORT"
-      },
-      {
-        "hour": "18:00",
-        "price": 90530.0,
-        "long": 49.0,
-        "short": 64.0,
-        "signal": null
-      },
-      {
         "hour": "19:00",
         "price": 89983.0,
         "long": 56.0,
@@ -440,9 +398,51 @@
       },
       {
         "hour": "00:00",
-        "price": 89510.0,
-        "long": 44.0,
+        "price": 89453.0,
+        "long": 43.0,
         "short": 22.0,
+        "signal": null
+      },
+      {
+        "hour": "01:00",
+        "price": 89550.0,
+        "long": 42.0,
+        "short": 17.0,
+        "signal": null
+      },
+      {
+        "hour": "02:00",
+        "price": 89703.0,
+        "long": 35.0,
+        "short": 19.0,
+        "signal": null
+      },
+      {
+        "hour": "03:00",
+        "price": 89770.0,
+        "long": 28.0,
+        "short": 24.0,
+        "signal": null
+      },
+      {
+        "hour": "04:00",
+        "price": 89829.0,
+        "long": 42.0,
+        "short": 20.0,
+        "signal": null
+      },
+      {
+        "hour": "05:00",
+        "price": 89775.0,
+        "long": 44.0,
+        "short": 18.0,
+        "signal": null
+      },
+      {
+        "hour": "06:00",
+        "price": 89736.0,
+        "long": 39.0,
+        "short": 20.0,
         "signal": null
       }
     ],
@@ -490,10 +490,10 @@
     ],
     "matched_hours": 2,
     "missed_hours": 3,
-    "trade_count": 14
+    "trade_count": 11
   },
   "alerts": [],
-  "check_count": 445,
+  "check_count": 446,
   "config": {
     "BTC": {
       "SL_PCT": 0.7,
