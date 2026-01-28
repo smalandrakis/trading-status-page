@@ -1,6 +1,6 @@
 {
-  "last_update": "2026-01-28 21:33:29 CET",
-  "last_update_utc": "2026-01-28 20:33:29 UTC",
+  "last_update": "2026-01-28 22:03:34 CET",
+  "last_update_utc": "2026-01-28 21:03:34 UTC",
   "bots": {
     "BTC": {
       "running": true,
@@ -18,7 +18,7 @@
       "last_log_time": "2026-01-23 19:18:41",
       "pnl_24h": {
         "realized": 0,
-        "unrealized": 37.22,
+        "unrealized": 134.41,
         "trades": 0,
         "wins": 0,
         "losses": 0,
@@ -27,15 +27,15 @@
             "id": "4h_0.5pct_SHORT",
             "direction": "SHORT",
             "entry": 89575.45,
-            "current": 89389.36,
-            "pnl": 18.61
+            "current": 88903.42,
+            "pnl": 67.2
           },
           {
             "id": "2h_0.5pct_SHORT",
             "direction": "SHORT",
             "entry": 89575.45,
-            "current": 89389.36,
-            "pnl": 18.61
+            "current": 88903.42,
+            "pnl": 67.2
           }
         ],
         "closed_trades": []
@@ -78,7 +78,7 @@
       "last_log_time": "2026-01-23 19:18:32",
       "pnl_24h": {
         "realized": 0,
-        "unrealized": -199.55,
+        "unrealized": -222.97,
         "trades": 0,
         "wins": 0,
         "losses": 0,
@@ -87,8 +87,8 @@
             "id": "indicator_long",
             "direction": "long",
             "entry": 6894.6,
-            "current": 7094.15,
-            "pnl": -199.55
+            "current": 7117.57,
+            "pnl": -222.97
           }
         ],
         "closed_trades": []
@@ -100,16 +100,16 @@
       "healthy": true,
       "bars": 2000,
       "last_timestamp": "2026-01-26 22:55:00",
-      "freshness_minutes": 2738.5,
+      "freshness_minutes": 2768.6,
       "issues": [
-        "Stale data: 2738 min old"
+        "Stale data: 2769 min old"
       ]
     },
     "QQQ": {
       "healthy": true,
-      "bars": 4596,
-      "last_timestamp": "2026-01-28 21:00:00",
-      "freshness_minutes": -26.5,
+      "bars": 4602,
+      "last_timestamp": "2026-01-28 21:30:00",
+      "freshness_minutes": -26.4,
       "issues": []
     }
   },
@@ -162,43 +162,43 @@
         "4h_0.5pct_SHORT": 0.0
       },
       "parquet_probs": {
-        "2h_0.5pct": 14.1,
-        "4h_0.5pct": 15.3,
-        "2h_0.5pct_SHORT": 14.8,
-        "4h_0.5pct_SHORT": 16.3
+        "2h_0.5pct": 28.0,
+        "4h_0.5pct": 6.3,
+        "2h_0.5pct_SHORT": 18.9,
+        "4h_0.5pct_SHORT": 14.0
       },
       "fresh_probs": {
-        "2h_0.5pct": 14.1,
-        "4h_0.5pct": 15.3,
-        "2h_0.5pct_SHORT": 14.8,
-        "4h_0.5pct_SHORT": 16.3
+        "2h_0.5pct": 28.0,
+        "4h_0.5pct": 6.3,
+        "2h_0.5pct_SHORT": 18.9,
+        "4h_0.5pct_SHORT": 14.0
       },
-      "timestamp": "2026-01-28 21:00:00",
-      "note": "Re-compared at 2026-01-28 21:30:00 after refresh",
+      "timestamp": "2026-01-28 21:30:00",
+      "note": "Re-compared at 2026-01-28 21:50:00 after refresh",
       "indicators": {
-        "bb_pct_b": 0.4849,
-        "bb_condition": true,
-        "roc_12": 0.06,
-        "macd_hist": 0.0153,
-        "macd_hist_prev": 0.0652,
-        "macd_hist_increasing": false,
-        "macd_hist_decreasing": true
+        "bb_pct_b": 0.6384,
+        "bb_condition": false,
+        "roc_12": -0.07,
+        "macd_hist": -0.0446,
+        "macd_hist_prev": -0.075,
+        "macd_hist_increasing": true,
+        "macd_hist_decreasing": false
       },
-      "indicator_signal": true,
+      "indicator_signal": false,
       "auto_fixed": true
     },
     "SPY": {
       "match": true,
       "indicators": {
-        "rsi": 49.3,
+        "rsi": 53.46,
         "rsi_threshold": 40,
         "rsi_condition": false,
-        "bb_pct_b": 0.4849,
+        "bb_pct_b": 0.6384,
         "bb_threshold": 0.4,
         "bb_condition": false
       },
       "indicator_signal": false,
-      "timestamp": "2026-01-28 21:30:00"
+      "timestamp": "2026-01-28 21:50:00"
     }
   },
   "backtest": {
@@ -363,12 +363,12 @@
   },
   "alerts": [
     {
-      "time": "2026-01-28T20:33:32.423374",
+      "time": "2026-01-28T21:03:39.371118",
       "type": "info",
-      "message": "MNQ parquet refreshed with 4602 bars"
+      "message": "MNQ parquet refreshed with 12917 bars"
     }
   ],
-  "check_count": 666,
+  "check_count": 667,
   "config": {
     "BTC": {
       "SL_PCT": 0.7,
