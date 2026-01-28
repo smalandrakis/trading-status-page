@@ -1,6 +1,6 @@
 {
-  "last_update": "2026-01-28 12:00:40 CET",
-  "last_update_utc": "2026-01-28 11:00:40 UTC",
+  "last_update": "2026-01-28 12:30:46 CET",
+  "last_update_utc": "2026-01-28 11:30:46 UTC",
   "bots": {
     "BTC": {
       "running": true,
@@ -18,7 +18,7 @@
       "last_log_time": "2026-01-23 19:18:41",
       "pnl_24h": {
         "realized": 0,
-        "unrealized": 34.68,
+        "unrealized": 28.62,
         "trades": 0,
         "wins": 0,
         "losses": 0,
@@ -27,15 +27,15 @@
             "id": "4h_0.5pct_SHORT",
             "direction": "SHORT",
             "entry": 89575.45,
-            "current": 89402.04,
-            "pnl": 17.34
+            "current": 89432.37,
+            "pnl": 14.31
           },
           {
             "id": "2h_0.5pct_SHORT",
             "direction": "SHORT",
             "entry": 89575.45,
-            "current": 89402.04,
-            "pnl": 17.34
+            "current": 89432.37,
+            "pnl": 14.31
           }
         ],
         "closed_trades": []
@@ -100,16 +100,16 @@
       "healthy": true,
       "bars": 2000,
       "last_timestamp": "2026-01-26 22:55:00",
-      "freshness_minutes": 2165.7,
+      "freshness_minutes": 2195.8,
       "issues": [
-        "Stale data: 2166 min old"
+        "Stale data: 2196 min old"
       ]
     },
     "QQQ": {
       "healthy": true,
       "bars": 12850,
       "last_timestamp": "2026-01-26 22:15:00",
-      "freshness_minutes": 2205.7,
+      "freshness_minutes": 2235.8,
       "issues": []
     }
   },
@@ -174,7 +174,7 @@
         "4h_0.5pct_SHORT": 5.0
       },
       "timestamp": "2026-01-26 22:15:00",
-      "note": "Compared at common timestamp: 2026-01-26 22:15:00 (parquet latest: 2026-01-26 22:15:00, fresh latest: 2026-01-28 11:50:00)",
+      "note": "Compared at common timestamp: 2026-01-26 22:15:00 (parquet latest: 2026-01-26 22:15:00, fresh latest: 2026-01-28 12:20:00)",
       "indicators": {
         "bb_pct_b": 0.3212,
         "bb_condition": true,
@@ -362,7 +362,7 @@
     "error": "HTTPSConnectionPool(host='api.binance.com', port=443): Max retries exceeded with url: /api/v3/klines?symbol=BTCUSDT&interval=5m&limit=1000 (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x1314b2040>: Failed to resolve 'api.binance.com' ([Errno 8] nodename nor servname provided, or not known)\"))"
   },
   "alerts": [],
-  "check_count": 647,
+  "check_count": 648,
   "config": {
     "BTC": {
       "SL_PCT": 0.7,
