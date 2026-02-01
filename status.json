@@ -1,6 +1,6 @@
 {
-  "last_update": "2026-02-01 19:38:00 CET",
-  "last_update_utc": "2026-02-01 19:38:00 UTC",
+  "last_update": "2026-02-01 20:17:03 CET",
+  "last_update_utc": "2026-02-01 20:17:03 UTC",
   "bots": {
     "BTC": {
       "running": true,
@@ -18,26 +18,11 @@
       "last_log_time": "2026-01-23 19:18:41",
       "pnl_24h": {
         "realized": 0,
-        "unrealized": 2392.69,
+        "unrealized": 0,
         "trades": 0,
         "wins": 0,
         "losses": 0,
-        "open_positions": [
-          {
-            "id": "4h_0.5pct_SHORT",
-            "direction": "SHORT",
-            "entry": 89575.45,
-            "current": 77611.99,
-            "pnl": 1196.35
-          },
-          {
-            "id": "2h_0.5pct_SHORT",
-            "direction": "SHORT",
-            "entry": 89575.45,
-            "current": 77611.99,
-            "pnl": 1196.35
-          }
-        ],
+        "open_positions": [],
         "closed_trades": []
       }
     },
@@ -99,30 +84,24 @@
     "BTC": {
       "healthy": true,
       "bars": 2000,
-      "last_timestamp": "2026-02-01 03:50:00",
-      "freshness_minutes": 948.0,
+      "last_timestamp": "2026-02-01 19:35:00",
+      "freshness_minutes": 42.1,
       "issues": [
-        "Stale data: 948 min old"
+        "Stale data: 42 min old"
       ]
     },
     "QQQ": {
       "healthy": true,
       "bars": 12923,
       "last_timestamp": "2026-01-28 22:20:00",
-      "freshness_minutes": 5598.0,
+      "freshness_minutes": 5637.1,
       "issues": []
     }
   },
   "signal_match": {
     "BTC": {
       "match": false,
-      "differences": {
-        "2h_0.5pct": 1.2,
-        "4h_0.5pct": 6.1,
-        "6h_0.5pct": 13.6,
-        "2h_0.5pct_SHORT": 24.4,
-        "4h_0.5pct_SHORT": 30.8
-      },
+      "differences": {},
       "parquet_probs": {
         "2h_0.5pct": 46.9,
         "4h_0.5pct": 62.1,
@@ -130,29 +109,11 @@
         "2h_0.5pct_SHORT": 67.1,
         "4h_0.5pct_SHORT": 59.3
       },
-      "fresh_probs": {
-        "2h_0.5pct": 48.1,
-        "4h_0.5pct": 56.0,
-        "6h_0.5pct": 43.6,
-        "2h_0.5pct_SHORT": 42.7,
-        "4h_0.5pct_SHORT": 28.5
-      },
-      "timestamp": "2026-02-01 03:50:00",
-      "indicators": {
-        "bb_pct_b": 0.0721,
-        "macd": -13.1,
-        "macd_signal": 36.18,
-        "macd_hist": -49.2779,
-        "macd_hist_prev": -44.2682,
-        "roc_12": -0.7,
-        "roc_threshold": 0.4,
-        "long_condition": false,
-        "short_condition": true,
-        "macd_hist_increasing": false,
-        "macd_hist_decreasing": true
-      },
-      "indicator_signal": "SHORT",
-      "auto_fixed": true
+      "fresh_probs": {},
+      "timestamp": "2026-02-01 19:35:00",
+      "indicators": {},
+      "indicator_signal": false,
+      "error": "HTTPSConnectionPool(host='api.binance.com', port=443): Max retries exceeded with url: /api/v3/klines?symbol=BTCUSDT&interval=5m&limit=1000 (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x1310f5d60>: Failed to resolve 'api.binance.com' ([Errno 8] nodename nor servname provided, or not known)\"))"
     },
     "MNQ": {
       "match": true,
@@ -344,29 +305,8 @@
     "trade_count": 0,
     "error": "HTTPSConnectionPool(host='api.binance.com', port=443): Max retries exceeded with url: /api/v3/klines?symbol=BTCUSDT&interval=5m&limit=1000 (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x130e9b250>: Failed to resolve 'api.binance.com' ([Errno 8] nodename nor servname provided, or not known)\"))"
   },
-  "alerts": [
-    {
-      "time": "2026-02-01T19:38:03.157615",
-      "type": "warning",
-      "message": "BTC 6h_0.5pct mismatch: parquet=32.5% vs fresh=43.6%"
-    },
-    {
-      "time": "2026-02-01T19:38:05.807068",
-      "type": "info",
-      "message": "BTC parquet refreshed with 2000 bars"
-    },
-    {
-      "time": "2026-02-01T19:38:05.807820",
-      "type": "info",
-      "message": "BTC parquet auto-refreshed to fix mismatch"
-    },
-    {
-      "time": "2026-02-01T19:38:05.867206",
-      "type": "warning",
-      "message": "BTC signal still mismatched after refresh - may need investigation"
-    }
-  ],
-  "check_count": 712,
+  "alerts": [],
+  "check_count": 713,
   "config": {
     "BTC": {
       "SL_PCT": 0.7,
