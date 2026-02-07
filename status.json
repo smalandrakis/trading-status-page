@@ -1,6 +1,6 @@
 {
-  "last_update": "2026-02-07 10:53:35 CET",
-  "last_update_utc": "2026-02-07 09:53:35 UTC",
+  "last_update": "2026-02-08 00:28:34 CET",
+  "last_update_utc": "2026-02-07 23:28:34 UTC",
   "bots": {
     "BTC": {
       "running": true,
@@ -18,7 +18,7 @@
       "last_log_time": "2026-01-23 19:18:41",
       "pnl_24h": {
         "realized": 0,
-        "unrealized": 4331.07,
+        "unrealized": 4092.18,
         "trades": 0,
         "wins": 0,
         "losses": 0,
@@ -27,15 +27,15 @@
             "id": "4h_0.5pct_SHORT",
             "direction": "SHORT",
             "entry": 89575.45,
-            "current": 67920.1,
-            "pnl": 2165.53
+            "current": 69114.54,
+            "pnl": 2046.09
           },
           {
             "id": "2h_0.5pct_SHORT",
             "direction": "SHORT",
             "entry": 89575.45,
-            "current": 67920.1,
-            "pnl": 2165.53
+            "current": 69114.54,
+            "pnl": 2046.09
           }
         ],
         "closed_trades": []
@@ -100,29 +100,23 @@
       "healthy": true,
       "bars": 2000,
       "last_timestamp": "2026-02-05 15:45:00",
-      "freshness_minutes": 2528.6,
+      "freshness_minutes": 3343.6,
       "issues": [
-        "Stale data: 2529 min old"
+        "Stale data: 3344 min old"
       ]
     },
     "QQQ": {
       "healthy": true,
       "bars": 4558,
       "last_timestamp": "2026-02-06 17:50:00",
-      "freshness_minutes": 963.6,
+      "freshness_minutes": 1778.6,
       "issues": []
     }
   },
   "signal_match": {
     "BTC": {
-      "match": true,
-      "differences": {
-        "2h_0.5pct": 1.4,
-        "4h_0.5pct": 0.0,
-        "6h_0.5pct": 0.0,
-        "2h_0.5pct_SHORT": 1.4,
-        "4h_0.5pct_SHORT": 1.4
-      },
+      "match": false,
+      "differences": {},
       "parquet_probs": {
         "2h_0.5pct": 83.7,
         "4h_0.5pct": 85.1,
@@ -130,28 +124,11 @@
         "2h_0.5pct_SHORT": 53.0,
         "4h_0.5pct_SHORT": 31.3
       },
-      "fresh_probs": {
-        "2h_0.5pct": 82.3,
-        "4h_0.5pct": 85.1,
-        "6h_0.5pct": 51.0,
-        "2h_0.5pct_SHORT": 54.4,
-        "4h_0.5pct_SHORT": 29.9
-      },
+      "fresh_probs": {},
       "timestamp": "2026-02-05 15:45:00",
-      "indicators": {
-        "bb_pct_b": 0.1788,
-        "macd": -699.74,
-        "macd_signal": -504.87,
-        "macd_hist": -194.8777,
-        "macd_hist_prev": -225.6082,
-        "roc_12": -4.29,
-        "roc_threshold": 0.4,
-        "long_condition": false,
-        "short_condition": false,
-        "macd_hist_increasing": true,
-        "macd_hist_decreasing": false
-      },
-      "indicator_signal": false
+      "indicators": {},
+      "indicator_signal": false,
+      "error": "HTTPSConnectionPool(host='api.binance.com', port=443): Read timed out. (read timeout=10)"
     },
     "MNQ": {
       "match": true,
@@ -343,7 +320,7 @@
     "trade_count": 0
   },
   "alerts": [],
-  "check_count": 779,
+  "check_count": 780,
   "config": {
     "BTC": {
       "SL_PCT": 0.7,
