@@ -1,21 +1,21 @@
 {
-  "last_update": "2026-02-22 08:36:42 CET",
-  "last_update_utc": "2026-02-22 06:36:42 UTC",
+  "last_update": "2026-02-22 09:06:48 CET",
+  "last_update_utc": "2026-02-22 07:06:48 UTC",
   "bots": {
     "BTC": {
       "running": true,
       "pid": "15240",
       "probabilities": {
-        "2h_0.5pct": 11.5,
-        "4h_0.5pct": 14.3,
-        "6h_0.5pct": 46.7,
-        "2h_0.5pct_SHORT": 13.9,
-        "4h_0.5pct_SHORT": 23.8
+        "2h_0.5pct": 20.9,
+        "4h_0.5pct": 14.1,
+        "6h_0.5pct": 51.6,
+        "2h_0.5pct_SHORT": 20.1,
+        "4h_0.5pct_SHORT": 21.4
       },
       "positions": 0,
       "max_positions": 4,
-      "last_price": 68088.0,
-      "last_log_time": "2026-02-22 08:36:33",
+      "last_price": 68013.43,
+      "last_log_time": "2026-02-22 09:06:43",
       "pnl_24h": {
         "realized": 0,
         "unrealized": 0,
@@ -38,7 +38,7 @@
       "positions": 0,
       "max_positions": 4,
       "last_price": 608.75,
-      "last_log_time": "2026-02-22 08:36:39",
+      "last_log_time": "2026-02-22 09:06:42",
       "pnl_24h": {
         "realized": 0,
         "unrealized": 0,
@@ -60,7 +60,7 @@
       "positions": 0,
       "max_positions": 3,
       "last_price": 689.59,
-      "last_log_time": "2026-02-22 08:36:39",
+      "last_log_time": "2026-02-22 09:06:41",
       "pnl_24h": {
         "realized": 0,
         "unrealized": 0,
@@ -75,16 +75,16 @@
   "parquet_health": {
     "BTC": {
       "healthy": true,
-      "bars": 2271,
-      "last_timestamp": "2026-02-22 06:35:00",
-      "freshness_minutes": 1.7,
+      "bars": 2006,
+      "last_timestamp": "2026-02-22 07:05:00",
+      "freshness_minutes": 1.8,
       "issues": []
     },
     "QQQ": {
       "healthy": true,
       "bars": 13274,
       "last_timestamp": "2026-02-20 22:55:00",
-      "freshness_minutes": 1901.7,
+      "freshness_minutes": 1931.8,
       "issues": []
     }
   },
@@ -92,42 +92,41 @@
     "BTC": {
       "match": true,
       "differences": {
-        "2h_0.5pct": 0.0,
-        "4h_0.5pct": 0.0,
+        "2h_0.5pct": 2.3,
+        "4h_0.5pct": 2.6,
         "6h_0.5pct": 0.0,
-        "2h_0.5pct_SHORT": 0.0,
-        "4h_0.5pct_SHORT": 0.0
+        "2h_0.5pct_SHORT": 0.4,
+        "4h_0.5pct_SHORT": 0.6
       },
       "parquet_probs": {
-        "2h_0.5pct": 12.5,
-        "4h_0.5pct": 15.4,
-        "6h_0.5pct": 38.6,
-        "2h_0.5pct_SHORT": 17.6,
-        "4h_0.5pct_SHORT": 22.8
+        "2h_0.5pct": 20.9,
+        "4h_0.5pct": 14.1,
+        "6h_0.5pct": 51.6,
+        "2h_0.5pct_SHORT": 20.1,
+        "4h_0.5pct_SHORT": 21.4
       },
       "fresh_probs": {
-        "2h_0.5pct": 12.5,
-        "4h_0.5pct": 15.4,
-        "6h_0.5pct": 38.6,
-        "2h_0.5pct_SHORT": 17.6,
-        "4h_0.5pct_SHORT": 22.8
+        "2h_0.5pct": 23.2,
+        "4h_0.5pct": 16.7,
+        "6h_0.5pct": 51.6,
+        "2h_0.5pct_SHORT": 19.7,
+        "4h_0.5pct_SHORT": 20.8
       },
-      "timestamp": "2026-02-22 06:35:00",
+      "timestamp": "2026-02-22 07:05:00",
       "indicators": {
-        "bb_pct_b": 0.8114,
-        "macd": 29.86,
-        "macd_signal": 10.88,
-        "macd_hist": 18.9768,
-        "macd_hist_prev": 22.5362,
-        "roc_12": 0.2,
+        "bb_pct_b": 0.5455,
+        "macd": 17.53,
+        "macd_signal": 18.99,
+        "macd_hist": -1.4637,
+        "macd_hist_prev": 0.6104,
+        "roc_12": -0.01,
         "roc_threshold": 0.4,
         "long_condition": false,
         "short_condition": false,
         "macd_hist_increasing": false,
         "macd_hist_decreasing": true
       },
-      "indicator_signal": false,
-      "auto_fixed": true
+      "indicator_signal": false
     },
     "MNQ": {
       "match": true,
@@ -359,14 +358,8 @@
     "missed_hours": 6,
     "trade_count": 7
   },
-  "alerts": [
-    {
-      "time": "2026-02-22T06:36:46.093062",
-      "type": "info",
-      "message": "BTC parquet refreshed with 2000 bars"
-    }
-  ],
-  "check_count": 110,
+  "alerts": [],
+  "check_count": 111,
   "config": {
     "BTC": {
       "SL_PCT": 0.7,
