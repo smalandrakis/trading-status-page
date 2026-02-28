@@ -1,6 +1,6 @@
 {
-  "last_update": "2026-02-28 18:51:45 CET",
-  "last_update_utc": "2026-02-28 17:51:45 UTC",
+  "last_update": "2026-02-28 19:26:50 CET",
+  "last_update_utc": "2026-02-28 18:26:50 UTC",
   "bots": {
     "BTC": {
       "running": true,
@@ -47,8 +47,8 @@
       },
       "positions": 0,
       "max_positions": 4,
-      "last_price": 606.69,
-      "last_log_time": "2026-02-28 17:51:18",
+      "last_price": 605.64,
+      "last_log_time": "2026-02-28 19:25:46",
       "pnl_24h": {
         "realized": 0,
         "unrealized": 0,
@@ -69,8 +69,8 @@
       },
       "positions": 0,
       "max_positions": 3,
-      "last_price": 685.1,
-      "last_log_time": "2026-02-28 17:51:18",
+      "last_price": 687.52,
+      "last_log_time": "2026-02-28 19:25:46",
       "pnl_24h": {
         "realized": 0,
         "unrealized": 0,
@@ -87,23 +87,29 @@
       "healthy": true,
       "bars": 2000,
       "last_timestamp": "2026-02-27 23:10:00",
-      "freshness_minutes": 1121.8,
+      "freshness_minutes": 1155.7,
       "issues": [
-        "Stale data: 1122 min old"
+        "Stale data: 1156 min old"
       ]
     },
     "QQQ": {
       "healthy": true,
       "bars": 13291,
       "last_timestamp": "2026-02-27 22:55:00",
-      "freshness_minutes": 1136.8,
+      "freshness_minutes": 1170.7,
       "issues": []
     }
   },
   "signal_match": {
     "BTC": {
-      "match": false,
-      "differences": {},
+      "match": true,
+      "differences": {
+        "2h_0.5pct": 0.9,
+        "4h_0.5pct": 0.4,
+        "6h_0.5pct": 1.1,
+        "2h_0.5pct_SHORT": 2.2,
+        "4h_0.5pct_SHORT": 1.2
+      },
       "parquet_probs": {
         "2h_0.5pct": 44.9,
         "4h_0.5pct": 63.7,
@@ -111,11 +117,28 @@
         "2h_0.5pct_SHORT": 37.3,
         "4h_0.5pct_SHORT": 54.7
       },
-      "fresh_probs": {},
+      "fresh_probs": {
+        "2h_0.5pct": 45.8,
+        "4h_0.5pct": 64.1,
+        "6h_0.5pct": 62.2,
+        "2h_0.5pct_SHORT": 39.5,
+        "4h_0.5pct_SHORT": 53.5
+      },
       "timestamp": "2026-02-27 23:10:00",
-      "indicators": {},
-      "indicator_signal": false,
-      "error": "HTTPSConnectionPool(host='api.binance.com', port=443): Max retries exceeded with url: /api/v3/klines?symbol=BTCUSDT&interval=5m&limit=1000 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x130aae160>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))"
+      "indicators": {
+        "bb_pct_b": 0.8031,
+        "macd": 40.76,
+        "macd_signal": 2.87,
+        "macd_hist": 37.8917,
+        "macd_hist_prev": 36.7516,
+        "roc_12": 0.3,
+        "roc_threshold": 0.4,
+        "long_condition": false,
+        "short_condition": false,
+        "macd_hist_increasing": true,
+        "macd_hist_decreasing": false
+      },
+      "indicator_signal": false
     },
     "MNQ": {
       "match": true,
@@ -147,43 +170,13 @@
     }
   },
   "backtest": {
-    "last_run": "2026-02-28 06:15 UTC",
+    "last_run": "2026-02-28 18:26 UTC",
     "period": "24h",
-    "total_signals": 199,
-    "long_signals": 197,
-    "short_signals": 2,
-    "signal_hours": 16,
+    "total_signals": 53,
+    "long_signals": 53,
+    "short_signals": 0,
+    "signal_hours": 8,
     "recent_signals": [
-      {
-        "time": "22:20 UTC",
-        "price": 65483.0,
-        "model": "6h_0.5pct",
-        "prob": 72.9
-      },
-      {
-        "time": "22:25 UTC",
-        "price": 65467.0,
-        "model": "6h_0.5pct",
-        "prob": 74.0
-      },
-      {
-        "time": "22:30 UTC",
-        "price": 64986.0,
-        "model": "2h_0.5pct",
-        "prob": 65.4
-      },
-      {
-        "time": "22:30 UTC",
-        "price": 64986.0,
-        "model": "4h_0.5pct",
-        "prob": 74.5
-      },
-      {
-        "time": "22:30 UTC",
-        "price": 64986.0,
-        "model": "6h_0.5pct",
-        "prob": 78.8
-      },
       {
         "time": "22:35 UTC",
         "price": 65274.0,
@@ -213,91 +206,121 @@
         "price": 65638.0,
         "model": "4h_0.5pct",
         "prob": 67.0
+      },
+      {
+        "time": "06:15 UTC",
+        "price": 64944.0,
+        "model": "2h_0.5pct",
+        "prob": 66.3
+      },
+      {
+        "time": "07:20 UTC",
+        "price": 63433.0,
+        "model": "2h_0.5pct",
+        "prob": 65.7
+      },
+      {
+        "time": "09:05 UTC",
+        "price": 63391.0,
+        "model": "4h_0.5pct",
+        "prob": 66.5
+      },
+      {
+        "time": "15:10 UTC",
+        "price": 64224.0,
+        "model": "2h_0.5pct",
+        "prob": 66.1
+      },
+      {
+        "time": "15:10 UTC",
+        "price": 64224.0,
+        "model": "4h_0.5pct",
+        "prob": 65.2
       }
     ],
     "hourly_summary": [
       {
-        "hour": "19:00",
-        "price": 65392.0,
-        "long": 79.0,
-        "short": 50.0,
+        "hour": "07:00",
+        "price": 63826.0,
+        "long": 66.0,
+        "short": 39.0,
         "signal": "LONG"
       },
       {
-        "hour": "20:00",
-        "price": 65595.0,
-        "long": 65.0,
-        "short": 49.0,
+        "hour": "08:00",
+        "price": 63473.0,
+        "long": 62.0,
+        "short": 41.0,
         "signal": null
       },
       {
-        "hour": "21:00",
-        "price": 65528.0,
-        "long": 71.0,
-        "short": 45.0,
+        "hour": "09:00",
+        "price": 63659.0,
+        "long": 67.0,
+        "short": 42.0,
         "signal": "LONG"
       },
       {
-        "hour": "22:00",
-        "price": 65638.0,
-        "long": 79.0,
-        "short": 57.0,
-        "signal": "LONG"
+        "hour": "10:00",
+        "price": 64010.0,
+        "long": 55.0,
+        "short": 51.0,
+        "signal": null
       },
       {
-        "hour": "23:00",
-        "price": 65872.0,
-        "long": 64.0,
+        "hour": "11:00",
+        "price": 63844.0,
+        "long": 58.0,
+        "short": 50.0,
+        "signal": null
+      },
+      {
+        "hour": "12:00",
+        "price": 64017.0,
+        "long": 60.0,
+        "short": 38.0,
+        "signal": null
+      },
+      {
+        "hour": "13:00",
+        "price": 65106.0,
+        "long": 59.0,
         "short": 53.0,
         "signal": null
       },
       {
-        "hour": "00:00",
-        "price": 65942.0,
-        "long": 53.0,
-        "short": 32.0,
+        "hour": "14:00",
+        "price": 64436.0,
+        "long": 62.0,
+        "short": 53.0,
         "signal": null
       },
       {
-        "hour": "01:00",
-        "price": 65770.0,
-        "long": 51.0,
-        "short": 22.0,
+        "hour": "15:00",
+        "price": 64841.0,
+        "long": 66.0,
+        "short": 57.0,
+        "signal": "LONG"
+      },
+      {
+        "hour": "16:00",
+        "price": 65094.0,
+        "long": 58.0,
+        "short": 50.0,
         "signal": null
       },
       {
-        "hour": "02:00",
-        "price": 65961.0,
+        "hour": "17:00",
+        "price": 65443.0,
+        "long": 56.0,
+        "short": 52.0,
+        "signal": null
+      },
+      {
+        "hour": "18:00",
+        "price": 65231.0,
         "long": 50.0,
-        "short": 21.0,
-        "signal": null
-      },
-      {
-        "hour": "03:00",
-        "price": 65797.0,
-        "long": 49.0,
-        "short": 20.0,
-        "signal": null
-      },
-      {
-        "hour": "04:00",
-        "price": 65663.0,
-        "long": 55.0,
-        "short": 23.0,
-        "signal": null
-      },
-      {
-        "hour": "05:00",
-        "price": 65591.0,
-        "long": 46.0,
-        "short": 18.0,
-        "signal": null
-      },
-      {
-        "hour": "06:00",
-        "price": 65581.0,
-        "long": 41.0,
-        "short": 16.0,
+        "short": 47.0,
         "signal": null
       }
     ],
@@ -309,47 +332,14 @@
         "model": "4h_0.5pct",
         "pnl": "-$28",
         "result": "\u274c"
-      },
-      {
-        "time": "16:33 UTC",
-        "direction": "LONG",
-        "price": 65943.0,
-        "model": "4h_0.5pct",
-        "pnl": "+$15",
-        "result": "\u2705"
-      },
-      {
-        "time": "15:40 UTC",
-        "direction": "LONG",
-        "price": 66085.0,
-        "model": "4h_0.5pct",
-        "pnl": "-$29",
-        "result": "\u274c"
-      },
-      {
-        "time": "13:30 UTC",
-        "direction": "SHORT",
-        "price": 65889.0,
-        "model": "2h_0.5pct_SHORT",
-        "pnl": "-$29",
-        "result": "\u274c"
-      },
-      {
-        "time": "12:15 UTC",
-        "direction": "SHORT",
-        "price": 66656.0,
-        "model": "4h_0.5pct_SHORT",
-        "pnl": "+$17",
-        "result": "\u2705"
       }
     ],
-    "matched_hours": 5,
-    "missed_hours": 11,
-    "trade_count": 9,
-    "error": "HTTPSConnectionPool(host='api.binance.com', port=443): Max retries exceeded with url: /api/v3/klines?symbol=BTCUSDT&interval=5m&limit=1000 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x130a76430>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))"
+    "matched_hours": 1,
+    "missed_hours": 7,
+    "trade_count": 1
   },
   "alerts": [],
-  "check_count": 90,
+  "check_count": 91,
   "config": {
     "BTC": {
       "SL_PCT": 0.7,
