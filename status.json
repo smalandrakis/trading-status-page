@@ -1,6 +1,6 @@
 {
-  "last_update": "2026-03-01 15:54:17 CET",
-  "last_update_utc": "2026-03-01 14:54:17 UTC",
+  "last_update": "2026-03-01 16:55:08 CET",
+  "last_update_utc": "2026-03-01 15:55:08 UTC",
   "bots": {
     "BTC": {
       "running": false,
@@ -77,29 +77,23 @@
       "healthy": true,
       "bars": 2035,
       "last_timestamp": "2026-02-28 23:45:00",
-      "freshness_minutes": 909.2,
+      "freshness_minutes": 970.1,
       "issues": [
-        "Stale data: 909 min old"
+        "Stale data: 970 min old"
       ]
     },
     "QQQ": {
       "healthy": true,
       "bars": 13291,
       "last_timestamp": "2026-02-27 22:55:00",
-      "freshness_minutes": 2399.2,
+      "freshness_minutes": 2460.1,
       "issues": []
     }
   },
   "signal_match": {
     "BTC": {
-      "match": true,
-      "differences": {
-        "2h_0.5pct": 0.0,
-        "4h_0.5pct": 1.2,
-        "6h_0.5pct": 0.4,
-        "2h_0.5pct_SHORT": 0.1,
-        "4h_0.5pct_SHORT": 0.0
-      },
+      "match": false,
+      "differences": {},
       "parquet_probs": {
         "2h_0.5pct": 30.1,
         "4h_0.5pct": 47.7,
@@ -107,28 +101,11 @@
         "2h_0.5pct_SHORT": 44.3,
         "4h_0.5pct_SHORT": 42.8
       },
-      "fresh_probs": {
-        "2h_0.5pct": 30.1,
-        "4h_0.5pct": 46.5,
-        "6h_0.5pct": 34.4,
-        "2h_0.5pct_SHORT": 44.2,
-        "4h_0.5pct_SHORT": 42.8
-      },
+      "fresh_probs": {},
       "timestamp": "2026-02-28 23:45:00",
-      "indicators": {
-        "bb_pct_b": 0.4357,
-        "macd": 39.54,
-        "macd_signal": 91.08,
-        "macd_hist": -51.5437,
-        "macd_hist_prev": -66.4486,
-        "roc_12": -0.7,
-        "roc_threshold": 0.4,
-        "long_condition": false,
-        "short_condition": false,
-        "macd_hist_increasing": true,
-        "macd_hist_decreasing": false
-      },
-      "indicator_signal": false
+      "indicators": {},
+      "indicator_signal": false,
+      "error": "HTTPSConnectionPool(host='api.binance.com', port=443): Max retries exceeded with url: /api/v3/klines?symbol=BTCUSDT&interval=5m&limit=1000 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x130ec6ca0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))"
     },
     "MNQ": {
       "match": true,
@@ -320,7 +297,7 @@
     "trade_count": 0
   },
   "alerts": [],
-  "check_count": 110,
+  "check_count": 111,
   "config": {
     "BTC": {
       "SL_PCT": 0.7,
