@@ -1,6 +1,6 @@
 {
-  "last_update": "2026-03-01 17:56:09 CET",
-  "last_update_utc": "2026-03-01 16:56:09 UTC",
+  "last_update": "2026-03-01 18:57:43 CET",
+  "last_update_utc": "2026-03-01 17:57:43 UTC",
   "bots": {
     "BTC": {
       "running": false,
@@ -77,16 +77,16 @@
       "healthy": true,
       "bars": 2035,
       "last_timestamp": "2026-02-28 23:45:00",
-      "freshness_minutes": 1031.1,
+      "freshness_minutes": 1092.3,
       "issues": [
-        "Stale data: 1031 min old"
+        "Stale data: 1092 min old"
       ]
     },
     "QQQ": {
       "healthy": true,
       "bars": 13291,
       "last_timestamp": "2026-02-27 22:55:00",
-      "freshness_minutes": 2521.1,
+      "freshness_minutes": 2582.3,
       "issues": []
     }
   },
@@ -105,7 +105,7 @@
       "timestamp": "2026-02-28 23:45:00",
       "indicators": {},
       "indicator_signal": false,
-      "error": "HTTPSConnectionPool(host='api.binance.com', port=443): Max retries exceeded with url: /api/v3/klines?symbol=BTCUSDT&interval=5m&limit=1000 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x13086ed00>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))"
+      "error": "HTTPSConnectionPool(host='api.binance.com', port=443): Read timed out. (read timeout=10)"
     },
     "MNQ": {
       "match": true,
@@ -297,7 +297,7 @@
     "trade_count": 0
   },
   "alerts": [],
-  "check_count": 112,
+  "check_count": 113,
   "config": {
     "BTC": {
       "SL_PCT": 0.7,
