@@ -1,10 +1,10 @@
 {
-  "last_update": "2026-03-01 02:16:27 CET",
-  "last_update_utc": "2026-03-01 01:16:27 UTC",
+  "last_update": "2026-03-01 02:47:46 CET",
+  "last_update_utc": "2026-03-01 01:47:46 UTC",
   "bots": {
     "BTC": {
-      "running": true,
-      "pid": "43609",
+      "running": false,
+      "pid": null,
       "probabilities": {
         "2h_0.5pct": 30.1,
         "4h_0.5pct": 47.7,
@@ -37,8 +37,8 @@
       },
       "positions": 0,
       "max_positions": 4,
-      "last_price": 605.64,
-      "last_log_time": "2026-03-01 00:47:46",
+      "last_price": 605.38,
+      "last_log_time": "2026-03-01 02:17:00",
       "pnl_24h": {
         "realized": 0,
         "unrealized": 0,
@@ -59,8 +59,8 @@
       },
       "positions": 0,
       "max_positions": 3,
-      "last_price": 687.52,
-      "last_log_time": "2026-03-01 00:47:46",
+      "last_price": 683.69,
+      "last_log_time": "2026-03-01 02:17:00",
       "pnl_24h": {
         "realized": 0,
         "unrealized": 0,
@@ -77,16 +77,16 @@
       "healthy": true,
       "bars": 2035,
       "last_timestamp": "2026-02-28 23:45:00",
-      "freshness_minutes": 91.0,
+      "freshness_minutes": 122.5,
       "issues": [
-        "Stale data: 91 min old"
+        "Stale data: 122 min old"
       ]
     },
     "QQQ": {
       "healthy": true,
       "bars": 13291,
       "last_timestamp": "2026-02-27 22:55:00",
-      "freshness_minutes": 1581.0,
+      "freshness_minutes": 1612.5,
       "issues": []
     }
   },
@@ -105,7 +105,7 @@
       "timestamp": "2026-02-28 23:45:00",
       "indicators": {},
       "indicator_signal": false,
-      "error": "HTTPSConnectionPool(host='api.binance.com', port=443): Max retries exceeded with url: /api/v3/klines?symbol=BTCUSDT&interval=5m&limit=1000 (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x130af9c40>, 'Connection to api.binance.com timed out. (connect timeout=10)'))"
+      "error": "HTTPSConnectionPool(host='api.binance.com', port=443): Max retries exceeded with url: /api/v3/klines?symbol=BTCUSDT&interval=5m&limit=1000&endTime=1772029799999 (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x130a4bbb0>, 'Connection to api.binance.com timed out. (connect timeout=10)'))"
     },
     "MNQ": {
       "match": true,
@@ -306,7 +306,7 @@
     "trade_count": 1
   },
   "alerts": [],
-  "check_count": 97,
+  "check_count": 98,
   "config": {
     "BTC": {
       "SL_PCT": 0.7,
