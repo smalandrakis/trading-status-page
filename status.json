@@ -1,21 +1,21 @@
 {
-  "last_update": "2026-03-03 00:00:24 CET",
-  "last_update_utc": "2026-03-02 23:00:24 UTC",
+  "last_update": "2026-03-03 00:47:46 CET",
+  "last_update_utc": "2026-03-02 23:47:46 UTC",
   "bots": {
     "BTC": {
       "running": true,
       "pid": "22263",
       "probabilities": {
-        "2h_0.5pct": 37.9,
-        "4h_0.5pct": 43.1,
-        "6h_0.5pct": 41.0,
-        "2h_0.5pct_SHORT": 57.7,
-        "4h_0.5pct_SHORT": 43.3
+        "2h_0.5pct": 48.6,
+        "4h_0.5pct": 51.5,
+        "6h_0.5pct": 56.6,
+        "2h_0.5pct_SHORT": 54.7,
+        "4h_0.5pct_SHORT": 42.2
       },
       "positions": 0,
       "max_positions": 4,
-      "last_price": 69300.0,
-      "last_log_time": "2026-03-02 23:14:22",
+      "last_price": 68841.49,
+      "last_log_time": "2026-03-03 00:31:56",
       "pnl_24h": {
         "realized": -30.03,
         "unrealized": 0,
@@ -165,7 +165,7 @@
       "positions": 0,
       "max_positions": 4,
       "last_price": 607.5,
-      "last_log_time": "2026-03-02 23:14:10",
+      "last_log_time": "2026-03-03 00:32:02",
       "pnl_24h": {
         "realized": 0,
         "unrealized": 0,
@@ -184,17 +184,32 @@
         "2h_0.5pct_SHORT": 7.1,
         "4h_0.5pct_SHORT": 11.4
       },
-      "positions": 0,
+      "positions": 1,
       "max_positions": 3,
-      "last_price": 688.45,
-      "last_log_time": "2026-03-02 23:14:21",
+      "last_price": 687.23,
+      "last_log_time": "2026-03-03 00:31:59",
       "pnl_24h": {
         "realized": 0,
-        "unrealized": 0,
+        "unrealized": 55319.51,
         "trades": 0,
         "wins": 0,
         "losses": 0,
-        "open_positions": [],
+        "open_positions": [
+          {
+            "id": "orphan",
+            "direction": "short",
+            "entry": 34398.13,
+            "current": 6783.0,
+            "pnl": 55230.26
+          },
+          {
+            "id": "ml_v3_long",
+            "direction": "long",
+            "entry": 6872.25,
+            "current": 6783.0,
+            "pnl": 89.25
+          }
+        ],
         "closed_trades": []
       }
     }
@@ -204,16 +219,16 @@
       "healthy": true,
       "bars": 2015,
       "last_timestamp": "2026-03-02 22:10:00",
-      "freshness_minutes": 50.4,
+      "freshness_minutes": 81.8,
       "issues": [
-        "Stale data: 50 min old"
+        "Stale data: 82 min old"
       ]
     },
     "QQQ": {
       "healthy": true,
       "bars": 12699,
       "last_timestamp": "2026-03-02 22:55:00",
-      "freshness_minutes": 5.4,
+      "freshness_minutes": 36.8,
       "issues": []
     }
   },
@@ -232,7 +247,7 @@
       "timestamp": "2026-03-02 22:10:00",
       "indicators": {},
       "indicator_signal": false,
-      "error": "HTTPSConnectionPool(host='api.binance.com', port=443): Max retries exceeded with url: /api/v3/klines?symbol=BTCUSDT&interval=5m&limit=1000 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x130cd5d00>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))"
+      "error": "HTTPSConnectionPool(host='api.binance.com', port=443): Read timed out."
     },
     "MNQ": {
       "match": true,
@@ -255,7 +270,7 @@
         "4h_0.5pct_SHORT": 24.6
       },
       "timestamp": "2026-03-02 22:55:00",
-      "note": "Compared at common timestamp: 2026-03-02 22:55:00 (parquet latest: 2026-03-02 22:55:00, fresh latest: 2026-03-02 22:55:00)",
+      "note": "Compared at common timestamp: 2026-03-02 22:55:00 (parquet latest: 2026-03-02 22:55:00, fresh latest: 2026-03-03 00:35:00)",
       "indicators": {
         "bb_pct_b": 0.4013,
         "bb_condition": true,
@@ -270,15 +285,15 @@
     "SPY": {
       "match": true,
       "indicators": {
-        "rsi": 45.49,
+        "rsi": 34.66,
         "rsi_threshold": 40,
-        "rsi_condition": false,
-        "bb_pct_b": 0.4013,
+        "rsi_condition": true,
+        "bb_pct_b": 0.0371,
         "bb_threshold": 0.4,
-        "bb_condition": false
+        "bb_condition": true
       },
-      "indicator_signal": false,
-      "timestamp": "2026-03-02 22:55:00"
+      "indicator_signal": true,
+      "timestamp": "2026-03-03 00:35:00"
     }
   },
   "backtest": {
@@ -476,7 +491,7 @@
     "error": "HTTPSConnectionPool(host='api.binance.com', port=443): Read timed out. (read timeout=10)"
   },
   "alerts": [],
-  "check_count": 162,
+  "check_count": 163,
   "config": {
     "BTC": {
       "SL_PCT": 0.7,
