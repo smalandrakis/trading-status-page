@@ -1,6 +1,6 @@
 {
-  "last_update": "2026-03-03 06:45:24 CET",
-  "last_update_utc": "2026-03-03 05:45:24 UTC",
+  "last_update": "2026-03-03 08:11:46 CET",
+  "last_update_utc": "2026-03-03 07:11:46 UTC",
   "bots": {
     "BTC": {
       "running": true,
@@ -139,15 +139,15 @@
       "running": true,
       "pid": "4210",
       "probabilities": {
-        "2h_0.5pct": 3.4,
-        "4h_0.5pct": 8.1,
-        "2h_0.5pct_SHORT": 3.1,
-        "4h_0.5pct_SHORT": 37.2
+        "2h_0.5pct": 14.8,
+        "4h_0.5pct": 23.9,
+        "2h_0.5pct_SHORT": 10.4,
+        "4h_0.5pct_SHORT": 15.4
       },
       "positions": 0,
       "max_positions": 4,
-      "last_price": 602.25,
-      "last_log_time": "2026-03-03 06:29:29",
+      "last_price": 601.38,
+      "last_log_time": "2026-03-03 07:13:33",
       "pnl_24h": {
         "realized": 0,
         "unrealized": 0,
@@ -168,11 +168,11 @@
       },
       "positions": 1,
       "max_positions": 3,
-      "last_price": 683.9,
-      "last_log_time": "2026-03-03 06:29:29",
+      "last_price": 683.38,
+      "last_log_time": "2026-03-03 07:13:27",
       "pnl_24h": {
         "realized": 0,
-        "unrealized": 89.23,
+        "unrealized": 117.71,
         "trades": 0,
         "wins": 0,
         "losses": 0,
@@ -181,8 +181,8 @@
             "id": "ml_v3_long",
             "direction": "long",
             "entry": 6846.0,
-            "current": 6756.77,
-            "pnl": 89.23
+            "current": 6728.29,
+            "pnl": 117.71
           }
         ],
         "closed_trades": []
@@ -194,16 +194,16 @@
       "healthy": true,
       "bars": 2031,
       "last_timestamp": "2026-03-02 23:30:00",
-      "freshness_minutes": 375.4,
+      "freshness_minutes": 415.8,
       "issues": [
-        "Stale data: 375 min old"
+        "Stale data: 416 min old"
       ]
     },
     "QQQ": {
       "healthy": true,
-      "bars": 12796,
-      "last_timestamp": "2026-03-03 04:15:00",
-      "freshness_minutes": 90.4,
+      "bars": 12811,
+      "last_timestamp": "2026-03-03 07:15:00",
+      "freshness_minutes": -49.2,
       "issues": []
     }
   },
@@ -222,35 +222,54 @@
       "timestamp": "2026-03-02 23:30:00",
       "indicators": {},
       "indicator_signal": false,
-      "error": "HTTPSConnectionPool(host='api.binance.com', port=443): Max retries exceeded with url: /api/v3/klines?symbol=BTCUSDT&interval=5m&limit=1000 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x130e6f2b0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))"
+      "error": "HTTPSConnectionPool(host='api.binance.com', port=443): Read timed out."
     },
     "MNQ": {
       "match": true,
-      "differences": {},
-      "parquet_probs": {
-        "2h_0.5pct": 1.9,
-        "4h_0.5pct": 7.2,
-        "2h_0.5pct_SHORT": 3.3,
-        "4h_0.5pct_SHORT": 38.1
+      "differences": {
+        "2h_0.5pct": 0.0,
+        "4h_0.5pct": 0.0,
+        "2h_0.5pct_SHORT": 0.0,
+        "4h_0.5pct_SHORT": 0.0
       },
-      "fresh_probs": {},
-      "timestamp": "2026-03-03 04:15:00",
-      "note": "Could not download fresh NQ=F data",
-      "indicators": {},
-      "indicator_signal": false
+      "parquet_probs": {
+        "2h_0.5pct": 18.9,
+        "4h_0.5pct": 31.8,
+        "2h_0.5pct_SHORT": 13.1,
+        "4h_0.5pct_SHORT": 13.2
+      },
+      "fresh_probs": {
+        "2h_0.5pct": 18.9,
+        "4h_0.5pct": 31.8,
+        "2h_0.5pct_SHORT": 13.1,
+        "4h_0.5pct_SHORT": 13.2
+      },
+      "timestamp": "2026-03-03 07:15:00",
+      "note": "Re-compared at 2026-03-03 07:15:00 after refresh",
+      "indicators": {
+        "bb_pct_b": 0.1434,
+        "bb_condition": true,
+        "roc_12": -0.26,
+        "macd_hist": -0.0381,
+        "macd_hist_prev": -0.0378,
+        "macd_hist_increasing": false,
+        "macd_hist_decreasing": true
+      },
+      "indicator_signal": true,
+      "auto_fixed": true
     },
     "SPY": {
       "match": true,
       "indicators": {
-        "rsi": 40.65,
+        "rsi": 20.41,
         "rsi_threshold": 40,
-        "rsi_condition": false,
-        "bb_pct_b": 0.4577,
+        "rsi_condition": true,
+        "bb_pct_b": 0.1434,
         "bb_threshold": 0.4,
-        "bb_condition": false
+        "bb_condition": true
       },
-      "indicator_signal": false,
-      "timestamp": "2026-03-03 04:15:00"
+      "indicator_signal": true,
+      "timestamp": "2026-03-03 07:15:00"
     }
   },
   "backtest": {
@@ -447,8 +466,14 @@
     "trade_count": 4,
     "error": "HTTPSConnectionPool(host='api.binance.com', port=443): Read timed out."
   },
-  "alerts": [],
-  "check_count": 171,
+  "alerts": [
+    {
+      "time": "2026-03-03T06:26:04.976896",
+      "type": "info",
+      "message": "MNQ parquet refreshed with 12811 bars"
+    }
+  ],
+  "check_count": 172,
   "config": {
     "BTC": {
       "SL_PCT": 0.7,
