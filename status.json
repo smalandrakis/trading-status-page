@@ -1,6 +1,6 @@
 {
-  "last_update": "2026-03-03 04:07:12 CET",
-  "last_update_utc": "2026-03-03 03:07:12 UTC",
+  "last_update": "2026-03-03 04:43:43 CET",
+  "last_update_utc": "2026-03-03 03:43:43 UTC",
   "bots": {
     "BTC": {
       "running": true,
@@ -146,8 +146,8 @@
       },
       "positions": 0,
       "max_positions": 4,
-      "last_price": 602.35,
-      "last_log_time": "2026-03-03 03:35:57",
+      "last_price": 603.24,
+      "last_log_time": "2026-03-03 04:27:49",
       "pnl_24h": {
         "realized": 0,
         "unrealized": 0,
@@ -168,11 +168,11 @@
       },
       "positions": 1,
       "max_positions": 3,
-      "last_price": 684.05,
-      "last_log_time": "2026-03-03 03:36:02",
+      "last_price": 685.08,
+      "last_log_time": "2026-03-03 04:27:49",
       "pnl_24h": {
         "realized": 0,
-        "unrealized": 116.37,
+        "unrealized": 122.82,
         "trades": 0,
         "wins": 0,
         "losses": 0,
@@ -181,8 +181,8 @@
             "id": "ml_v3_long",
             "direction": "long",
             "entry": 6872.25,
-            "current": 6755.88,
-            "pnl": 116.37
+            "current": 6749.43,
+            "pnl": 122.82
           }
         ],
         "closed_trades": []
@@ -194,16 +194,16 @@
       "healthy": true,
       "bars": 2031,
       "last_timestamp": "2026-03-02 23:30:00",
-      "freshness_minutes": 217.1,
+      "freshness_minutes": 253.6,
       "issues": [
-        "Stale data: 217 min old"
+        "Stale data: 254 min old"
       ]
     },
     "QQQ": {
       "healthy": true,
       "bars": 12737,
       "last_timestamp": "2026-03-03 03:05:00",
-      "freshness_minutes": 2.1,
+      "freshness_minutes": 38.6,
       "issues": []
     }
   },
@@ -222,35 +222,53 @@
       "timestamp": "2026-03-02 23:30:00",
       "indicators": {},
       "indicator_signal": false,
-      "error": "HTTPSConnectionPool(host='api.binance.com', port=443): Max retries exceeded with url: /api/v3/klines?symbol=BTCUSDT&interval=5m&limit=1000 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x1310a38e0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))"
+      "error": "HTTPSConnectionPool(host='api.binance.com', port=443): Max retries exceeded with url: /api/v3/klines?symbol=BTCUSDT&interval=5m&limit=1000 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x130f82880>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))"
     },
     "MNQ": {
       "match": true,
-      "differences": {},
+      "differences": {
+        "2h_0.5pct": 0.2,
+        "4h_0.5pct": 4.7,
+        "2h_0.5pct_SHORT": 2.2,
+        "4h_0.5pct_SHORT": 0.5
+      },
       "parquet_probs": {
         "2h_0.5pct": 2.5,
         "4h_0.5pct": 32.0,
         "2h_0.5pct_SHORT": 3.3,
         "4h_0.5pct_SHORT": 36.0
       },
-      "fresh_probs": {},
+      "fresh_probs": {
+        "2h_0.5pct": 2.3,
+        "4h_0.5pct": 27.3,
+        "2h_0.5pct_SHORT": 5.5,
+        "4h_0.5pct_SHORT": 35.5
+      },
       "timestamp": "2026-03-03 03:05:00",
-      "note": "Could not download fresh NQ=F data",
-      "indicators": {},
-      "indicator_signal": false
+      "note": "Compared at common timestamp: 2026-03-03 03:05:00 (parquet latest: 2026-03-03 03:05:00, fresh latest: 2026-03-03 04:30:00)",
+      "indicators": {
+        "bb_pct_b": -0.0491,
+        "bb_condition": true,
+        "roc_12": -0.34,
+        "macd_hist": -0.1676,
+        "macd_hist_prev": -0.1517,
+        "macd_hist_increasing": false,
+        "macd_hist_decreasing": true
+      },
+      "indicator_signal": true
     },
     "SPY": {
       "match": true,
       "indicators": {
-        "rsi": 23.07,
+        "rsi": 33.52,
         "rsi_threshold": 40,
         "rsi_condition": true,
-        "bb_pct_b": -0.0491,
+        "bb_pct_b": 0.1974,
         "bb_threshold": 0.4,
         "bb_condition": true
       },
       "indicator_signal": true,
-      "timestamp": "2026-03-03 03:05:00"
+      "timestamp": "2026-03-03 04:30:00"
     }
   },
   "backtest": {
@@ -448,7 +466,7 @@
     "error": "HTTPSConnectionPool(host='api.binance.com', port=443): Read timed out."
   },
   "alerts": [],
-  "check_count": 167,
+  "check_count": 168,
   "config": {
     "BTC": {
       "SL_PCT": 0.7,
