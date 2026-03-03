@@ -1,6 +1,6 @@
 {
-  "last_update": "2026-03-03 04:43:43 CET",
-  "last_update_utc": "2026-03-03 03:43:43 UTC",
+  "last_update": "2026-03-03 05:26:24 CET",
+  "last_update_utc": "2026-03-03 04:26:24 UTC",
   "bots": {
     "BTC": {
       "running": true,
@@ -139,15 +139,15 @@
       "running": true,
       "pid": "4210",
       "probabilities": {
-        "2h_0.5pct": 2.5,
-        "4h_0.5pct": 32.0,
-        "2h_0.5pct_SHORT": 3.3,
-        "4h_0.5pct_SHORT": 36.0
+        "2h_0.5pct": 2.1,
+        "4h_0.5pct": 10.3,
+        "2h_0.5pct_SHORT": 5.5,
+        "4h_0.5pct_SHORT": 28.0
       },
       "positions": 0,
       "max_positions": 4,
-      "last_price": 603.24,
-      "last_log_time": "2026-03-03 04:27:49",
+      "last_price": 607.5,
+      "last_log_time": "2026-03-03 05:09:49",
       "pnl_24h": {
         "realized": 0,
         "unrealized": 0,
@@ -166,13 +166,13 @@
         "2h_0.5pct_SHORT": 7.1,
         "4h_0.5pct_SHORT": 11.4
       },
-      "positions": 1,
+      "positions": 0,
       "max_positions": 3,
-      "last_price": 685.08,
-      "last_log_time": "2026-03-03 04:27:49",
+      "last_price": 684.6,
+      "last_log_time": "2026-03-03 05:26:15",
       "pnl_24h": {
         "realized": 0,
-        "unrealized": 122.82,
+        "unrealized": 91.75,
         "trades": 0,
         "wins": 0,
         "losses": 0,
@@ -180,9 +180,9 @@
           {
             "id": "ml_v3_long",
             "direction": "long",
-            "entry": 6872.25,
-            "current": 6749.43,
-            "pnl": 122.82
+            "entry": 6846.0,
+            "current": 6754.25,
+            "pnl": 91.75
           }
         ],
         "closed_trades": []
@@ -194,23 +194,29 @@
       "healthy": true,
       "bars": 2031,
       "last_timestamp": "2026-03-02 23:30:00",
-      "freshness_minutes": 253.6,
+      "freshness_minutes": 296.2,
       "issues": [
-        "Stale data: 254 min old"
+        "Stale data: 296 min old"
       ]
     },
     "QQQ": {
       "healthy": true,
-      "bars": 12737,
-      "last_timestamp": "2026-03-03 03:05:00",
-      "freshness_minutes": 38.6,
+      "bars": 12759,
+      "last_timestamp": "2026-03-03 04:55:00",
+      "freshness_minutes": -28.8,
       "issues": []
     }
   },
   "signal_match": {
     "BTC": {
-      "match": false,
-      "differences": {},
+      "match": true,
+      "differences": {
+        "2h_0.5pct": 3.6,
+        "4h_0.5pct": 3.5,
+        "6h_0.5pct": 0.0,
+        "2h_0.5pct_SHORT": 1.7,
+        "4h_0.5pct_SHORT": 0.0
+      },
       "parquet_probs": {
         "2h_0.5pct": 48.6,
         "4h_0.5pct": 51.5,
@@ -218,40 +224,57 @@
         "2h_0.5pct_SHORT": 54.7,
         "4h_0.5pct_SHORT": 42.2
       },
-      "fresh_probs": {},
+      "fresh_probs": {
+        "2h_0.5pct": 52.2,
+        "4h_0.5pct": 55.0,
+        "6h_0.5pct": 56.6,
+        "2h_0.5pct_SHORT": 56.4,
+        "4h_0.5pct_SHORT": 42.2
+      },
       "timestamp": "2026-03-02 23:30:00",
-      "indicators": {},
-      "indicator_signal": false,
-      "error": "HTTPSConnectionPool(host='api.binance.com', port=443): Max retries exceeded with url: /api/v3/klines?symbol=BTCUSDT&interval=5m&limit=1000 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x130f82880>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))"
+      "indicators": {
+        "bb_pct_b": -0.2238,
+        "macd": -54.58,
+        "macd_signal": 5.55,
+        "macd_hist": -60.1322,
+        "macd_hist_prev": -45.6706,
+        "roc_12": -0.66,
+        "roc_threshold": 0.4,
+        "long_condition": false,
+        "short_condition": true,
+        "macd_hist_increasing": false,
+        "macd_hist_decreasing": true
+      },
+      "indicator_signal": "SHORT"
     },
     "MNQ": {
       "match": true,
       "differences": {
-        "2h_0.5pct": 0.2,
-        "4h_0.5pct": 4.7,
-        "2h_0.5pct_SHORT": 2.2,
-        "4h_0.5pct_SHORT": 0.5
+        "2h_0.5pct": 0.5,
+        "4h_0.5pct": 0.0,
+        "2h_0.5pct_SHORT": 0.7,
+        "4h_0.5pct_SHORT": 0.2
       },
       "parquet_probs": {
-        "2h_0.5pct": 2.5,
-        "4h_0.5pct": 32.0,
-        "2h_0.5pct_SHORT": 3.3,
-        "4h_0.5pct_SHORT": 36.0
+        "2h_0.5pct": 3.4,
+        "4h_0.5pct": 8.1,
+        "2h_0.5pct_SHORT": 3.1,
+        "4h_0.5pct_SHORT": 37.2
       },
       "fresh_probs": {
-        "2h_0.5pct": 2.3,
-        "4h_0.5pct": 27.3,
-        "2h_0.5pct_SHORT": 5.5,
-        "4h_0.5pct_SHORT": 35.5
+        "2h_0.5pct": 3.9,
+        "4h_0.5pct": 8.1,
+        "2h_0.5pct_SHORT": 3.8,
+        "4h_0.5pct_SHORT": 37.4
       },
-      "timestamp": "2026-03-03 03:05:00",
-      "note": "Compared at common timestamp: 2026-03-03 03:05:00 (parquet latest: 2026-03-03 03:05:00, fresh latest: 2026-03-03 04:30:00)",
+      "timestamp": "2026-03-03 04:55:00",
+      "note": "Compared at common timestamp: 2026-03-03 04:55:00 (parquet latest: 2026-03-03 04:55:00, fresh latest: 2026-03-03 05:15:00)",
       "indicators": {
-        "bb_pct_b": -0.0491,
+        "bb_pct_b": 0.4512,
         "bb_condition": true,
-        "roc_12": -0.34,
-        "macd_hist": -0.1676,
-        "macd_hist_prev": -0.1517,
+        "roc_12": -0.06,
+        "macd_hist": 0.0958,
+        "macd_hist_prev": 0.1085,
         "macd_hist_increasing": false,
         "macd_hist_decreasing": true
       },
@@ -260,15 +283,15 @@
     "SPY": {
       "match": true,
       "indicators": {
-        "rsi": 33.52,
+        "rsi": 43.37,
         "rsi_threshold": 40,
-        "rsi_condition": true,
-        "bb_pct_b": 0.1974,
+        "rsi_condition": false,
+        "bb_pct_b": 0.4512,
         "bb_threshold": 0.4,
-        "bb_condition": true
+        "bb_condition": false
       },
-      "indicator_signal": true,
-      "timestamp": "2026-03-03 04:30:00"
+      "indicator_signal": false,
+      "timestamp": "2026-03-03 04:55:00"
     }
   },
   "backtest": {
@@ -466,7 +489,7 @@
     "error": "HTTPSConnectionPool(host='api.binance.com', port=443): Read timed out."
   },
   "alerts": [],
-  "check_count": 168,
+  "check_count": 169,
   "config": {
     "BTC": {
       "SL_PCT": 0.7,
