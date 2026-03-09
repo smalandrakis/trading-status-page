@@ -1,28 +1,43 @@
 {
-  "last_update": "2026-03-09 09:30:14 CET",
-  "last_update_utc": "2026-03-09 08:30:14 UTC",
+  "last_update": "2026-03-09 10:02:11 CET",
+  "last_update_utc": "2026-03-09 09:02:11 UTC",
   "bots": {
     "BTC": {
       "running": true,
       "pid": "39260",
       "probabilities": {
-        "2h_0.5pct": 37.4,
-        "4h_0.5pct": 56.8,
-        "6h_0.5pct": 63.3,
-        "2h_0.5pct_SHORT": 52.4,
-        "4h_0.5pct_SHORT": 35.4
+        "2h_0.5pct": 41.9,
+        "4h_0.5pct": 45.6,
+        "6h_0.5pct": 47.7,
+        "2h_0.5pct_SHORT": 55.9,
+        "4h_0.5pct_SHORT": 36.3
       },
-      "positions": 1,
+      "positions": 2,
       "max_positions": 4,
-      "last_price": 67517.84,
-      "last_log_time": "2026-03-09 09:18:43",
+      "last_price": 67809.05,
+      "last_log_time": "2026-03-09 10:02:09",
       "pnl_24h": {
         "realized": 1.17,
-        "unrealized": 0,
+        "unrealized": 35.1,
         "trades": 13,
         "wins": 7,
         "losses": 6,
-        "open_positions": [],
+        "open_positions": [
+          {
+            "id": "6h_0.5pct",
+            "direction": "LONG",
+            "entry": 67493.72,
+            "current": 67813.8,
+            "pnl": 32.01
+          },
+          {
+            "id": "4h_0.5pct",
+            "direction": "LONG",
+            "entry": 67782.87,
+            "current": 67813.8,
+            "pnl": 3.09
+          }
+        ],
         "closed_trades": [
           {
             "direction": "LONG",
@@ -155,11 +170,11 @@
       },
       "positions": 1,
       "max_positions": 4,
-      "last_price": 589.42,
-      "last_log_time": "2026-03-09 09:18:44",
+      "last_price": 588.88,
+      "last_log_time": "2026-03-09 09:30:57",
       "pnl_24h": {
         "realized": 0,
-        "unrealized": -0.25,
+        "unrealized": -40.0,
         "trades": 0,
         "wins": 0,
         "losses": 0,
@@ -168,8 +183,8 @@
             "id": "trend_follow_short",
             "direction": "short",
             "entry": 24278.0,
-            "current": 24278.25,
-            "pnl": -0.25
+            "current": 24318.0,
+            "pnl": -40.0
           }
         ],
         "closed_trades": []
@@ -185,11 +200,11 @@
       },
       "positions": 1,
       "max_positions": 3,
-      "last_price": 664.73,
-      "last_log_time": "2026-03-09 09:18:42",
+      "last_price": 664.23,
+      "last_log_time": "2026-03-09 09:30:58",
       "pnl_24h": {
         "realized": 0,
-        "unrealized": 39.59,
+        "unrealized": 29.03,
         "trades": 0,
         "wins": 0,
         "losses": 0,
@@ -197,9 +212,9 @@
           {
             "id": "ml_v3_long",
             "direction": "long",
-            "entry": 6639.5,
-            "current": 6599.91,
-            "pnl": 39.59
+            "entry": 6639.75,
+            "current": 6610.72,
+            "pnl": 29.03
           }
         ],
         "closed_trades": []
@@ -209,65 +224,106 @@
   "parquet_health": {
     "BTC": {
       "healthy": true,
-      "bars": 2004,
-      "last_timestamp": "2026-03-09 08:15:00",
-      "freshness_minutes": 15.2,
-      "issues": [
-        "Stale data: 15 min old"
-      ]
+      "bars": 2013,
+      "last_timestamp": "2026-03-09 09:00:00",
+      "freshness_minutes": 2.1,
+      "issues": []
     },
     "QQQ": {
-      "healthy": true,
-      "bars": 13097,
-      "last_timestamp": "2026-03-09 09:05:00",
-      "freshness_minutes": -34.8,
-      "issues": []
+      "healthy": false,
+      "bars": 0,
+      "last_timestamp": null,
+      "freshness_minutes": null,
+      "issues": [
+        "Error reading: Could not open Parquet input source '<Buffer>': Parquet magic bytes not found in footer. Either the file is corrupted or this is not a parquet file."
+      ]
     }
   },
   "signal_match": {
     "BTC": {
-      "match": false,
-      "differences": {},
-      "parquet_probs": {
-        "2h_0.5pct": 37.4,
-        "4h_0.5pct": 56.8,
-        "6h_0.5pct": 63.3,
-        "2h_0.5pct_SHORT": 52.4,
-        "4h_0.5pct_SHORT": 35.4
+      "match": true,
+      "differences": {
+        "2h_0.5pct": 1.0,
+        "4h_0.5pct": 0.0,
+        "6h_0.5pct": 1.5,
+        "2h_0.5pct_SHORT": 0.1,
+        "4h_0.5pct_SHORT": 0.0
       },
-      "fresh_probs": {},
-      "timestamp": "2026-03-09 08:15:00",
-      "indicators": {},
-      "indicator_signal": false,
-      "error": "HTTPSConnectionPool(host='api.binance.com', port=443): Max retries exceeded with url: /api/v3/klines?symbol=BTCUSDT&interval=5m&limit=1000 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x12f899c40>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))"
+      "parquet_probs": {
+        "2h_0.5pct": 41.9,
+        "4h_0.5pct": 45.6,
+        "6h_0.5pct": 47.7,
+        "2h_0.5pct_SHORT": 55.9,
+        "4h_0.5pct_SHORT": 36.3
+      },
+      "fresh_probs": {
+        "2h_0.5pct": 42.9,
+        "4h_0.5pct": 45.6,
+        "6h_0.5pct": 49.2,
+        "2h_0.5pct_SHORT": 55.8,
+        "4h_0.5pct_SHORT": 36.3
+      },
+      "timestamp": "2026-03-09 09:00:00",
+      "indicators": {
+        "bb_pct_b": 0.7645,
+        "macd": 117.08,
+        "macd_signal": 94.73,
+        "macd_hist": 22.3427,
+        "macd_hist_prev": 28.565,
+        "roc_12": 0.47,
+        "roc_threshold": 0.4,
+        "long_condition": false,
+        "short_condition": false,
+        "macd_hist_increasing": false,
+        "macd_hist_decreasing": true
+      },
+      "indicator_signal": false
     },
     "MNQ": {
       "match": true,
-      "differences": {},
-      "parquet_probs": {
-        "2h_0.5pct": 8.2,
-        "4h_0.5pct": 3.1,
-        "2h_0.5pct_SHORT": 15.6,
-        "4h_0.5pct_SHORT": 27.3
+      "differences": {
+        "2h_0.5pct": 0.3,
+        "4h_0.5pct": 0.2,
+        "2h_0.5pct_SHORT": 0.2,
+        "4h_0.5pct_SHORT": 0.0
       },
-      "fresh_probs": {},
-      "timestamp": "2026-03-09 09:05:00",
-      "note": "Could not download fresh NQ=F data",
-      "indicators": {},
+      "parquet_probs": {
+        "2h_0.5pct": 4.9,
+        "4h_0.5pct": 2.5,
+        "2h_0.5pct_SHORT": 30.3,
+        "4h_0.5pct_SHORT": 21.8
+      },
+      "fresh_probs": {
+        "2h_0.5pct": 5.2,
+        "4h_0.5pct": 2.7,
+        "2h_0.5pct_SHORT": 30.5,
+        "4h_0.5pct_SHORT": 21.8
+      },
+      "timestamp": "2026-03-09 09:50:00",
+      "note": "Compared at common timestamp: 2026-03-09 09:50:00 (parquet latest: 2026-03-09 09:50:00, fresh latest: 2026-03-09 09:50:00)",
+      "indicators": {
+        "bb_pct_b": 0.8886,
+        "bb_condition": false,
+        "roc_12": 0.18,
+        "macd_hist": 0.0152,
+        "macd_hist_prev": -0.0097,
+        "macd_hist_increasing": true,
+        "macd_hist_decreasing": false
+      },
       "indicator_signal": false
     },
     "SPY": {
       "match": true,
       "indicators": {
-        "rsi": 56.57,
+        "rsi": 57.61,
         "rsi_threshold": 40,
         "rsi_condition": false,
-        "bb_pct_b": 0.6036,
+        "bb_pct_b": 0.8886,
         "bb_threshold": 0.4,
         "bb_condition": false
       },
       "indicator_signal": false,
-      "timestamp": "2026-03-09 09:05:00"
+      "timestamp": "2026-03-09 09:50:00"
     }
   },
   "backtest": {
@@ -471,8 +527,14 @@
     "missed_hours": 14,
     "trade_count": 12
   },
-  "alerts": [],
-  "check_count": 22,
+  "alerts": [
+    {
+      "time": "2026-03-09T09:02:07.833304",
+      "type": "info",
+      "message": "MNQ parquet refreshed with 13106 bars"
+    }
+  ],
+  "check_count": 23,
   "config": {
     "BTC": {
       "SL_PCT": 0.7,
