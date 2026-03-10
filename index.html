@@ -34,7 +34,7 @@
         <div id="alertsContainer" class="mb-6"></div>
 
         <!-- Bot Cards -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
             <!-- BTC Bot -->
             <div class="card rounded-xl p-4">
                 <div class="flex items-center justify-between mb-4">
@@ -87,6 +87,25 @@
                 <div id="spyPositions" class="text-sm text-gray-400 mb-4">Positions: --/3</div>
                 <div id="spyProbs" class="space-y-2"></div>
                 <div id="spyPnl" class="mt-4 pt-4 border-t border-gray-700 text-sm"></div>
+            </div>
+
+            <!-- BTC Tick ML Bot -->
+            <div class="card rounded-xl p-4 border border-yellow-500/30">
+                <div class="flex items-center justify-between mb-4">
+                    <div class="flex items-center">
+                        <span class="text-2xl mr-2">⚡</span>
+                        <span class="text-xl font-bold">BTC Tick</span>
+                    </div>
+                    <div id="btc_tickStatus" class="flex items-center">
+                        <span class="w-3 h-3 rounded-full bg-gray-500 mr-2"></span>
+                        <span class="text-sm">Loading...</span>
+                    </div>
+                </div>
+                <div id="btc_tickPrice" class="text-2xl font-mono mb-2">--</div>
+                <div id="btc_tickPositions" class="text-sm text-gray-400 mb-2">Positions: --/4</div>
+                <div class="text-xs text-yellow-400/70 mb-3">2-sec tick ML | L:any≥60% S:2+≥70%</div>
+                <div id="btc_tickProbs" class="space-y-2"></div>
+                <div id="btc_tickPnl" class="mt-4 pt-4 border-t border-gray-700 text-sm"></div>
             </div>
         </div>
 
@@ -147,6 +166,15 @@
                         <div>SHORT: <span class="text-red-400">2h, 4h ✓</span></div>
                     </div>
                 </div>
+                <div class="bg-gray-800/50 rounded-lg p-3 border border-yellow-500/30">
+                    <div class="font-bold mb-2">⚡ BTC Tick ML</div>
+                    <div class="space-y-1 text-gray-400">
+                        <div>LONG SL: <span class="text-white">0.30%</span> | TS: <span class="text-white">0.40%/0.10%</span></div>
+                        <div>SHORT SL: <span class="text-white">0.20%</span> | TS: <span class="text-white">0.25%/0.05%</span></div>
+                        <div>LONG: <span class="text-green-400">L1, L3 (any≥60%)</span></div>
+                        <div>SHORT: <span class="text-red-400">S1, S3, S4 (2+≥70%)</span></div>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -201,7 +229,7 @@
             document.getElementById('alertsContainer').innerHTML = alertsHtml;
 
             // Bot cards
-            ['BTC', 'MNQ', 'SPY'].forEach(bot => {
+            ['BTC', 'MNQ', 'SPY', 'BTC_TICK'].forEach(bot => {
                 const botData = data.bots?.[bot] || {};
                 const prefix = bot.toLowerCase();
                 
@@ -216,25 +244,27 @@
                 // Price
                 const price = botData.last_price;
                 document.getElementById(`${prefix}Price`).textContent = 
-                    price ? (bot === 'BTC' ? `$${price.toLocaleString()}` : `$${price}`) : '--';
+                    price ? ((bot === 'BTC' || bot === 'BTC_TICK') ? `$${price.toLocaleString()}` : `$${price}`) : '--';
 
                 // Positions
-                const maxPos = bot === 'SPY' ? 3 : 4;
+                const maxPos = (bot === 'SPY') ? 3 : 4;
                 document.getElementById(`${prefix}Positions`).textContent = 
                     `Positions: ${botData.positions || 0}/${maxPos}`;
 
                 // Probabilities
                 const probs = botData.probabilities || {};
                 const probsHtml = Object.entries(probs).map(([name, prob]) => {
-                    const isShort = name.includes('SHORT');
-                    const probClass = prob >= 65 ? 'prob-high' : prob >= 50 ? 'prob-med' : 'prob-low';
+                    const isShort = name.includes('SHORT') || name.startsWith('S');
+                    const isLong = name.startsWith('L');
+                    const threshold = (bot === 'BTC_TICK') ? (isShort ? 70 : 60) : 65;
+                    const probClass = prob >= threshold ? 'prob-high' : prob >= 50 ? 'prob-med' : 'prob-low';
                     const direction = isShort ? '🔴' : '🟢';
                     return `<div class="flex items-center justify-between text-sm">
                         <span>${direction} ${name.replace('_SHORT', ' S')}</span>
                         <div class="w-24 h-5 bg-gray-700 rounded overflow-hidden">
                             <div class="${probClass} h-full rounded" style="--prob: ${prob}%; width: ${prob}%"></div>
                         </div>
-                        <span class="w-12 text-right font-mono ${prob >= 65 ? 'text-green-400' : ''}">${prob}%</span>
+                        <span class="w-12 text-right font-mono ${prob >= threshold ? 'text-green-400' : ''}">${prob}%</span>
                     </div>`;
                 }).join('');
                 document.getElementById(`${prefix}Probs`).innerHTML = probsHtml || '<span class="text-gray-500">No data</span>';
