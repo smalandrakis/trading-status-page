@@ -176,112 +176,6 @@
         "open_positions": [],
         "closed_trades": []
       }
-    },
-    "BTC_TICK": {
-      "running": true,
-      "pid": "88593",
-      "probabilities": {
-        "L1_full_wide": 17.2,
-        "L3_mom_wide": 34.0,
-        "S1_full_cur": 55.0,
-        "S3_mr_cur": 41.2,
-        "S4_full_tight": 40.8
-      },
-      "positions": 0,
-      "max_positions": 4,
-      "last_price": 70000.55,
-      "last_log_time": "2026-03-11 00:26:04",
-      "pnl_24h": {
-        "realized": -115.84,
-        "unrealized": 0,
-        "trades": 9,
-        "wins": 2,
-        "losses": 7,
-        "open_positions": [],
-        "closed_trades": [
-          {
-            "direction": "LONG",
-            "entry": 70295.0,
-            "exit": 70336.0,
-            "pnl": 4.1,
-            "reason": "TRAILING_STOP",
-            "exit_time": "2026-03-10T22:07:13",
-            "model": "L3_mom_wide"
-          },
-          {
-            "direction": "SHORT",
-            "entry": 70365.0,
-            "exit": 70389.44,
-            "pnl": -2.44,
-            "reason": "STOP_LOSS",
-            "exit_time": "2026-03-10T22:05:40",
-            "model": "S1_full_cur"
-          },
-          {
-            "direction": "LONG",
-            "entry": 70340.0,
-            "exit": 70070.0,
-            "pnl": -27.0,
-            "reason": "STOP_LOSS",
-            "exit_time": "2026-03-10T20:11:31",
-            "model": "L1_full_wide"
-          },
-          {
-            "direction": "LONG",
-            "entry": 70300.0,
-            "exit": 70065.0,
-            "pnl": -23.5,
-            "reason": "STOP_LOSS",
-            "exit_time": "2026-03-10T19:56:01",
-            "model": "L3_mom_wide"
-          },
-          {
-            "direction": "LONG",
-            "entry": 70495.0,
-            "exit": 70275.0,
-            "pnl": -22.0,
-            "reason": "STOP_LOSS",
-            "exit_time": "2026-03-10T19:40:11",
-            "model": "L3_mom_wide"
-          },
-          {
-            "direction": "LONG",
-            "entry": 70515.0,
-            "exit": 70275.0,
-            "pnl": -24.0,
-            "reason": "STOP_LOSS",
-            "exit_time": "2026-03-10T19:40:09",
-            "model": "L1_full_wide"
-          },
-          {
-            "direction": "LONG",
-            "entry": 71095.0,
-            "exit": 70900.0,
-            "pnl": -19.5,
-            "reason": "STOP_LOSS",
-            "exit_time": "2026-03-10T19:09:28",
-            "model": "L3_mom_wide"
-          },
-          {
-            "direction": "LONG",
-            "entry": 70870.0,
-            "exit": 71090.0,
-            "pnl": 22.0,
-            "reason": "TRAILING_STOP",
-            "exit_time": "2026-03-10T18:55:23",
-            "model": "L3_mom_wide"
-          },
-          {
-            "direction": "LONG",
-            "entry": 71040.0,
-            "exit": 70805.0,
-            "pnl": -23.5,
-            "reason": "STOP_LOSS",
-            "exit_time": "2026-03-10T18:38:27",
-            "model": "L3_mom_wide"
-          }
-        ]
-      }
     }
   },
   "parquet_health": {
@@ -388,13 +282,19 @@
     }
   },
   "backtest": {
-    "last_run": "2026-03-10 18:29 UTC",
+    "last_run": "2026-03-10 18:14 UTC",
     "period": "24h",
-    "total_signals": 95,
+    "total_signals": 94,
     "long_signals": 2,
-    "short_signals": 93,
-    "signal_hours": 17,
+    "short_signals": 92,
+    "signal_hours": 16,
     "recent_signals": [
+      {
+        "time": "17:10 UTC",
+        "price": 71258.0,
+        "model": "2h_0.5pct_SHORT",
+        "prob": 67.2
+      },
       {
         "time": "17:15 UTC",
         "price": 71252.0,
@@ -448,12 +348,6 @@
         "price": 70961.0,
         "model": "2h_0.5pct_SHORT",
         "prob": 66.5
-      },
-      {
-        "time": "18:20 UTC",
-        "price": 70327.0,
-        "model": "2h_0.5pct_SHORT",
-        "prob": 66.1
       }
     ],
     "hourly_summary": [
@@ -536,10 +430,10 @@
       },
       {
         "hour": "18:00",
-        "price": 70419.0,
-        "long": 52.0,
-        "short": 66.0,
-        "signal": "SHORT"
+        "price": 70570.0,
+        "long": 46.0,
+        "short": 62.0,
+        "signal": null
       }
     ],
     "actual_trades": [
@@ -574,14 +468,22 @@
         "model": "legacy_mbt_2",
         "pnl": "-$17",
         "result": "\u274c"
+      },
+      {
+        "time": "18:15 UTC",
+        "direction": "LONG",
+        "price": 68998.0,
+        "model": "4h_0.5pct",
+        "pnl": "-$23",
+        "result": "\u274c"
       }
     ],
     "matched_hours": 2,
-    "missed_hours": 15,
-    "trade_count": 4
+    "missed_hours": 14,
+    "trade_count": 5
   },
   "alerts": [],
-  "check_count": 10,
+  "check_count": 92,
   "config": {
     "BTC": {
       "SL_PCT": 0.7,
@@ -641,33 +543,6 @@
       "ml_v3_threshold": 0.55,
       "enabled_long": true,
       "enabled_short": true
-    },
-    "BTC_TICK": {
-      "SL_PCT_LONG": 0.3,
-      "TS_ACT_LONG": 0.4,
-      "TS_TRAIL_LONG": 0.1,
-      "SL_PCT_SHORT": 0.2,
-      "TS_ACT_SHORT": 0.25,
-      "TS_TRAIL_SHORT": 0.05,
-      "models": [
-        "L1_full_wide",
-        "L3_mom_wide",
-        "S1_full_cur",
-        "S3_mr_cur",
-        "S4_full_tight"
-      ],
-      "thresholds": {
-        "L1_full_wide": 0.6,
-        "L3_mom_wide": 0.6,
-        "S1_full_cur": 0.7,
-        "S3_mr_cur": 0.7,
-        "S4_full_tight": 0.7
-      },
-      "entry_long": "any of L1/L3 >= 60%",
-      "entry_short": "2+ of S1/S3/S4 >= 70% (majority vote)",
-      "enabled_long": true,
-      "enabled_short": true,
-      "db_path": "tick_trades.db"
     }
   }
 }
