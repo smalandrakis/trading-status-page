@@ -1,6 +1,6 @@
 {
-  "last_update": "2026-03-10 22:00:55 CET",
-  "last_update_utc": "2026-03-10 21:00:55 UTC",
+  "last_update": "2026-03-10 22:00:58 CET",
+  "last_update_utc": "2026-03-10 21:00:58 UTC",
   "bots": {
     "BTC": {
       "running": true,
@@ -14,8 +14,8 @@
       },
       "positions": 2,
       "max_positions": 4,
-      "last_price": 70243.86,
-      "last_log_time": "2026-03-10 22:00:42",
+      "last_price": 70266.0,
+      "last_log_time": "2026-03-10 22:00:58",
       "pnl_24h": {
         "realized": -56.69,
         "unrealized": -15.34,
@@ -116,8 +116,8 @@
       },
       "positions": 2,
       "max_positions": 4,
-      "last_price": 607.18,
-      "last_log_time": "2026-03-10 22:00:39",
+      "last_price": 607.29,
+      "last_log_time": "2026-03-10 22:00:54",
       "pnl_24h": {
         "realized": 0,
         "unrealized": 93.81,
@@ -331,7 +331,7 @@
         "4h_0.5pct_SHORT": 18.9
       },
       "timestamp": "2026-03-10 21:50:00",
-      "note": "Re-compared at 2026-03-10 21:50:00 after refresh",
+      "note": "Compared at common timestamp: 2026-03-10 21:50:00 (parquet latest: 2026-03-10 21:50:00, fresh latest: 2026-03-10 21:50:00)",
       "indicators": {
         "bb_pct_b": 0.6191,
         "bb_condition": false,
@@ -341,8 +341,7 @@
         "macd_hist_increasing": false,
         "macd_hist_decreasing": true
       },
-      "indicator_signal": false,
-      "auto_fixed": true
+      "indicator_signal": false
     },
     "SPY": {
       "match": true,
@@ -361,9 +360,9 @@
   "backtest": {
     "last_run": "2026-03-10 18:29 UTC",
     "period": "24h",
-    "total_signals": 97,
+    "total_signals": 95,
     "long_signals": 2,
-    "short_signals": 95,
+    "short_signals": 93,
     "signal_hours": 17,
     "recent_signals": [
       {
@@ -382,7 +381,7 @@
         "time": "17:20 UTC",
         "price": 71242.0,
         "model": "4h_0.5pct_SHORT",
-        "prob": 67.3
+        "prob": 67.0
       },
       {
         "time": "17:25 UTC",
@@ -394,7 +393,7 @@
         "time": "17:25 UTC",
         "price": 71046.0,
         "model": "4h_0.5pct_SHORT",
-        "prob": 66.9
+        "prob": 66.6
       },
       {
         "time": "17:30 UTC",
@@ -507,7 +506,7 @@
       },
       {
         "hour": "18:00",
-        "price": 70360.0,
+        "price": 70419.0,
         "long": 52.0,
         "short": 66.0,
         "signal": "SHORT"
@@ -551,14 +550,8 @@
     "missed_hours": 15,
     "trade_count": 4
   },
-  "alerts": [
-    {
-      "time": "2026-03-10T21:00:53.586744",
-      "type": "info",
-      "message": "MNQ parquet refreshed with 13321 bars"
-    }
-  ],
-  "check_count": 7,
+  "alerts": [],
+  "check_count": 6,
   "config": {
     "BTC": {
       "SL_PCT": 0.7,
