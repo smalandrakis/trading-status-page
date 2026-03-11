@@ -1,6 +1,6 @@
 {
-  "last_update": "2026-03-11 03:58:52 CET",
-  "last_update_utc": "2026-03-11 02:58:52 UTC",
+  "last_update": "2026-03-11 03:59:11 CET",
+  "last_update_utc": "2026-03-11 02:59:11 UTC",
   "bots": {
     "BTC": {
       "running": true,
@@ -14,8 +14,8 @@
       },
       "positions": 0,
       "max_positions": 4,
-      "last_price": 69758.19,
-      "last_log_time": "2026-03-11 03:58:49",
+      "last_price": 69763.02,
+      "last_log_time": "2026-03-11 03:59:05",
       "pnl_24h": {
         "realized": -210.43,
         "unrealized": 0,
@@ -155,8 +155,8 @@
       },
       "positions": 1,
       "max_positions": 4,
-      "last_price": 609.0,
-      "last_log_time": "2026-03-11 03:58:49",
+      "last_price": 609.02,
+      "last_log_time": "2026-03-11 03:59:04",
       "pnl_24h": {
         "realized": 0,
         "unrealized": -165.88,
@@ -185,8 +185,8 @@
       },
       "positions": 0,
       "max_positions": 3,
-      "last_price": 681.55,
-      "last_log_time": "2026-03-11 03:58:38",
+      "last_price": 681.6,
+      "last_log_time": "2026-03-11 03:59:08",
       "pnl_24h": {
         "realized": 0,
         "unrealized": 0,
@@ -196,6 +196,130 @@
         "open_positions": [],
         "closed_trades": []
       }
+    },
+    "BTC_TICK": {
+      "running": true,
+      "pid": "88593",
+      "probabilities": {
+        "L1_full_wide": 49.7,
+        "L3_mom_wide": 33.9,
+        "S1_full_cur": 36.8,
+        "S3_mr_cur": 45.1,
+        "S4_full_tight": 44.2
+      },
+      "positions": 0,
+      "max_positions": 4,
+      "last_price": 69753.23,
+      "last_log_time": "2026-03-11 03:58:55",
+      "pnl_24h": {
+        "realized": -136.34,
+        "unrealized": 0,
+        "trades": 11,
+        "wins": 2,
+        "losses": 9,
+        "open_positions": [],
+        "closed_trades": [
+          {
+            "direction": "LONG",
+            "entry": 70110.0,
+            "exit": 69930.0,
+            "pnl": -18.0,
+            "reason": "STOP_LOSS",
+            "exit_time": "2026-03-11T03:33:59",
+            "model": "L1_full_wide"
+          },
+          {
+            "direction": "SHORT",
+            "entry": 70200.0,
+            "exit": 70225.0,
+            "pnl": -2.5,
+            "reason": "TRAILING_STOP",
+            "exit_time": "2026-03-11T03:13:38",
+            "model": "S1_full_cur"
+          },
+          {
+            "direction": "LONG",
+            "entry": 70295.0,
+            "exit": 70336.0,
+            "pnl": 4.1,
+            "reason": "TRAILING_STOP",
+            "exit_time": "2026-03-10T22:07:13",
+            "model": "L3_mom_wide"
+          },
+          {
+            "direction": "SHORT",
+            "entry": 70365.0,
+            "exit": 70389.44,
+            "pnl": -2.44,
+            "reason": "STOP_LOSS",
+            "exit_time": "2026-03-10T22:05:40",
+            "model": "S1_full_cur"
+          },
+          {
+            "direction": "LONG",
+            "entry": 70340.0,
+            "exit": 70070.0,
+            "pnl": -27.0,
+            "reason": "STOP_LOSS",
+            "exit_time": "2026-03-10T20:11:31",
+            "model": "L1_full_wide"
+          },
+          {
+            "direction": "LONG",
+            "entry": 70300.0,
+            "exit": 70065.0,
+            "pnl": -23.5,
+            "reason": "STOP_LOSS",
+            "exit_time": "2026-03-10T19:56:01",
+            "model": "L3_mom_wide"
+          },
+          {
+            "direction": "LONG",
+            "entry": 70495.0,
+            "exit": 70275.0,
+            "pnl": -22.0,
+            "reason": "STOP_LOSS",
+            "exit_time": "2026-03-10T19:40:11",
+            "model": "L3_mom_wide"
+          },
+          {
+            "direction": "LONG",
+            "entry": 70515.0,
+            "exit": 70275.0,
+            "pnl": -24.0,
+            "reason": "STOP_LOSS",
+            "exit_time": "2026-03-10T19:40:09",
+            "model": "L1_full_wide"
+          },
+          {
+            "direction": "LONG",
+            "entry": 71095.0,
+            "exit": 70900.0,
+            "pnl": -19.5,
+            "reason": "STOP_LOSS",
+            "exit_time": "2026-03-10T19:09:28",
+            "model": "L3_mom_wide"
+          },
+          {
+            "direction": "LONG",
+            "entry": 70870.0,
+            "exit": 71090.0,
+            "pnl": 22.0,
+            "reason": "TRAILING_STOP",
+            "exit_time": "2026-03-10T18:55:23",
+            "model": "L3_mom_wide"
+          },
+          {
+            "direction": "LONG",
+            "entry": 71040.0,
+            "exit": 70805.0,
+            "pnl": -23.5,
+            "reason": "STOP_LOSS",
+            "exit_time": "2026-03-10T18:38:27",
+            "model": "L3_mom_wide"
+          }
+        ]
+      }
     }
   },
   "parquet_health": {
@@ -203,14 +327,14 @@
       "healthy": true,
       "bars": 2024,
       "last_timestamp": "2026-03-11 02:55:00",
-      "freshness_minutes": 3.7,
+      "freshness_minutes": 4.1,
       "issues": []
     },
     "QQQ": {
       "healthy": true,
-      "bars": 13379,
-      "last_timestamp": "2026-03-11 03:40:00",
-      "freshness_minutes": -41.3,
+      "bars": 13380,
+      "last_timestamp": "2026-03-11 03:45:00",
+      "freshness_minutes": -45.9,
       "issues": []
     }
   },
@@ -221,7 +345,7 @@
         "2h_0.5pct": 2.6,
         "4h_0.5pct": 0.6,
         "6h_0.5pct": 0.4,
-        "2h_0.5pct_SHORT": 1.4,
+        "2h_0.5pct_SHORT": 1.9,
         "4h_0.5pct_SHORT": 0.0
       },
       "parquet_probs": {
@@ -235,7 +359,7 @@
         "2h_0.5pct": 36.3,
         "4h_0.5pct": 37.8,
         "6h_0.5pct": 69.6,
-        "2h_0.5pct_SHORT": 35.5,
+        "2h_0.5pct_SHORT": 36.0,
         "4h_0.5pct_SHORT": 26.4
       },
       "timestamp": "2026-03-11 02:55:00",
@@ -274,8 +398,8 @@
         "2h_0.5pct_SHORT": 1.7,
         "4h_0.5pct_SHORT": 7.4
       },
-      "timestamp": "2026-03-11 03:40:00",
-      "note": "Re-compared at 2026-03-11 03:45:00 after refresh",
+      "timestamp": "2026-03-11 03:45:00",
+      "note": "Compared at common timestamp: 2026-03-11 03:45:00 (parquet latest: 2026-03-11 03:45:00, fresh latest: 2026-03-11 03:45:00)",
       "indicators": {
         "bb_pct_b": 0.7452,
         "bb_condition": false,
@@ -285,8 +409,7 @@
         "macd_hist_increasing": true,
         "macd_hist_decreasing": false
       },
-      "indicator_signal": false,
-      "auto_fixed": true
+      "indicator_signal": false
     },
     "SPY": {
       "match": true,
@@ -303,7 +426,7 @@
     }
   },
   "backtest": {
-    "last_run": "2026-03-11 00:27 UTC",
+    "last_run": "2026-03-11 00:28 UTC",
     "period": "24h",
     "total_signals": 72,
     "long_signals": 2,
@@ -503,14 +626,8 @@
     "missed_hours": 9,
     "trade_count": 10
   },
-  "alerts": [
-    {
-      "time": "2026-03-11T02:58:51.828760",
-      "type": "info",
-      "message": "MNQ parquet refreshed with 13380 bars"
-    }
-  ],
-  "check_count": 99,
+  "alerts": [],
+  "check_count": 18,
   "config": {
     "BTC": {
       "SL_PCT": 0.7,
@@ -570,6 +687,33 @@
       "ml_v3_threshold": 0.55,
       "enabled_long": true,
       "enabled_short": true
+    },
+    "BTC_TICK": {
+      "SL_PCT_LONG": 0.3,
+      "TS_ACT_LONG": 0.4,
+      "TS_TRAIL_LONG": 0.1,
+      "SL_PCT_SHORT": 0.2,
+      "TS_ACT_SHORT": 0.25,
+      "TS_TRAIL_SHORT": 0.05,
+      "models": [
+        "L1_full_wide",
+        "L3_mom_wide",
+        "S1_full_cur",
+        "S3_mr_cur",
+        "S4_full_tight"
+      ],
+      "thresholds": {
+        "L1_full_wide": 0.6,
+        "L3_mom_wide": 0.6,
+        "S1_full_cur": 0.7,
+        "S3_mr_cur": 0.7,
+        "S4_full_tight": 0.7
+      },
+      "entry_long": "any of L1/L3 >= 60%",
+      "entry_short": "2+ of S1/S3/S4 >= 70% (majority vote)",
+      "enabled_long": true,
+      "enabled_short": true,
+      "db_path": "tick_trades.db"
     }
   }
 }
