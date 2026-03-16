@@ -34,7 +34,7 @@
         <div id="alertsContainer" class="mb-6"></div>
 
         <!-- Bot Cards -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 mb-6">
             <!-- BTC Bot -->
             <div class="card rounded-xl p-4">
                 <div class="flex items-center justify-between mb-4">
@@ -107,6 +107,25 @@
                 <div id="btc_tickProbs" class="space-y-2"></div>
                 <div id="btc_tickPnl" class="mt-4 pt-4 border-t border-gray-700 text-sm"></div>
             </div>
+
+            <!-- BTC Trend Bot -->
+            <div class="card rounded-xl p-4 border border-cyan-500/30">
+                <div class="flex items-center justify-between mb-4">
+                    <div class="flex items-center">
+                        <span class="text-2xl mr-2">🌊</span>
+                        <span class="text-xl font-bold">BTC Trend</span>
+                    </div>
+                    <div id="btc_trendStatus" class="flex items-center">
+                        <span class="w-3 h-3 rounded-full bg-gray-500 mr-2"></span>
+                        <span class="text-sm">Loading...</span>
+                    </div>
+                </div>
+                <div id="btc_trendPrice" class="text-2xl font-mono mb-2">--</div>
+                <div id="btc_trendPositions" class="text-sm text-gray-400 mb-2">Positions: --/1</div>
+                <div class="text-xs text-cyan-400/70 mb-3">5-min bars | Trend follow 0.15%</div>
+                <div id="btc_trendProbs" class="space-y-2"></div>
+                <div id="btc_trendPnl" class="mt-4 pt-4 border-t border-gray-700 text-sm"></div>
+            </div>
         </div>
 
         <!-- Indicator Signals -->
@@ -141,7 +160,7 @@
             <h2 class="text-lg font-bold mb-4">
                 <i class="fas fa-cog mr-2"></i>Bot Configuration (Jan 7, 2026)
             </h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4 text-sm">
                 <div class="bg-gray-800/50 rounded-lg p-3">
                     <div class="font-bold mb-2">₿ BTC</div>
                     <div class="space-y-1 text-gray-400">
@@ -173,6 +192,16 @@
                         <div>SHORT SL: <span class="text-white">0.20%</span> | TS: <span class="text-white">0.25%/0.05%</span></div>
                         <div>LONG: <span class="text-green-400">L1, L3 (any≥60%)</span></div>
                         <div>SHORT: <span class="text-red-400">S1, S3, S4 (2+≥70%)</span></div>
+                    </div>
+                </div>
+                <div class="bg-gray-800/50 rounded-lg p-3 border border-cyan-500/30">
+                    <div class="font-bold mb-2">🌊 BTC Trend</div>
+                    <div class="space-y-1 text-gray-400">
+                        <div>SL: <span class="text-white">0.50%</span> | TP: <span class="text-white">1.00%</span></div>
+                        <div>TS: <span class="text-white">0.50%/0.25%</span></div>
+                        <div>Entry: <span class="text-cyan-400">bar ret > 0.15%</span></div>
+                        <div>Max hold: <span class="text-white">24 bars (2h)</span></div>
+                        <div>Cooldown: <span class="text-white">30 min after SL</span></div>
                     </div>
                 </div>
             </div>
@@ -229,7 +258,7 @@
             document.getElementById('alertsContainer').innerHTML = alertsHtml;
 
             // Bot cards
-            ['BTC', 'MNQ', 'SPY', 'BTC_TICK'].forEach(bot => {
+            ['BTC', 'MNQ', 'SPY', 'BTC_TICK', 'BTC_TREND'].forEach(bot => {
                 const botData = data.bots?.[bot] || {};
                 const prefix = bot.toLowerCase();
                 
@@ -244,10 +273,10 @@
                 // Price
                 const price = botData.last_price;
                 document.getElementById(`${prefix}Price`).textContent = 
-                    price ? ((bot === 'BTC' || bot === 'BTC_TICK') ? `$${price.toLocaleString()}` : `$${price}`) : '--';
+                    price ? ((bot === 'BTC' || bot === 'BTC_TICK' || bot === 'BTC_TREND') ? `$${price.toLocaleString()}` : `$${price}`) : '--';
 
                 // Positions
-                const maxPos = (bot === 'SPY') ? 3 : 4;
+                const maxPos = (bot === 'BTC_TREND') ? 1 : (bot === 'SPY') ? 3 : 4;
                 document.getElementById(`${prefix}Positions`).textContent = 
                     `Positions: ${botData.positions || 0}/${maxPos}`;
 
