@@ -34,7 +34,7 @@
         <div id="alertsContainer" class="mb-6"></div>
 
         <!-- Bot Cards -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
             <!-- BTC Bot -->
             <div class="card rounded-xl p-4">
                 <div class="flex items-center justify-between mb-4">
@@ -91,6 +91,26 @@
                 <div id="btc_tick_reversePnl" class="mt-4 pt-4 border-t border-gray-700 text-sm"></div>
             </div>
 
+            <!-- MNQ Global Signal Bot -->
+            <div class="card rounded-xl p-4 border border-cyan-500/30">
+                <div class="flex items-center justify-between mb-4">
+                    <div class="flex items-center">
+                        <span class="text-2xl mr-2">📈</span>
+                        <span class="text-xl font-bold">MNQ Global</span>
+                    </div>
+                    <div id="mnq_globalStatus" class="flex items-center">
+                        <span class="w-3 h-3 rounded-full bg-gray-500 mr-2"></span>
+                        <span class="text-sm">Loading...</span>
+                    </div>
+                </div>
+                <div id="mnq_globalPrice" class="text-2xl font-mono mb-2">--</div>
+                <div id="mnq_globalPositions" class="text-sm text-gray-400 mb-2">Position: --/1</div>
+                <div class="text-xs text-cyan-400/70 mb-3">RF@55% | TP 1.0% SL 0.5% | 10:30 ET</div>
+                <div id="mnq_globalSignal" class="mb-2"></div>
+                <div id="mnq_globalProbs" class="space-y-2"></div>
+                <div id="mnq_globalPnl" class="mt-4 pt-4 border-t border-gray-700 text-sm"></div>
+            </div>
+
         </div>
 
         <!-- Indicator Signals -->
@@ -123,9 +143,9 @@
         <!-- Bot Configuration -->
         <div class="card rounded-xl p-4 mb-6">
             <h2 class="text-lg font-bold mb-4">
-                <i class="fas fa-cog mr-2"></i>Bot Configuration (Jan 7, 2026)
+                <i class="fas fa-cog mr-2"></i>Bot Configuration
             </h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 text-sm">
                 <div class="bg-gray-800/50 rounded-lg p-3">
                     <div class="font-bold mb-2">₿ BTC</div>
                     <div class="space-y-1 text-gray-400">
@@ -150,6 +170,15 @@
                         <div>SHORT SL: <span class="text-white">0.45%</span> | TS: <span class="text-white">0.50%/0.15%</span></div>
                         <div>LONG: <span class="text-green-400">REVERSE: S-models agree → LONG</span></div>
                         <div>SHORT: <span class="text-red-400">REVERSE: L1≥55% → SHORT</span></div>
+                    </div>
+                </div>
+                <div class="bg-gray-800/50 rounded-lg p-3 border border-cyan-500/30">
+                    <div class="font-bold mb-2">📈 MNQ Global Signal</div>
+                    <div class="space-y-1 text-gray-400">
+                        <div>SL: <span class="text-white">0.50%</span> | TP: <span class="text-white">1.00%</span> (2:1)</div>
+                        <div>Model: <span class="text-cyan-400">RF @ 55% threshold</span></div>
+                        <div>Entry: <span class="text-white">10:30 ET</span> | Exit: <span class="text-white">15:55 ET</span></div>
+                        <div>Max: <span class="text-white">1 trade/day, 1 MNQ ($2/pt)</span></div>
                     </div>
                 </div>
             </div>
@@ -206,12 +235,13 @@
             document.getElementById('alertsContainer').innerHTML = alertsHtml;
 
             // Bot cards
-            ['BTC', 'BTC_TICK', 'BTC_TICK_REVERSE'].forEach(bot => {
+            ['BTC', 'BTC_TICK', 'BTC_TICK_REVERSE', 'MNQ_GLOBAL'].forEach(bot => {
                 const botData = data.bots?.[bot] || {};
                 const prefix = bot.toLowerCase();
                 
                 // Status
                 const statusEl = document.getElementById(`${prefix}Status`);
+                if (!statusEl) return;
                 if (botData.running) {
                     statusEl.innerHTML = '<span class="w-3 h-3 rounded-full bg-green-500 mr-2 pulse"></span><span class="text-green-400 text-sm">Running</span>';
                 } else {
@@ -220,22 +250,74 @@
 
                 // Price
                 const price = botData.last_price;
+                const isBTC = ['BTC', 'BTC_TICK', 'BTC_TICK_REVERSE', 'BTC_TREND'].includes(bot);
                 document.getElementById(`${prefix}Price`).textContent = 
-                    price ? ((bot === 'BTC' || bot === 'BTC_TICK' || bot === 'BTC_TICK_REVERSE' || bot === 'BTC_TREND') ? `$${price.toLocaleString()}` : `$${price}`) : '--';
+                    price ? (isBTC ? `$${price.toLocaleString()}` : `$${price.toLocaleString()}`) : '--';
 
                 // Positions
-                const maxPos = (bot === 'BTC_TREND') ? 1 : (bot === 'SPY') ? 3 : 4;
+                const maxPos = (bot === 'MNQ_GLOBAL' || bot === 'BTC_TREND') ? 1 : (bot === 'SPY') ? 3 : 4;
                 document.getElementById(`${prefix}Positions`).textContent = 
-                    `Positions: ${botData.positions || 0}/${maxPos}`;
+                    `Position${maxPos > 1 ? 's' : ''}: ${botData.positions || 0}/${maxPos}`;
+
+                // MNQ Global: show today's signal and position detail
+                if (bot === 'MNQ_GLOBAL') {
+                    const signalEl = document.getElementById('mnq_globalSignal');
+                    if (signalEl) {
+                        let signalHtml = '';
+                        const sig = botData.today_signal;
+                        const rfProb = botData.rf_prob;
+                        if (sig === 'LONG') {
+                            signalHtml = `<div class="bg-green-900/30 border border-green-500/50 rounded px-2 py-1 text-sm text-center">
+                                🟢 <strong>LONG</strong> signal (RF: ${rfProb ? (rfProb * 100).toFixed(1) : '?'}%)
+                            </div>`;
+                        } else if (sig === 'SHORT') {
+                            signalHtml = `<div class="bg-red-900/30 border border-red-500/50 rounded px-2 py-1 text-sm text-center">
+                                🔴 <strong>SHORT</strong> signal (RF: ${rfProb ? (rfProb * 100).toFixed(1) : '?'}%)
+                            </div>`;
+                        } else if (sig === 'SKIP') {
+                            signalHtml = `<div class="bg-gray-800/50 rounded px-2 py-1 text-sm text-center text-gray-400">
+                                ⏸️ No trade today (RF: ${rfProb ? (rfProb * 100).toFixed(1) : '?'}%)
+                            </div>`;
+                        }
+                        // Position detail
+                        const pos = botData.position_detail;
+                        if (pos) {
+                            const dirIcon = pos.direction === 'LONG' ? '🟢' : '🔴';
+                            signalHtml += `<div class="mt-2 text-xs bg-gray-800/50 rounded p-2">
+                                <div>${dirIcon} ${pos.direction} @ $${pos.entry_price?.toLocaleString()}</div>
+                                <div class="text-gray-500">TP: $${pos.tp_price?.toLocaleString()} | SL: $${pos.sl_price?.toLocaleString()}</div>
+                                <div class="text-gray-500">Since: ${pos.entry_time || ''}</div>
+                            </div>`;
+                        }
+                        // Week stats
+                        const ws = botData.week_stats;
+                        if (ws && ws.trades > 0) {
+                            const wrColor = ws.win_rate >= 60 ? 'text-green-400' : ws.win_rate >= 50 ? 'text-yellow-400' : 'text-red-400';
+                            const pnlColor = ws.pnl >= 0 ? 'text-green-400' : 'text-red-400';
+                            signalHtml += `<div class="mt-2 text-xs bg-gray-800/30 rounded p-2">
+                                <div class="text-gray-500 mb-1">7-day stats:</div>
+                                <div class="flex justify-between">
+                                    <span>${ws.trades}T ${ws.wins}W/${ws.losses}L</span>
+                                    <span class="${wrColor}">${ws.win_rate}% WR</span>
+                                    <span class="${pnlColor} font-mono">$${ws.pnl}</span>
+                                </div>
+                            </div>`;
+                        }
+                        signalEl.innerHTML = signalHtml;
+                    }
+                }
 
                 // Probabilities
                 const probs = botData.probabilities || {};
                 const probsHtml = Object.entries(probs).map(([name, prob]) => {
                     const isShort = name.includes('SHORT') || name.startsWith('S');
                     const isLong = name.startsWith('L');
-                    const threshold = (bot === 'BTC_TICK') ? (isShort ? 70 : 60) : 65;
+                    let threshold;
+                    if (bot === 'MNQ_GLOBAL') threshold = 55;
+                    else if (bot === 'BTC_TICK') threshold = isShort ? 70 : 60;
+                    else threshold = 65;
                     const probClass = prob >= threshold ? 'prob-high' : prob >= 50 ? 'prob-med' : 'prob-low';
-                    const direction = isShort ? '🔴' : '🟢';
+                    const direction = isShort ? '🔴' : (bot === 'MNQ_GLOBAL' ? '📈' : '🟢');
                     return `<div class="flex items-center justify-between text-sm">
                         <span>${direction} ${name.replace('_SHORT', ' S')}</span>
                         <div class="w-24 h-5 bg-gray-700 rounded overflow-hidden">
@@ -275,7 +357,7 @@
                         ${pnl.closed_trades.slice(0, 5).map(t => {
                             const pnlColor = t.pnl >= 0 ? 'text-green-400' : 'text-red-400';
                             const dirIcon = t.direction === 'LONG' ? '🟢' : '🔴';
-                            const reasonIcon = t.reason === 'TAKE_PROFIT' ? '✅' : t.reason === 'STOP_LOSS' ? '❌' : '⏱️';
+                            const reasonIcon = t.reason === 'TAKE_PROFIT' || t.reason === 'TP' ? '✅' : t.reason === 'STOP_LOSS' || t.reason === 'SL' ? '❌' : '⏱️';
                             const exitParts = t.exit_time ? t.exit_time.split(' ') : [];
                             const exitDate = exitParts[0] ? exitParts[0].substring(5) : ''; // MM-DD
                             const exitTime = exitParts[1] ? exitParts[1].substring(0,5) : '';
