@@ -1,6 +1,6 @@
 {
-  "last_update": "2026-03-24 18:01:23 CET",
-  "last_update_utc": "2026-03-24 17:01:23 UTC",
+  "last_update": "2026-03-24 19:23:40 CET",
+  "last_update_utc": "2026-03-24 18:23:40 UTC",
   "bots": {
     "BTC": {
       "running": true,
@@ -49,7 +49,7 @@
       "positions": 0,
       "max_positions": 4,
       "last_price": 69841.04,
-      "last_log_time": "2026-03-24 18:01:20",
+      "last_log_time": "2026-03-24 19:23:39",
       "pnl_24h": {
         "realized": -76.61,
         "unrealized": 0,
@@ -149,7 +149,7 @@
       "positions": 0,
       "max_positions": 4,
       "last_price": 69841.04,
-      "last_log_time": "2026-03-24 18:01:21",
+      "last_log_time": "2026-03-24 19:23:25",
       "pnl_24h": {
         "realized": 16.05,
         "unrealized": 0,
@@ -281,7 +281,7 @@
       "positions": 0,
       "max_positions": 3,
       "last_price": 69841.04,
-      "last_log_time": "2026-03-24 18:01:20",
+      "last_log_time": "2026-03-24 19:23:23",
       "strategy_positions": [],
       "week_stats": {
         "trades": 1,
@@ -315,14 +315,16 @@
       "healthy": true,
       "bars": 2032,
       "last_timestamp": "2026-03-24 16:50:00",
-      "freshness_minutes": 11.4,
-      "issues": []
+      "freshness_minutes": 93.7,
+      "issues": [
+        "Stale data: 94 min old"
+      ]
     },
     "QQQ": {
       "healthy": true,
       "bars": 4638,
       "last_timestamp": "2026-03-24 17:30:00",
-      "freshness_minutes": -28.6,
+      "freshness_minutes": 53.7,
       "issues": []
     }
   },
@@ -341,7 +343,7 @@
       "timestamp": "2026-03-24 16:50:00",
       "indicators": {},
       "indicator_signal": false,
-      "error": "HTTPSConnectionPool(host='api.binance.com', port=443): Max retries exceeded with url: /api/v3/klines?symbol=BTCUSDT&interval=5m&limit=1000 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x130ececa0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))"
+      "error": "HTTPSConnectionPool(host='api.binance.com', port=443): Max retries exceeded with url: /api/v3/klines?symbol=BTCUSDT&interval=5m&limit=1000 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x13126c0a0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))"
     },
     "MNQ": {
       "match": true,
@@ -547,10 +549,11 @@
     ],
     "matched_hours": 1,
     "missed_hours": 9,
-    "trade_count": 2
+    "trade_count": 2,
+    "error": "HTTPSConnectionPool(host='api.binance.com', port=443): Max retries exceeded with url: /api/v3/klines?symbol=BTCUSDT&interval=5m&limit=1000 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x13102f9a0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))"
   },
   "alerts": [],
-  "check_count": 41,
+  "check_count": 42,
   "config": {
     "BTC": {
       "SL_PCT": 0.7,
