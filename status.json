@@ -1,21 +1,21 @@
 {
-  "last_update": "2026-03-25 01:39:37 CET",
-  "last_update_utc": "2026-03-25 00:39:37 UTC",
+  "last_update": "2026-03-25 02:09:42 CET",
+  "last_update_utc": "2026-03-25 01:09:42 UTC",
   "bots": {
     "BTC": {
       "running": true,
       "pid": "69286",
       "probabilities": {
-        "2h_0.5pct": 26.8,
-        "4h_0.5pct": 38.2,
-        "6h_0.5pct": 48.4,
-        "2h_0.5pct_SHORT": 44.2,
-        "4h_0.5pct_SHORT": 26.5
+        "2h_0.5pct": 32.7,
+        "4h_0.5pct": 34.9,
+        "6h_0.5pct": 49.0,
+        "2h_0.5pct_SHORT": 34.7,
+        "4h_0.5pct_SHORT": 24.1
       },
       "positions": 0,
       "max_positions": 4,
-      "last_price": 70892.02,
-      "last_log_time": "2026-03-25 01:39:31",
+      "last_price": 70733.59,
+      "last_log_time": "2026-03-25 02:09:30",
       "pnl_24h": {
         "realized": 30.1,
         "unrealized": 0,
@@ -40,21 +40,21 @@
       "running": true,
       "pid": "16315",
       "probabilities": {
-        "L1_full_wide": 80.1,
-        "L3_mom_wide": 51.9,
-        "S1_full_cur": 35.3,
-        "S3_mr_cur": 32.4,
-        "S4_full_tight": 38.0
+        "L1_full_wide": 91.9,
+        "L3_mom_wide": 40.6,
+        "S1_full_cur": 42.2,
+        "S3_mr_cur": 52.0,
+        "S4_full_tight": 44.6
       },
-      "positions": 0,
+      "positions": 1,
       "max_positions": 4,
-      "last_price": 70882.41,
-      "last_log_time": "2026-03-25 01:39:34",
+      "last_price": 70733.6,
+      "last_log_time": "2026-03-25 02:09:27",
       "pnl_24h": {
-        "realized": -70.11,
+        "realized": -106.61,
         "unrealized": 0,
-        "trades": 11,
-        "wins": 4,
+        "trades": 10,
+        "wins": 3,
         "losses": 7,
         "open_positions": [],
         "closed_trades": [
@@ -147,15 +147,6 @@
             "reason": "STOP_LOSS",
             "exit_time": "2026-03-24T01:13:39",
             "model": "L1_full_wide"
-          },
-          {
-            "direction": "LONG",
-            "entry": 70650.0,
-            "exit": 71015.0,
-            "pnl": 36.5,
-            "reason": "TRAILING_STOP",
-            "exit_time": "2026-03-24T01:01:55",
-            "model": "L1_full_wide"
           }
         ]
       }
@@ -164,16 +155,16 @@
       "running": true,
       "pid": "16946",
       "probabilities": {},
-      "positions": 0,
+      "positions": 1,
       "max_positions": 4,
-      "last_price": 70889.67,
-      "last_log_time": "2026-03-25 01:39:33",
+      "last_price": 70768.7,
+      "last_log_time": "2026-03-25 02:09:42",
       "pnl_24h": {
-        "realized": -1.57,
+        "realized": 35.73,
         "unrealized": 0,
-        "trades": 11,
+        "trades": 10,
         "wins": 6,
-        "losses": 5,
+        "losses": 4,
         "open_positions": [],
         "closed_trades": [
           {
@@ -265,15 +256,6 @@
             "reason": "STOP_LOSS",
             "exit_time": "2026-03-24T01:13:42",
             "model": "REV_L1_full_wide"
-          },
-          {
-            "direction": "SHORT",
-            "entry": 70650.0,
-            "exit": 71025.0,
-            "pnl": -37.3,
-            "reason": "TRAILING_STOP",
-            "exit_time": "2026-03-24T01:01:58",
-            "model": "REV_L1_full_wide"
           }
         ]
       }
@@ -312,12 +294,12 @@
       "running": true,
       "pid": "17257",
       "probabilities": {
-        "Vol": 1.39
+        "Vol": 1.49
       },
       "positions": 0,
       "max_positions": 3,
-      "last_price": 70895.0,
-      "last_log_time": "2026-03-25 01:39:24",
+      "last_price": 70739.18,
+      "last_log_time": "2026-03-25 02:09:35",
       "strategy_positions": [],
       "week_stats": {
         "trades": 1,
@@ -349,16 +331,16 @@
   "parquet_health": {
     "BTC": {
       "healthy": true,
-      "bars": 2030,
-      "last_timestamp": "2026-03-25 00:35:00",
-      "freshness_minutes": 4.5,
+      "bars": 2006,
+      "last_timestamp": "2026-03-25 01:05:00",
+      "freshness_minutes": 4.6,
       "issues": []
     },
     "QQQ": {
       "healthy": true,
       "bars": 13616,
       "last_timestamp": "2026-03-25 00:25:00",
-      "freshness_minutes": 14.5,
+      "freshness_minutes": 44.6,
       "issues": []
     }
   },
@@ -366,50 +348,49 @@
     "BTC": {
       "match": true,
       "differences": {
-        "2h_0.5pct": 0.0,
-        "4h_0.5pct": 0.0,
-        "6h_0.5pct": 0.0,
-        "2h_0.5pct_SHORT": 0.0,
-        "4h_0.5pct_SHORT": 0.0
+        "2h_0.5pct": 0.4,
+        "4h_0.5pct": 2.5,
+        "6h_0.5pct": 1.4,
+        "2h_0.5pct_SHORT": 1.8,
+        "4h_0.5pct_SHORT": 1.7
       },
       "parquet_probs": {
-        "2h_0.5pct": 31.9,
-        "4h_0.5pct": 39.7,
-        "6h_0.5pct": 46.5,
-        "2h_0.5pct_SHORT": 45.1,
-        "4h_0.5pct_SHORT": 27.1
+        "2h_0.5pct": 32.7,
+        "4h_0.5pct": 34.9,
+        "6h_0.5pct": 49.1,
+        "2h_0.5pct_SHORT": 34.7,
+        "4h_0.5pct_SHORT": 24.1
       },
       "fresh_probs": {
-        "2h_0.5pct": 31.9,
-        "4h_0.5pct": 39.7,
-        "6h_0.5pct": 46.5,
-        "2h_0.5pct_SHORT": 45.1,
-        "4h_0.5pct_SHORT": 27.1
+        "2h_0.5pct": 33.1,
+        "4h_0.5pct": 37.4,
+        "6h_0.5pct": 50.5,
+        "2h_0.5pct_SHORT": 36.5,
+        "4h_0.5pct_SHORT": 25.8
       },
-      "timestamp": "2026-03-25 00:35:00",
+      "timestamp": "2026-03-25 01:05:00",
       "indicators": {
-        "bb_pct_b": 0.9944,
-        "macd": 118.01,
-        "macd_signal": 117.45,
-        "macd_hist": 0.5628,
-        "macd_hist_prev": -9.4318,
-        "roc_12": 0.16,
+        "bb_pct_b": 0.7315,
+        "macd": 116.32,
+        "macd_signal": 122.53,
+        "macd_hist": -6.2075,
+        "macd_hist_prev": -3.5001,
+        "roc_12": 0.19,
         "roc_threshold": 0.4,
         "long_condition": false,
         "short_condition": false,
-        "macd_hist_increasing": true,
-        "macd_hist_decreasing": false
+        "macd_hist_increasing": false,
+        "macd_hist_decreasing": true
       },
-      "indicator_signal": false,
-      "auto_fixed": true
+      "indicator_signal": false
     },
     "MNQ": {
       "match": true,
       "differences": {
-        "2h_0.5pct": 0.1,
-        "4h_0.5pct": 1.4,
-        "2h_0.5pct_SHORT": 0.4,
-        "4h_0.5pct_SHORT": 0.0
+        "2h_0.5pct": 0.3,
+        "4h_0.5pct": 2.2,
+        "2h_0.5pct_SHORT": 1.1,
+        "4h_0.5pct_SHORT": 2.3
       },
       "parquet_probs": {
         "2h_0.5pct": 1.9,
@@ -418,13 +399,13 @@
         "4h_0.5pct_SHORT": 23.6
       },
       "fresh_probs": {
-        "2h_0.5pct": 2.0,
-        "4h_0.5pct": 4.7,
-        "2h_0.5pct_SHORT": 3.5,
-        "4h_0.5pct_SHORT": 23.6
+        "2h_0.5pct": 2.2,
+        "4h_0.5pct": 5.5,
+        "2h_0.5pct_SHORT": 4.2,
+        "4h_0.5pct_SHORT": 21.3
       },
       "timestamp": "2026-03-25 00:25:00",
-      "note": "Compared at common timestamp: 2026-03-25 00:25:00 (parquet latest: 2026-03-25 00:25:00, fresh latest: 2026-03-25 01:25:00)",
+      "note": "Compared at common timestamp: 2026-03-25 00:25:00 (parquet latest: 2026-03-25 00:25:00, fresh latest: 2026-03-25 01:55:00)",
       "indicators": {
         "bb_pct_b": 0.8534,
         "bb_condition": false,
@@ -619,14 +600,8 @@
     "missed_hours": 14,
     "trade_count": 1
   },
-  "alerts": [
-    {
-      "time": "2026-03-25T00:39:34.698597",
-      "type": "info",
-      "message": "BTC parquet refreshed with 2000 bars"
-    }
-  ],
-  "check_count": 52,
+  "alerts": [],
+  "check_count": 53,
   "config": {
     "BTC": {
       "SL_PCT": 0.7,
