@@ -1,6 +1,6 @@
 {
-  "last_update": "2026-04-01 20:36:07 CET",
-  "last_update_utc": "2026-04-01 18:36:07 UTC",
+  "last_update": "2026-04-01 21:06:11 CET",
+  "last_update_utc": "2026-04-01 19:06:11 UTC",
   "bots": {
     "BTC": {
       "running": true,
@@ -58,24 +58,33 @@
       "running": true,
       "pid": "6471",
       "probabilities": {
-        "L1_full_wide": 3.1,
-        "L3_mom_wide": 55.9,
-        "S1_full_cur": 44.0,
-        "S3_mr_cur": 44.5,
-        "S4_full_tight": 42.9
+        "L1_full_wide": 69.6,
+        "L3_mom_wide": 45.3,
+        "S1_full_cur": 35.8,
+        "S3_mr_cur": 34.4,
+        "S4_full_tight": 35.2
       },
-      "positions": 1,
+      "positions": 0,
       "max_positions": 4,
-      "last_price": 68761.07,
-      "last_log_time": "2026-04-01 20:35:17",
+      "last_price": 68183.99,
+      "last_log_time": "2026-04-01 21:05:57",
       "pnl_24h": {
-        "realized": 74.37,
+        "realized": 23.16,
         "unrealized": 0,
-        "trades": 7,
+        "trades": 8,
         "wins": 4,
-        "losses": 3,
+        "losses": 4,
         "open_positions": [],
         "closed_trades": [
+          {
+            "direction": "LONG",
+            "entry": 68684.21,
+            "exit": 68172.17,
+            "pnl": -51.2,
+            "reason": "STOP_LOSS",
+            "exit_time": "2026-04-01T21:02:34",
+            "model": "L1_full_wide"
+          },
           {
             "direction": "LONG",
             "entry": 68375.38,
@@ -146,18 +155,27 @@
       "running": true,
       "pid": "6799",
       "probabilities": {},
-      "positions": 1,
+      "positions": 0,
       "max_positions": 4,
       "last_price": null,
-      "last_log_time": "2026-04-01 20:35:16",
+      "last_log_time": "2026-04-01 21:06:11",
       "pnl_24h": {
-        "realized": -27.81,
+        "realized": 1.68,
         "unrealized": 0,
-        "trades": 4,
-        "wins": 2,
+        "trades": 5,
+        "wins": 3,
         "losses": 2,
         "open_positions": [],
         "closed_trades": [
+          {
+            "direction": "SHORT",
+            "entry": 68678.67,
+            "exit": 68385.0,
+            "pnl": 29.49,
+            "reason": "TAKE_PROFIT",
+            "exit_time": "2026-04-01T21:02:35",
+            "model": "REV_L1_full_wide"
+          },
           {
             "direction": "SHORT",
             "entry": 68418.01,
@@ -231,12 +249,12 @@
       "running": true,
       "pid": "7115",
       "probabilities": {
-        "Vol": 1.8
+        "Vol": 3.3
       },
       "positions": 0,
       "max_positions": 3,
-      "last_price": 68761.07,
-      "last_log_time": "2026-04-01 20:35:01",
+      "last_price": 68205.99,
+      "last_log_time": "2026-04-01 21:06:09",
       "strategy_positions": [],
       "week_stats": {
         "trades": 2,
@@ -270,16 +288,16 @@
       "healthy": true,
       "bars": 2007,
       "last_timestamp": "2026-04-01 17:30:00",
-      "freshness_minutes": 65.0,
+      "freshness_minutes": 96.1,
       "issues": [
-        "Stale data: 65 min old"
+        "Stale data: 96 min old"
       ]
     },
     "QQQ": {
       "healthy": true,
       "bars": 13652,
       "last_timestamp": "2026-03-31 22:00:00",
-      "freshness_minutes": 1235.0,
+      "freshness_minutes": 1266.1,
       "issues": []
     }
   },
@@ -344,7 +362,7 @@
         "4h_0.5pct_SHORT": 6.8
       },
       "timestamp": "2026-03-31 21:55:00",
-      "note": "Compared at common timestamp: 2026-03-31 21:55:00 (parquet latest: 2026-03-31 22:00:00, fresh latest: 2026-04-01 20:35:00)",
+      "note": "Compared at common timestamp: 2026-03-31 21:55:00 (parquet latest: 2026-03-31 22:00:00, fresh latest: 2026-04-01 21:05:00)",
       "indicators": {
         "bb_pct_b": 0.4893,
         "bb_condition": true,
@@ -556,7 +574,7 @@
     "trade_count": 3
   },
   "alerts": [],
-  "check_count": 338,
+  "check_count": 339,
   "config": {
     "BTC": {
       "SL_PCT": 0.7,
