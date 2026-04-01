@@ -1,24 +1,24 @@
 {
-  "last_update": "2026-04-01 04:12:53 CET",
-  "last_update_utc": "2026-04-01 02:12:53 UTC",
+  "last_update": "2026-04-01 05:17:12 CET",
+  "last_update_utc": "2026-04-01 03:17:12 UTC",
   "bots": {
     "BTC": {
       "running": true,
       "pid": "18329",
       "probabilities": {
-        "2h_0.5pct": 41.1,
-        "4h_0.5pct": 41.0,
-        "6h_0.5pct": 79.0,
+        "2h_0.5pct": 17.2,
+        "4h_0.5pct": 48.7,
+        "6h_0.5pct": 65.6,
         "2h_0.5pct_SHORT": 0.0,
         "4h_0.5pct_SHORT": 0.0
       },
       "positions": 2,
       "max_positions": 4,
-      "last_price": 67809.97,
-      "last_log_time": "2026-04-01 04:12:49",
+      "last_price": 68021.36,
+      "last_log_time": "2026-04-01 05:17:07",
       "pnl_24h": {
         "realized": -266.06,
-        "unrealized": -42.69,
+        "unrealized": 0.94,
         "trades": 3,
         "wins": 0,
         "losses": 3,
@@ -27,15 +27,15 @@
             "id": "4h_0.5pct",
             "direction": "LONG",
             "entry": 68035.66,
-            "current": 67803.22,
-            "pnl": -23.24
+            "current": 68021.37,
+            "pnl": -1.43
           },
           {
             "id": "6h_0.5pct",
             "direction": "LONG",
             "entry": 67997.67,
-            "current": 67803.22,
-            "pnl": -19.44
+            "current": 68021.37,
+            "pnl": 2.37
           }
         ],
         "closed_trades": [
@@ -82,12 +82,12 @@
       "positions": 1,
       "max_positions": 4,
       "last_price": 67947.94,
-      "last_log_time": "2026-04-01 04:12:42",
+      "last_log_time": "2026-04-01 05:17:00",
       "pnl_24h": {
-        "realized": 155.11,
+        "realized": 143.47,
         "unrealized": 0,
-        "trades": 6,
-        "wins": 4,
+        "trades": 5,
+        "wins": 3,
         "losses": 2,
         "open_positions": [],
         "closed_trades": [
@@ -135,15 +135,6 @@
             "reason": "TRAILING_STOP",
             "exit_time": "2026-03-31T05:24:12",
             "model": "L1_full_wide"
-          },
-          {
-            "direction": "LONG",
-            "entry": 66818.6,
-            "exit": 66935.0,
-            "pnl": 11.64,
-            "reason": "TRAILING_STOP",
-            "exit_time": "2026-03-31T02:16:12",
-            "model": "L1_full_wide"
           }
         ]
       }
@@ -155,7 +146,7 @@
       "positions": 0,
       "max_positions": 4,
       "last_price": null,
-      "last_log_time": "2026-04-01 04:12:43",
+      "last_log_time": "2026-04-01 05:16:59",
       "pnl_24h": {
         "realized": -169.66,
         "unrealized": 0,
@@ -224,7 +215,7 @@
       "positions": 0,
       "max_positions": 3,
       "last_price": 67947.94,
-      "last_log_time": "2026-04-01 04:12:42",
+      "last_log_time": "2026-04-01 05:16:44",
       "strategy_positions": [],
       "week_stats": {
         "trades": 2,
@@ -256,18 +247,16 @@
   "parquet_health": {
     "BTC": {
       "healthy": true,
-      "bars": 2066,
-      "last_timestamp": "2026-04-01 00:40:00",
-      "freshness_minutes": 92.8,
-      "issues": [
-        "Stale data: 93 min old"
-      ]
+      "bars": 2097,
+      "last_timestamp": "2026-04-01 03:15:00",
+      "freshness_minutes": 2.1,
+      "issues": []
     },
     "QQQ": {
       "healthy": true,
       "bars": 13652,
       "last_timestamp": "2026-03-31 22:00:00",
-      "freshness_minutes": 252.8,
+      "freshness_minutes": 317.1,
       "issues": []
     }
   },
@@ -276,12 +265,12 @@
       "match": false,
       "differences": {},
       "parquet_probs": {
-        "2h_0.5pct": 40.4,
-        "4h_0.5pct": 21.9,
-        "6h_0.5pct": 63.0
+        "2h_0.5pct": 17.2,
+        "4h_0.5pct": 48.7,
+        "6h_0.5pct": 65.6
       },
       "fresh_probs": {},
-      "timestamp": "2026-04-01 00:40:00",
+      "timestamp": "2026-04-01 03:15:00",
       "indicators": {},
       "indicator_signal": false,
       "error": "The feature names should match those that were passed during fit.\nFeature names seen at fit time, yet now missing:\n- prev_close\n- prev_high\n- prev_low\n- prev_volume\n"
@@ -307,7 +296,7 @@
         "4h_0.5pct_SHORT": 4.7
       },
       "timestamp": "2026-03-31 22:00:00",
-      "note": "Compared at common timestamp: 2026-03-31 22:00:00 (parquet latest: 2026-03-31 22:00:00, fresh latest: 2026-04-01 04:00:00)",
+      "note": "Compared at common timestamp: 2026-03-31 22:00:00 (parquet latest: 2026-03-31 22:00:00, fresh latest: 2026-04-01 05:05:00)",
       "indicators": {
         "bb_pct_b": 0.4893,
         "bb_condition": true,
@@ -520,7 +509,7 @@
     "error": "The feature names should match those that were passed during fit.\nFeature names seen at fit time, yet now missing:\n- prev_close\n- prev_high\n- prev_low\n- prev_volume\n"
   },
   "alerts": [],
-  "check_count": 312,
+  "check_count": 313,
   "config": {
     "BTC": {
       "SL_PCT": 0.7,
