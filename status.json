@@ -1,24 +1,24 @@
 {
-  "last_update": "2026-04-01 02:44:32 CET",
-  "last_update_utc": "2026-04-01 00:44:32 UTC",
+  "last_update": "2026-04-01 04:12:53 CET",
+  "last_update_utc": "2026-04-01 02:12:53 UTC",
   "bots": {
     "BTC": {
       "running": true,
       "pid": "18329",
       "probabilities": {
-        "2h_0.5pct": 40.4,
-        "4h_0.5pct": 21.9,
-        "6h_0.5pct": 63.0,
+        "2h_0.5pct": 41.1,
+        "4h_0.5pct": 41.0,
+        "6h_0.5pct": 79.0,
         "2h_0.5pct_SHORT": 0.0,
         "4h_0.5pct_SHORT": 0.0
       },
       "positions": 2,
       "max_positions": 4,
-      "last_price": 68035.53,
-      "last_log_time": "2026-04-01 02:44:19",
+      "last_price": 67809.97,
+      "last_log_time": "2026-04-01 04:12:49",
       "pnl_24h": {
         "realized": -266.06,
-        "unrealized": 7.15,
+        "unrealized": -42.69,
         "trades": 3,
         "wins": 0,
         "losses": 3,
@@ -27,15 +27,15 @@
             "id": "4h_0.5pct",
             "direction": "LONG",
             "entry": 68035.66,
-            "current": 68052.4,
-            "pnl": 1.67
+            "current": 67803.22,
+            "pnl": -23.24
           },
           {
             "id": "6h_0.5pct",
             "direction": "LONG",
             "entry": 67997.67,
-            "current": 68052.4,
-            "pnl": 5.47
+            "current": 67803.22,
+            "pnl": -19.44
           }
         ],
         "closed_trades": [
@@ -82,7 +82,7 @@
       "positions": 1,
       "max_positions": 4,
       "last_price": 67947.94,
-      "last_log_time": "2026-04-01 02:44:28",
+      "last_log_time": "2026-04-01 04:12:42",
       "pnl_24h": {
         "realized": 155.11,
         "unrealized": 0,
@@ -155,7 +155,7 @@
       "positions": 0,
       "max_positions": 4,
       "last_price": null,
-      "last_log_time": "2026-04-01 02:44:27",
+      "last_log_time": "2026-04-01 04:12:43",
       "pnl_24h": {
         "realized": -169.66,
         "unrealized": 0,
@@ -224,7 +224,7 @@
       "positions": 0,
       "max_positions": 3,
       "last_price": 67947.94,
-      "last_log_time": "2026-04-01 02:44:12",
+      "last_log_time": "2026-04-01 04:12:42",
       "strategy_positions": [],
       "week_stats": {
         "trades": 2,
@@ -258,14 +258,16 @@
       "healthy": true,
       "bars": 2066,
       "last_timestamp": "2026-04-01 00:40:00",
-      "freshness_minutes": 4.5,
-      "issues": []
+      "freshness_minutes": 92.8,
+      "issues": [
+        "Stale data: 93 min old"
+      ]
     },
     "QQQ": {
       "healthy": true,
       "bars": 13652,
       "last_timestamp": "2026-03-31 22:00:00",
-      "freshness_minutes": 164.5,
+      "freshness_minutes": 252.8,
       "issues": []
     }
   },
@@ -305,7 +307,7 @@
         "4h_0.5pct_SHORT": 4.7
       },
       "timestamp": "2026-03-31 22:00:00",
-      "note": "Compared at common timestamp: 2026-03-31 22:00:00 (parquet latest: 2026-03-31 22:00:00, fresh latest: 2026-04-01 02:30:00)",
+      "note": "Compared at common timestamp: 2026-03-31 22:00:00 (parquet latest: 2026-03-31 22:00:00, fresh latest: 2026-04-01 04:00:00)",
       "indicators": {
         "bb_pct_b": 0.4893,
         "bb_condition": true,
@@ -518,7 +520,7 @@
     "error": "The feature names should match those that were passed during fit.\nFeature names seen at fit time, yet now missing:\n- prev_close\n- prev_high\n- prev_low\n- prev_volume\n"
   },
   "alerts": [],
-  "check_count": 311,
+  "check_count": 312,
   "config": {
     "BTC": {
       "SL_PCT": 0.7,
