@@ -1,21 +1,21 @@
 {
-  "last_update": "2026-04-01 07:40:07 CET",
-  "last_update_utc": "2026-04-01 05:40:07 UTC",
+  "last_update": "2026-04-01 08:15:05 CET",
+  "last_update_utc": "2026-04-01 06:15:05 UTC",
   "bots": {
     "BTC": {
       "running": true,
       "pid": "18329",
       "probabilities": {
-        "2h_0.5pct": 19.1,
-        "4h_0.5pct": 5.1,
-        "6h_0.5pct": 30.3,
+        "2h_0.5pct": 15.6,
+        "4h_0.5pct": 8.2,
+        "6h_0.5pct": 27.1,
         "2h_0.5pct_SHORT": 0.0,
         "4h_0.5pct_SHORT": 0.0
       },
       "positions": 0,
       "max_positions": 4,
-      "last_price": 68511.41,
-      "last_log_time": "2026-04-01 07:39:50",
+      "last_price": 68768.1,
+      "last_log_time": "2026-04-01 08:14:50",
       "pnl_24h": {
         "realized": -204.88,
         "unrealized": 0,
@@ -85,12 +85,12 @@
       "positions": 1,
       "max_positions": 4,
       "last_price": 67947.94,
-      "last_log_time": "2026-04-01 07:39:58",
+      "last_log_time": "2026-04-01 08:14:57",
       "pnl_24h": {
-        "realized": 10.99,
+        "realized": -95.0,
         "unrealized": 0,
-        "trades": 4,
-        "wins": 2,
+        "trades": 3,
+        "wins": 1,
         "losses": 2,
         "open_positions": [],
         "closed_trades": [
@@ -120,15 +120,6 @@
             "reason": "STOP_LOSS",
             "exit_time": "2026-03-31T14:08:27",
             "model": "S1_full_cur"
-          },
-          {
-            "direction": "LONG",
-            "entry": 66775.15,
-            "exit": 67835.0,
-            "pnl": 105.98,
-            "reason": "TRAILING_STOP",
-            "exit_time": "2026-03-31T06:13:23",
-            "model": "L1_full_wide"
           }
         ]
       }
@@ -140,7 +131,7 @@
       "positions": 0,
       "max_positions": 4,
       "last_price": null,
-      "last_log_time": "2026-04-01 07:39:56",
+      "last_log_time": "2026-04-01 08:14:57",
       "pnl_24h": {
         "realized": -40.21,
         "unrealized": 0,
@@ -200,7 +191,7 @@
       "positions": 0,
       "max_positions": 3,
       "last_price": 67947.94,
-      "last_log_time": "2026-04-01 07:39:26",
+      "last_log_time": "2026-04-01 08:14:41",
       "strategy_positions": [],
       "week_stats": {
         "trades": 2,
@@ -232,16 +223,16 @@
   "parquet_health": {
     "BTC": {
       "healthy": true,
-      "bars": 2125,
-      "last_timestamp": "2026-04-01 05:35:00",
-      "freshness_minutes": 5.1,
+      "bars": 2131,
+      "last_timestamp": "2026-04-01 06:05:00",
+      "freshness_minutes": 10.1,
       "issues": []
     },
     "QQQ": {
       "healthy": true,
       "bars": 13652,
       "last_timestamp": "2026-03-31 22:00:00",
-      "freshness_minutes": 460.1,
+      "freshness_minutes": 495.1,
       "issues": []
     }
   },
@@ -250,48 +241,30 @@
       "match": false,
       "differences": {},
       "parquet_probs": {
-        "2h_0.5pct": 19.1,
-        "4h_0.5pct": 5.1,
-        "6h_0.5pct": 30.3
+        "2h_0.5pct": 15.6,
+        "4h_0.5pct": 8.2,
+        "6h_0.5pct": 27.1
       },
       "fresh_probs": {},
-      "timestamp": "2026-04-01 05:35:00",
+      "timestamp": "2026-04-01 06:05:00",
       "indicators": {},
       "indicator_signal": false,
       "error": "The feature names should match those that were passed during fit.\nFeature names seen at fit time, yet now missing:\n- prev_close\n- prev_high\n- prev_low\n- prev_volume\n"
     },
     "MNQ": {
       "match": true,
-      "differences": {
-        "2h_0.5pct": 0.0,
-        "4h_0.5pct": 3.5,
-        "2h_0.5pct_SHORT": 0.6,
-        "4h_0.5pct_SHORT": 0.0
-      },
+      "differences": {},
       "parquet_probs": {
         "2h_0.5pct": 44.9,
         "4h_0.5pct": 53.5,
         "2h_0.5pct_SHORT": 13.6,
         "4h_0.5pct_SHORT": 4.7
       },
-      "fresh_probs": {
-        "2h_0.5pct": 44.9,
-        "4h_0.5pct": 50.0,
-        "2h_0.5pct_SHORT": 14.2,
-        "4h_0.5pct_SHORT": 4.7
-      },
+      "fresh_probs": {},
       "timestamp": "2026-03-31 22:00:00",
-      "note": "Compared at common timestamp: 2026-03-31 22:00:00 (parquet latest: 2026-03-31 22:00:00, fresh latest: 2026-04-01 07:30:00)",
-      "indicators": {
-        "bb_pct_b": 0.4893,
-        "bb_condition": true,
-        "roc_12": 0.02,
-        "macd_hist": -0.123,
-        "macd_hist_prev": -0.0452,
-        "macd_hist_increasing": false,
-        "macd_hist_decreasing": true
-      },
-      "indicator_signal": true
+      "note": "Could not download fresh NQ=F data",
+      "indicators": {},
+      "indicator_signal": false
     },
     "SPY": {
       "match": true,
@@ -491,10 +464,10 @@
     "matched_hours": 2,
     "missed_hours": 13,
     "trade_count": 3,
-    "error": "The feature names should match those that were passed during fit.\nFeature names seen at fit time, yet now missing:\n- prev_close\n- prev_high\n- prev_low\n- prev_volume\n"
+    "error": "HTTPSConnectionPool(host='api.binance.com', port=443): Max retries exceeded with url: /api/v3/klines?symbol=BTCUSDT&interval=5m&limit=1000 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x1311b3550>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))"
   },
   "alerts": [],
-  "check_count": 315,
+  "check_count": 316,
   "config": {
     "BTC": {
       "SL_PCT": 0.7,
