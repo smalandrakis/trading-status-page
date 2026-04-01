@@ -1,21 +1,21 @@
 {
-  "last_update": "2026-04-01 08:15:05 CET",
-  "last_update_utc": "2026-04-01 06:15:05 UTC",
+  "last_update": "2026-04-01 09:03:54 CET",
+  "last_update_utc": "2026-04-01 07:03:54 UTC",
   "bots": {
     "BTC": {
       "running": true,
       "pid": "18329",
       "probabilities": {
-        "2h_0.5pct": 15.6,
-        "4h_0.5pct": 8.2,
-        "6h_0.5pct": 27.1,
+        "2h_0.5pct": 14.2,
+        "4h_0.5pct": 16.1,
+        "6h_0.5pct": 61.9,
         "2h_0.5pct_SHORT": 0.0,
         "4h_0.5pct_SHORT": 0.0
       },
       "positions": 0,
       "max_positions": 4,
-      "last_price": 68768.1,
-      "last_log_time": "2026-04-01 08:14:50",
+      "last_price": 69161.75,
+      "last_log_time": "2026-04-01 09:03:47",
       "pnl_24h": {
         "realized": -204.88,
         "unrealized": 0,
@@ -85,7 +85,7 @@
       "positions": 1,
       "max_positions": 4,
       "last_price": 67947.94,
-      "last_log_time": "2026-04-01 08:14:57",
+      "last_log_time": "2026-04-01 09:03:51",
       "pnl_24h": {
         "realized": -95.0,
         "unrealized": 0,
@@ -131,7 +131,7 @@
       "positions": 0,
       "max_positions": 4,
       "last_price": null,
-      "last_log_time": "2026-04-01 08:14:57",
+      "last_log_time": "2026-04-01 09:03:51",
       "pnl_24h": {
         "realized": -40.21,
         "unrealized": 0,
@@ -191,7 +191,7 @@
       "positions": 0,
       "max_positions": 3,
       "last_price": 67947.94,
-      "last_log_time": "2026-04-01 08:14:41",
+      "last_log_time": "2026-04-01 09:03:25",
       "strategy_positions": [],
       "week_stats": {
         "trades": 2,
@@ -223,16 +223,16 @@
   "parquet_health": {
     "BTC": {
       "healthy": true,
-      "bars": 2131,
-      "last_timestamp": "2026-04-01 06:05:00",
-      "freshness_minutes": 10.1,
+      "bars": 2142,
+      "last_timestamp": "2026-04-01 07:00:00",
+      "freshness_minutes": 3.8,
       "issues": []
     },
     "QQQ": {
       "healthy": true,
       "bars": 13652,
       "last_timestamp": "2026-03-31 22:00:00",
-      "freshness_minutes": 495.1,
+      "freshness_minutes": 543.8,
       "issues": []
     }
   },
@@ -241,30 +241,48 @@
       "match": false,
       "differences": {},
       "parquet_probs": {
-        "2h_0.5pct": 15.6,
-        "4h_0.5pct": 8.2,
-        "6h_0.5pct": 27.1
+        "2h_0.5pct": 14.2,
+        "4h_0.5pct": 16.1,
+        "6h_0.5pct": 61.9
       },
       "fresh_probs": {},
-      "timestamp": "2026-04-01 06:05:00",
+      "timestamp": "2026-04-01 07:00:00",
       "indicators": {},
       "indicator_signal": false,
       "error": "The feature names should match those that were passed during fit.\nFeature names seen at fit time, yet now missing:\n- prev_close\n- prev_high\n- prev_low\n- prev_volume\n"
     },
     "MNQ": {
       "match": true,
-      "differences": {},
+      "differences": {
+        "2h_0.5pct": 0.0,
+        "4h_0.5pct": 3.5,
+        "2h_0.5pct_SHORT": 0.6,
+        "4h_0.5pct_SHORT": 0.0
+      },
       "parquet_probs": {
         "2h_0.5pct": 44.9,
         "4h_0.5pct": 53.5,
         "2h_0.5pct_SHORT": 13.6,
         "4h_0.5pct_SHORT": 4.7
       },
-      "fresh_probs": {},
+      "fresh_probs": {
+        "2h_0.5pct": 44.9,
+        "4h_0.5pct": 50.0,
+        "2h_0.5pct_SHORT": 14.2,
+        "4h_0.5pct_SHORT": 4.7
+      },
       "timestamp": "2026-03-31 22:00:00",
-      "note": "Could not download fresh NQ=F data",
-      "indicators": {},
-      "indicator_signal": false
+      "note": "Compared at common timestamp: 2026-03-31 22:00:00 (parquet latest: 2026-03-31 22:00:00, fresh latest: 2026-04-01 08:50:00)",
+      "indicators": {
+        "bb_pct_b": 0.4893,
+        "bb_condition": true,
+        "roc_12": 0.02,
+        "macd_hist": -0.123,
+        "macd_hist_prev": -0.0452,
+        "macd_hist_increasing": false,
+        "macd_hist_decreasing": true
+      },
+      "indicator_signal": true
     },
     "SPY": {
       "match": true,
@@ -467,7 +485,7 @@
     "error": "HTTPSConnectionPool(host='api.binance.com', port=443): Max retries exceeded with url: /api/v3/klines?symbol=BTCUSDT&interval=5m&limit=1000 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x1311b3550>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))"
   },
   "alerts": [],
-  "check_count": 316,
+  "check_count": 317,
   "config": {
     "BTC": {
       "SL_PCT": 0.7,
